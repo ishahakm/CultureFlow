@@ -1,1 +1,2 @@
-# fluidic_handler
+# MicrofluidicPlatform
+Automated Organ-On-Chip Microfluidic Platform
