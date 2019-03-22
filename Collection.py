@@ -1,5 +1,5 @@
-import fakeSerial as serial
-#import serial
+#import fakeSerial as serial
+import serial
 import sys
 from serial.tools.list_ports import comports
 import time
@@ -17,6 +17,8 @@ class Collectador():
 
         self.serial_connect()
 
+        #The sleep for a second is needed for serial connection to be connected so reset could be run.
+        time.sleep(1)
         self.reset()
 
     def serial_connect(self):

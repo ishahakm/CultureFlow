@@ -123,7 +123,7 @@ void setup() {
 void loop() {
   //ascii to decimal for XY Stage
   //? = 63 Request Identifier
-  //Z = 68 Reset/Set function
+  //Z = 90 Reset/Set function
   //N = 78 Next function
   //L = 76 Previous/Last function
   //E = 69 Done/Eject function
@@ -162,21 +162,30 @@ void loop() {
     //S(et)
     if (incomingByte == 90) {
       //Serial.println("Setting XY Stage!");
+      //unsigned long startTime = millis();
       reset();
+      //unsigned long endTime = millis();
+      //Serial.println(endTime - startTime);
     }
 
     //N(ext)
     if (incomingByte == 78) {
       //Serial.println("Moving to Next Position!");
+      //unsigned long startTime = millis();
       myPosition = moveNext();
+      //unsigned long endTime = millis();
       //Serial.println(myPosition);
+      //Serial.println(endTime - startTime);
     }
 
     //P(revious)
     if (incomingByte == 76) {
       //Serial.println("Moving to Previous Position!");
+      //unsigned long startTime = millis();
       myPosition = moveLast();
+      //unsigned long endTime = millis();
       //Serial.println(myPosition);
+      //Serial.println(endTime - startTime);
     }
 
     //D(one)

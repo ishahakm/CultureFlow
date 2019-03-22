@@ -226,7 +226,7 @@ class App(tk.Tk):
             self.myColl = Collectador(self.portColl.get()) #= #self.portColl.get()
             self.my2Switch = TwoSwitch(self.portColl.get())
 
-        self.set_defaults()
+        #self.set_defaults()
         self.show_frame(ManualPage)
     def positive_run_status(self):
         self.should_be_running = True
@@ -241,7 +241,7 @@ class App(tk.Tk):
         label = tk.Label(window,text = message, bg = '#00fff2')
         label.grid(column = 1, row = 1, columnspan = 1,sticky=tk.W)
         abortbutton.grid(column = 1, row = 2)
-        
+
 class WelcomePage(tk.Frame):
     #Port and device selection
     #Running function instantiating devices via their respective classes
@@ -270,9 +270,9 @@ class WelcomePage(tk.Frame):
         print("Pump has the following port: " + controller.portPump.get())
 
         #print("XYStage/TwoSwitch",controller.get_comport("?","2xCS"))
-        #controller.portColl.set(controller.get_comport("?","2xCS"))
+        controller.portColl.set(controller.get_comport("?","2xCS"))
         #controller.port2Switch.set(controller.portColl.get())
-        #print(controller.portColl.get())
+        print(controller.portColl.get())
         #print(controller.port2Switch.get())
 
         #port selection and checkbox functionality for the m-switch
