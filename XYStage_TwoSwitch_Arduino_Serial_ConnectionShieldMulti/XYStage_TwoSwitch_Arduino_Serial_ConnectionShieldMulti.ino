@@ -181,7 +181,7 @@ void loop() {
       //unsigned long endTime = millis();
       //Serial.println(myPosition);
       //Serial.println(endTime - startTime);
-      //Serial.println(myPosition);
+      Serial.println(myPosition);
     }
 
     //P(revious)
@@ -192,7 +192,7 @@ void loop() {
       //unsigned long endTime = millis();
       //Serial.println(myPosition);
       //Serial.println(endTime - startTime);
-      //Serial.println(myPosition);
+      Serial.println(myPosition);
     }
 
     //D(one)
@@ -454,7 +454,7 @@ int moveLast(){
       myPosition = myPosition - 1;
       break;
     }
-
+    
     if (myPosition == left[i]){
       for (int j = 0; j < 3; j++){
         moveLeft();
@@ -477,11 +477,13 @@ int set(){
 // USER DONE WITH COLLECTION MOVES WELL PLATE TO EJECT.
 int eject() {
   /* code here*/
-  positions[0] = locations[32][1];
-  positions[1] = locations[32][0];
-  steppers.moveTo(positions);
-  steppers.runSpeedToPosition();
+//  positions[0] = locations[32][1];
+//  positions[1] = locations[32][0];
+//  steppers.moveTo(positions);
+//  steppers.runSpeedToPosition();
   myPosition = 32;
+  myMotorB -> setSpeed(delayRPM);
+  myMotorB -> step(8*225, FORWARD, SINGLE);
   return myPosition;
 }
 
