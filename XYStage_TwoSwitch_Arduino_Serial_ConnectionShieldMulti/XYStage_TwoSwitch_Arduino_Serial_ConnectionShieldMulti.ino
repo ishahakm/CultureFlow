@@ -387,7 +387,7 @@ int moveNext(){
 
   //Snake Pattern.
   if (myPosition == 31){
-    Serial.println("You have reached the end, can't go further!");
+    //Serial.println("You have reached the end, can't go further!");
     return 31;
   }
   int right[3] = {7,15,23};
@@ -435,7 +435,7 @@ int moveLast(){
 
   // Snake Pattern.
   if (myPosition == 0){
-    Serial.println("You are at the beginning can't go back a step!");
+    //Serial.println("You are at the beginning can't go back a step!");
     return 0;
   }
   int left[3] = {8,16,24};
