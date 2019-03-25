@@ -371,7 +371,7 @@ class ManualPage(tk.Frame):
         self.sampleslabel = tk.Label(self,text = "Samples", font =controller.appHighlightFont,bg='#00fff2')
 
         self.CollectionControlLabel = tk.Label(self, text = "                        Collection Control",bg='#00fff2', font =controller.appHighlightFont)
-        self.positionLabel = tk.Label(self, text = "Current Position: 0", bg = '#00fff2', font = controller.appHighlightFont)
+        self.positionLabel = tk.Label(self, text = "Current Position: 1", bg = '#00fff2', font = controller.appHighlightFont)
 
         #creating the number of channels that we specified
         self.create_channels(controller,self.channels,self.reservoirs)
@@ -621,21 +621,21 @@ class ManualPage(tk.Frame):
     def next(self,controller):
         if controller.myColl.position < 31 and controller.myColl.position != 32:
             controller.myColl.next_site()
-            self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position)
+            self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
         else:
             message_prompt("Have reached the end of the wells or in eject position, can't move forward!")
     def prev(self,controller):
         if controller.myColl.position > 0 and controller.myColl.position != 32:
             controller.myColl.last_site()
-            self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position)
+            self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
         else:
             message_prompt("At the beginning of the wells or in eject position, can't move backward!")
     def reset(self,controller):
         controller.myColl.reset()
-        self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position)
+        self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
     def eject(self,controller):
         controller.myColl.eject()
-        self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position)
+        self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
     def check_all_manual_and_sampling(self,controller):
         """
         use when running all channels together
