@@ -181,7 +181,7 @@ void loop() {
       //unsigned long endTime = millis();
       //Serial.println(myPosition);
       //Serial.println(endTime - startTime);
-      Serial.println(myPosition);
+      //Serial.println(myPosition);
     }
 
     //P(revious)
@@ -192,7 +192,7 @@ void loop() {
       //unsigned long endTime = millis();
       //Serial.println(myPosition);
       //Serial.println(endTime - startTime);
-      Serial.println(myPosition);
+      //Serial.println(myPosition);
     }
 
     //D(one)
