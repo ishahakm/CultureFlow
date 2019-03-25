@@ -31,7 +31,7 @@ const float acceleration = 2000.0; // Acceleration for the Stepper Motors.
 const int stepsPerRevolution = 200; // Steps per revolution for the Stepper Motor.
 const int stepsPerWell = 225; // Amount of steps needed from center of well to the next.
 const int stepsToEject = 1000; // Amount of steps to eject entire well plate.
-const int limitSwitchT = 30; // Digital Pin Number for Top Stepper Motor Limit Switch.
+const int limitSwitchT = 37; // Digital Pin Number for Top Stepper Motor Limit Switch.
 const int limitSwitchB = 36; // Digital Pin Number for Bottom Stepper Motor Limit Switch.
 const int TwoSwitchA = 32; // Digital Pin Number for TwoSwitchA.
 const int TwoSwitchB = 33; // Digital Pin Number for TwoSwitchB.
@@ -181,6 +181,7 @@ void loop() {
       //unsigned long endTime = millis();
       //Serial.println(myPosition);
       //Serial.println(endTime - startTime);
+      //Serial.println(myPosition);
     }
 
     //P(revious)
@@ -191,6 +192,7 @@ void loop() {
       //unsigned long endTime = millis();
       //Serial.println(myPosition);
       //Serial.println(endTime - startTime);
+      //Serial.println(myPosition);
     }
 
     //D(one)
@@ -358,14 +360,14 @@ void moveLeft(){
 //MOVE DOWN FUNCTION
 void moveDown(){
   if (myMotorB != NULL){
-    moveGen(myMotorB, delayRPM, FORWARD, SINGLE);
+    moveGen(myMotorB, delayRPM, BACKWARD, SINGLE);
   }
 }
 
 //MOVE UP FUNCTION
 void moveUp(){
   if (myMotorB != NULL){
-    moveGen(myMotorB, delayRPM, BACKWARD, SINGLE);
+    moveGen(myMotorB, delayRPM, FORWARD, SINGLE);
   }
 }
 
@@ -382,6 +384,8 @@ int moveNext(){
   //   //Serial.println(myPosition);
   // }
   // return myPosition;
+
+  //Snake Pattern.
   if (myPosition == 31){
     Serial.println("You have reached the end, can't go further!");
     return 31;
@@ -391,14 +395,6 @@ int moveNext(){
   int up[14] = {8,9,10,11,12,13,14,24,25,26,27,28,29,30};
 
   for (int i = 0; i < 32; i++){ //Might only need to loop up until myPosition + 1?
-    if (myPosition == right[i]){
-      for (int j = 0; j < 3; j++){
-        moveRight();
-      }
-      myPosition = myPosition + 1;
-      break;
-    }
-
     if (myPosition == down[i]){
       moveDown();
       myPosition = myPosition + 1;
@@ -407,6 +403,14 @@ int moveNext(){
 
     if (myPosition == up[i]){
       moveUp();
+      myPosition = myPosition + 1;
+      break;
+    }
+
+    if (myPosition == right[i]){
+      for (int j = 0; j < 3; j++){
+        moveRight();
+      }
       myPosition = myPosition + 1;
       break;
     }
@@ -429,6 +433,7 @@ int moveLast(){
   // }
   // return myPosition;
 
+  // Snake Pattern.
   if (myPosition == 0){
     Serial.println("You are at the beginning can't go back a step!");
     return 0;
@@ -438,14 +443,6 @@ int moveLast(){
   int up[14] = {1,2,3,4,5,6,7,17,18,19,20,21,22,23};
 
   for (int i = 0; i < 32; i++){  //Might only need to loop up until myPosition + 1?
-    if (myPosition == left[i]){
-      for (int j = 0; j < 3; j++){
-        moveLeft();
-      }
-      myPosition = myPosition - 1;
-      break;
-    }
-
     if (myPosition == down[i]){
       moveDown();
       myPosition = myPosition - 1;
@@ -454,6 +451,14 @@ int moveLast(){
 
     if (myPosition == up[i]){
       moveUp();
+      myPosition = myPosition - 1;
+      break;
+    }
+
+    if (myPosition == left[i]){
+      for (int j = 0; j < 3; j++){
+        moveLeft();
+      }
       myPosition = myPosition - 1;
       break;
     }
@@ -541,8 +546,8 @@ void reset() {
 // }
 
   //CODE TO MOVE THE WELL PLATE TO WHERE THE OUTLETS ARE ON TOP LEFT THREE WELLS.
-  positions[0] = positions[0] - 2000;
-  positions[1] = positions[1] + 1025;
+  positions[0] = positions[0] - 4349;
+  positions[1] = positions[1] + 2570;
 
   steppers.moveTo(positions);
   steppers.runSpeedToPosition();
