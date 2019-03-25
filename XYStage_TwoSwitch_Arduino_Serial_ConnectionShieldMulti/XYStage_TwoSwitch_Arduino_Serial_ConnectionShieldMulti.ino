@@ -454,7 +454,7 @@ int moveLast(){
       myPosition = myPosition - 1;
       break;
     }
-    
+
     if (myPosition == left[i]){
       for (int j = 0; j < 3; j++){
         moveLeft();
