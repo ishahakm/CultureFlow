@@ -55,6 +55,15 @@ class Serial:
         #print( "read: now self._data = ", self._data )
         return s
 
+    def flush(self):
+        pass
+
+    def flushInput(self):
+        pass
+
+    def flushOutput(self):
+        pass
+        
     ## readline()
     # reads characters from the fake Arduino until a \n is found.
     def readline( self ):

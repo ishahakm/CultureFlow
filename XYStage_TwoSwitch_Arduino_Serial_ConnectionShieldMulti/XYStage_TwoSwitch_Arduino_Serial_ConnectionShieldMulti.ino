@@ -43,6 +43,11 @@ void backwardstep1();
 void forwardstep2();
 void backwardstep2();
 void populateLocations(long (&locations)[numLocations][2]);
+void moveGen(Adafruit_StepperMotor *motor, int delay, int myDirection, int stepType);
+void moveRight();
+void moveLeft();
+void moveDown();
+void moveUp();
 int moveNext();
 int moveLast();
 int set();
@@ -317,18 +322,96 @@ void populateLocations(long (&locations)[numLocations][2]){
   locations[numLocations - 1][1] = -((columns / 3) - 1) * (3 * stepsPerWell);
 }
 
+
+//GENERIC MOVE FUNCTION
+void moveGen(Adafruit_StepperMotor *motor, int delay, int myDirection, int stepType){
+  //steps - total number of steps
+  //myDirection - FORWARD 1, BACKWARD 2, BRAKE 3, RELEASE 4.
+  //Stepper Motor Nema 17 1.8 degrees/step. 200 Step/Revolution
+  //Delay is handled by setting the RPM.
+  //Step Types include SINGLE, DOUBLE, INTERLEAVE, MICROSTEP.
+  if (motor == myMotorT){
+    motor -> setSpeed(delay);
+    motor -> step(stepsPerWell, myDirection, stepType);
+  }
+  else if (motor == myMotorB){
+    motor -> setSpeed(delay);
+    motor -> step(stepsPerWell, myDirection, stepType);
+  }
+
+}
+
+//MOVE RIGHT FUNCTION
+void moveRight(){
+  if (myMotorT != NULL){
+    moveGen(myMotorT, delayRPM, FORWARD, SINGLE);
+  }
+}
+
+//MOVE LEFT FUNCTION
+void moveLeft(){
+  if (myMotorT != NULL){
+    moveGen(myMotorT, delayRPM, BACKWARD, SINGLE);
+  }
+}
+
+//MOVE DOWN FUNCTION
+void moveDown(){
+  if (myMotorB != NULL){
+    moveGen(myMotorB, delayRPM, FORWARD, SINGLE);
+  }
+}
+
+//MOVE UP FUNCTION
+void moveUp(){
+  if (myMotorB != NULL){
+    moveGen(myMotorB, delayRPM, BACKWARD, SINGLE);
+  }
+}
+
 // This function moves the stepper motors to the next position and
 // returns the position once its done getting there.
 int moveNext(){
   /* code here */
-  if (myPosition < 31){
-    positions[0] = locations[myPosition + 1][1];
-    positions[1] = locations[myPosition + 1][0];
-    steppers.moveTo(positions);
-    steppers.runSpeedToPosition();
-    myPosition = myPosition + 1;
-    //Serial.println(myPosition);
+  // if (myPosition < 31){
+  //   positions[0] = locations[myPosition + 1][1];
+  //   positions[1] = locations[myPosition + 1][0];
+  //   steppers.moveTo(positions);
+  //   steppers.runSpeedToPosition();
+  //   myPosition = myPosition + 1;
+  //   //Serial.println(myPosition);
+  // }
+  // return myPosition;
+  if (myPosition == 31){
+    Serial.println("You have reached the end, can't go further!");
+    return 31;
   }
+  int right[3] = {7,15,23};
+  int down[14] = {0,1,2,3,4,5,6,16,17,18,19,20,21,22};
+  int up[14] = {8,9,10,11,12,13,14,24,25,26,27,28,29,30};
+
+  for (int i = 0; i < 32; i++){ //Might only need to loop up until myPosition + 1?
+    if (myPosition == right[i]){
+      for (int j = 0; j < 3; j++){
+        moveRight();
+      }
+      myPosition = myPosition + 1;
+      break;
+    }
+
+    if (myPosition == down[i]){
+      moveDown();
+      myPosition = myPosition + 1;
+      break;
+    }
+
+    if (myPosition == up[i]){
+      moveUp();
+      myPosition = myPosition + 1;
+      break;
+    }
+  }
+
   return myPosition;
 }
 
@@ -336,14 +419,46 @@ int moveNext(){
 // returns the position once its done getting there.
 int moveLast(){
   /* code here */
-  if (myPosition > 0){
-    positions[0] = locations[myPosition - 1][1];
-    positions[1] = locations[myPosition - 1][0];
-    steppers.moveTo(positions);
-    steppers.runSpeedToPosition();
-    myPosition = myPosition - 1;
-    //Serial.println(myPosition);
+  // if (myPosition > 0){
+  //   positions[0] = locations[myPosition - 1][1];
+  //   positions[1] = locations[myPosition - 1][0];
+  //   steppers.moveTo(positions);
+  //   steppers.runSpeedToPosition();
+  //   myPosition = myPosition - 1;
+  //   //Serial.println(myPosition);
+  // }
+  // return myPosition;
+
+  if (myPosition == 0){
+    Serial.println("You are at the beginning can't go back a step!");
+    return 0;
   }
+  int left[3] = {8,16,24};
+  int down[14] = {9,10,11,12,13,14,15,25,26,27,28,29,30,31};
+  int up[14] = {1,2,3,4,5,6,7,17,18,19,20,21,22,23};
+
+  for (int i = 0; i < 32; i++){  //Might only need to loop up until myPosition + 1?
+    if (myPosition == left[i]){
+      for (int j = 0; j < 3; j++){
+        moveLeft();
+      }
+      myPosition = myPosition - 1;
+      break;
+    }
+
+    if (myPosition == down[i]){
+      moveDown();
+      myPosition = myPosition - 1;
+      break;
+    }
+
+    if (myPosition == up[i]){
+      moveUp();
+      myPosition = myPosition - 1;
+      break;
+    }
+  }
+
   return myPosition;
 }
 
