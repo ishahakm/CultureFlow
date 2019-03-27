@@ -1,5 +1,5 @@
 #import serial
-import fakeSerial as serial
+import serial
 import sys
 from serial.tools.list_ports import comports
 import time
@@ -93,10 +93,18 @@ class ThreePump():
         print(flowrate)
         self.send(str(channel)+"f"+flowrate)
     def setDir(self,channel,direction):
+
         if direction == "CW":
             self.send(str(channel)+"J")
+            self.send(str(channel)+"xRJ")
+
         if direction == "CCW":
-            self.send(str(channel)+"K")
+            self.send(str(channel) + "K")
+            self.send(str(channel) + "xRK")
+
+
+
+
     def start(self,channel):
         self.send(str(channel)+"H")
     def stop(self,channel):
@@ -111,7 +119,7 @@ class ThreePump():
             self.send(to_send)
     def setMeasuredVolume(self,channel,volume):
         volume = self.FormatVolume(volume,"mL")
-        self.send(str(channel)+"xV"+volume)
+        self.send_return(str(channel)+"xV"+volume)
     def start_all(self):
         for i in range(3):
             self.send(str(i+1)+"H")
@@ -124,8 +132,9 @@ class ThreePump():
         #setting to flowrate mode
         for channel in range(3):
             self.send(str(channel+1)+"xU1000+0")
-            self.send(str(channel+1)+"xW00000600")
+            self.send(str(channel+1)+"xW00002400")
         self.send("M")
+
 def get_ports():
     """
     Uses serial module's comports command to get and return serial ports
