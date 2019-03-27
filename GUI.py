@@ -271,7 +271,7 @@ class WelcomePage(tk.Frame):
 
         #print("XYStage/TwoSwitch",controller.get_comport("?","2xCS"))
         controller.portColl.set(controller.get_comport("?","2xCS"))
-        #controller.port2Switch.set(controller.portColl.get())
+        controller.port2Switch.set(controller.portColl.get())
         print(controller.portColl.get())
         #print(controller.port2Switch.get())
 

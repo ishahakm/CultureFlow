@@ -481,41 +481,42 @@ int eject() {
 //  positions[1] = locations[32][0];
 //  steppers.moveTo(positions);
 //  steppers.runSpeedToPosition();
-  myPosition = 32;
   switch (myPosition) {
     case 7: case 8: case 23: case 24:
             myMotorB -> setSpeed(delayRPM);
-            myMotorB -> step(8*225, FORWARD, SINGLE);
+            myMotorB -> step(11*225, FORWARD, SINGLE);
             break;
     case 6: case 9: case 22: case 25:
             myMotorB -> setSpeed(delayRPM);
-            myMotorB -> step(7*225, FORWARD, SINGLE);
+            myMotorB -> step(10*225, FORWARD, SINGLE);
             break;
     case 5: case 10: case 21: case 26:
             myMotorB -> setSpeed(delayRPM);
-            myMotorB -> step(6*225, FORWARD, SINGLE);
+            myMotorB -> step(9*225, FORWARD, SINGLE);
             break;
     case 4: case 11: case 20: case 27:
             myMotorB -> setSpeed(delayRPM);
-            myMotorB -> step(5*225, FORWARD, SINGLE);
+            myMotorB -> step(8*225, FORWARD, SINGLE);
             break;
     case 3: case 12: case 19: case 28:
             myMotorB -> setSpeed(delayRPM);
-            myMotorB -> step(4*225, FORWARD, SINGLE);
+            myMotorB -> step(7*225, FORWARD, SINGLE);
             break;
     case 2: case 13: case 18: case 29:
             myMotorB -> setSpeed(delayRPM);
-            myMotorB -> step(3*225, FORWARD, SINGLE);
+            myMotorB -> step(6*225, FORWARD, SINGLE);
             break;
     case 1: case 14: case 17: case 30:
             myMotorB -> setSpeed(delayRPM);
-            myMotorB -> step(2*225, FORWARD, SINGLE);
+            myMotorB -> step(5*225, FORWARD, SINGLE);
             break;
     case 0: case 15: case 16: case 31:
             myMotorB -> setSpeed(delayRPM);
-            myMotorB -> step(1*225, FORWARD, SINGLE);
+            myMotorB -> step(4*225, FORWARD, SINGLE);
             break;
   }
+
+  myPosition = 32;
 
   return myPosition;
 }
