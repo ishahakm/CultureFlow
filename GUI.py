@@ -226,7 +226,7 @@ class App(tk.Tk):
             self.myColl = Collectador(self.portColl.get()) #= #self.portColl.get()
             self.my2Switch = TwoSwitch(self.portColl.get())
 
-        #self.set_defaults()
+        self.set_defaults()
         self.show_frame(ManualPage)
     def positive_run_status(self):
         self.should_be_running = True
