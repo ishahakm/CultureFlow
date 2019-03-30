@@ -123,16 +123,16 @@ class ThreePump():
             V (int): The amount of volume.
             unit (string): The unit the volume should be set in.
         """
-            if unit == "mL":
-                S = 1
-            elif unit == "uL":
-                S = 10E-4
-            A = '%E' % Decimal(str(float(V)*S))
-            B = A[-3:]
-            C = B[0]+B[2]
-            D = str(int(float(A[:5])*1000))
-            E = D+C
-            return E
+        if unit == "mL":
+            S = 1
+        elif unit == "uL":
+            S = 10E-4
+        A = '%E' % Decimal(str(float(V)*S))
+        B = A[-3:]
+        C = B[0]+B[2]
+        D = str(int(float(A[:5])*1000))
+        E = D+C
+        return E
 
     def setFlow(self,channel,flowrate):
         """

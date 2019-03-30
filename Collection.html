@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Collection</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Collection</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadiel%20hernandez%5Cgoogle%20drive%5Cdeveloper%5Csenior%20design%5Cfluidic_handler%5Ccollection.py">c:\users\adiel hernandez\google drive\developer\senior design\fluidic_handler\collection.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="fakeSerial.html">fakeSerial</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Collection.html#Collectador">Collectador</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Collectador">class <strong>Collectador</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Collectador">Collectador</a>(my_port)<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;is&nbsp;used&nbsp;for&nbsp;control&nbsp;of&nbsp;stepper&nbsp;motors.&nbsp;A&nbsp;serial&nbsp;connection&nbsp;is&nbsp;established<br>
+with&nbsp;the&nbsp;microcontroller&nbsp;controlling&nbsp;the&nbsp;stepper&nbsp;motors.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;baud&nbsp;(int):&nbsp;The&nbsp;baud&nbsp;rate&nbsp;the&nbsp;serial&nbsp;connection&nbsp;is&nbsp;using.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;port&nbsp;(string):&nbsp;the&nbsp;microcontrollers&nbsp;port&nbsp;for&nbsp;the&nbsp;serial&nbsp;connection.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ser&nbsp;(serial&nbsp;Object):&nbsp;Instance&nbsp;of&nbsp;serial&nbsp;<a href="builtins.html#object">object</a>&nbsp;representing&nbsp;the&nbsp;serial&nbsp;connection.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;serialConnected&nbsp;(bool):&nbsp;True/False&nbsp;of&nbsp;whether&nbsp;the&nbsp;serial&nbsp;connection&nbsp;was&nbsp;established.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;position&nbsp;(int):&nbsp;the&nbsp;position&nbsp;that&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;is&nbsp;currently&nbsp;at.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;uniqueID&nbsp;(string):&nbsp;the&nbsp;unique&nbsp;identifier&nbsp;the&nbsp;microcontroller&nbsp;returns&nbsp;for&nbsp;automatic&nbsp;port&nbsp;selection.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Collectador-__init__"><strong>__init__</strong></a>(self, my_port)</dt><dd><tt>The&nbsp;constructor&nbsp;for&nbsp;the&nbsp;<a href="#Collectador">Collectador</a>&nbsp;class.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;my_port&nbsp;(string):&nbsp;the&nbsp;microcontrollers&nbsp;port&nbsp;for&nbsp;the&nbsp;serial&nbsp;connection.</tt></dd></dl>
+
+<dl><dt><a name="Collectador-chop_return"><strong>chop_return</strong></a>(self, ret)</dt><dd><tt>This&nbsp;method&nbsp;modifies&nbsp;the&nbsp;output&nbsp;of&nbsp;the&nbsp;pump&nbsp;which&nbsp;comes&nbsp;with&nbsp;a&nbsp;carriage&nbsp;return&nbsp;and&nbsp;newline&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;itself.<br>
+The&nbsp;carriage&nbsp;return&nbsp;and&nbsp;newline&nbsp;is&nbsp;cut&nbsp;off&nbsp;here.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Output&nbsp;of&nbsp;the&nbsp;pump&nbsp;without&nbsp;the&nbsp;carraige&nbsp;return&nbsp;and&nbsp;newline&nbsp;at&nbsp;the&nbsp;end.</tt></dd></dl>
+
+<dl><dt><a name="Collectador-eject"><strong>eject</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"E"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
+move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;eject&nbsp;position&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.&nbsp;Simulatenously<br>
+also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
+
+<dl><dt><a name="Collectador-get_info"><strong>get_info</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"?"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
+send&nbsp;back&nbsp;a&nbsp;unique&nbsp;ID.&nbsp;The&nbsp;attribute&nbsp;uniqueID&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;microcontrollers&nbsp;response.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;response&nbsp;(string):&nbsp;The&nbsp;unique&nbsp;ID&nbsp;that&nbsp;the&nbsp;microcontroller&nbsp;sends&nbsp;back&nbsp;through&nbsp;the&nbsp;serial&nbsp;connection.</tt></dd></dl>
+
+<dl><dt><a name="Collectador-last_site"><strong>last_site</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"L"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
+move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;last&nbsp;position&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.&nbsp;Simulatenously<br>
+also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
+
+<dl><dt><a name="Collectador-next_site"><strong>next_site</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"N"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
+move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;next&nbsp;position&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.&nbsp;Simulatenously<br>
+also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
+
+<dl><dt><a name="Collectador-reset"><strong>reset</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"Z"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
+move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;origin&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.&nbsp;Simulatenously<br>
+also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
+
+<dl><dt><a name="Collectador-send"><strong>send</strong></a>(self, cmd)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;a&nbsp;command&nbsp;across&nbsp;the&nbsp;serial&nbsp;connection.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cmd&nbsp;(string):&nbsp;The&nbsp;command&nbsp;or&nbsp;string&nbsp;that&nbsp;is&nbsp;to&nbsp;be&nbsp;sent&nbsp;to&nbsp;the&nbsp;microcontroller.</tt></dd></dl>
+
+<dl><dt><a name="Collectador-serial_connect"><strong>serial_connect</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;establishes&nbsp;the&nbsp;serial&nbsp;connection&nbsp;with&nbsp;the&nbsp;microcontroller.<br>
+&nbsp;<br>
+Once&nbsp;the&nbsp;comport&nbsp;of&nbsp;the&nbsp;pump&nbsp;is&nbsp;known&nbsp;we&nbsp;open&nbsp;a&nbsp;serial&nbsp;connection<br>
+to&nbsp;it&nbsp;using&nbsp;pySerial.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
