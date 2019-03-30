@@ -21,7 +21,7 @@ class TwoSwitch():
 
     def __init__(self,my_port):
         """
-        The constructor for the Collectador class.
+        The constructor for the TwoSwitch class.
 
         Parameters:
             my_port (string): the microcontrollers port for the serial connection.
@@ -77,7 +77,7 @@ class TwoSwitch():
         Returns:
             Output of the pump without the carraige return and newline at the end.
         """
-        
+
         if ret.endswith('\r\n'):
             ret = ret[:-2]
         return ret
