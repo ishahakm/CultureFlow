@@ -6,8 +6,7 @@ import time
 
 class MSwitch():
     """
-    This class is used for control of the MSwitch. A serial connection is established
-    with the microcontroller controlling the MSwitch.
+    This class is used for control of the Manifold Switch. A serial connection is established with the microcontroller controlling the Manifold Switch.
 
     Attributes:
         baud (int): The baud rate the serial connection is using.
@@ -40,8 +39,7 @@ class MSwitch():
         """
         This method establishes the serial connection with the microcontroller.
 
-        Once the comport of the pump is known we open a serial connection
-        to it using pySerial.
+        Once the comport of the pump is known we open a serial connection to it using pySerial.
         """
 
         if self.port == None:
@@ -87,8 +85,7 @@ class MSwitch():
 
     def get_info(self):
         """
-        This method sends the command "?" to the microcontroller which is programmed to
-        send back a unique ID. The attribute uniqueID is set to the microcontrollers response.
+        This method sends the command "?" to the microcontroller which is programmed to send back a unique ID. The attribute uniqueID is set to the microcontrollers response.
 
         Returns:
             response (string): The unique ID that the microcontroller sends back through the serial connection.

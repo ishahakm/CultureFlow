@@ -6,8 +6,7 @@ import time
 
 class Collectador():
     """
-    This class is used for control of stepper motors. A serial connection is established
-    with the microcontroller controlling the stepper motors.
+    This class is used for control of stepper motors. A serial connection is established with the microcontroller controlling the stepper motors.
 
     Attributes:
         baud (int): The baud rate the serial connection is using.
@@ -43,8 +42,7 @@ class Collectador():
         """
         This method establishes the serial connection with the microcontroller.
 
-        Once the comport of the pump is known we open a serial connection
-        to it using pySerial.
+        Once the comport of the pump is known we open a serial connection to it using pySerial.
         """
 
         if self.port == None:
@@ -80,9 +78,8 @@ class Collectador():
 
     def reset(self):
         """
-        This method sends the command "Z" to the microcontroller which is programmed to
-        move the XY Stage to the origin when receiving this command. Simulatenously
-        also updates the current position of the XY Stage.
+        This method sends the command "Z" to the microcontroller which is programmed to move the XY Stage to the origin when receiving this command.
+        Simulatenously also updates the current position of the XY Stage.
         """
         self.send('Z')
         self.position = 0
@@ -90,9 +87,8 @@ class Collectador():
 
     def eject(self):
         """
-        This method sends the command "E" to the microcontroller which is programmed to
-        move the XY Stage to the eject position when receiving this command. Simulatenously
-        also updates the current position of the XY Stage.
+        This method sends the command "E" to the microcontroller which is programmed to move the XY Stage to the eject position when receiving this command.
+        Simulatenously also updates the current position of the XY Stage.
         """
         self.send('E')
         self.position = 32
@@ -100,9 +96,8 @@ class Collectador():
 
     def next_site(self):
         """
-        This method sends the command "N" to the microcontroller which is programmed to
-        move the XY Stage to the next position when receiving this command. Simulatenously
-        also updates the current position of the XY Stage.
+        This method sends the command "N" to the microcontroller which is programmed to move the XY Stage to the next position when receiving this command.
+        Simulatenously also updates the current position of the XY Stage.
         """
         if self.position < 31:
             self.send('N')
@@ -111,9 +106,8 @@ class Collectador():
 
     def last_site(self):
         """
-        This method sends the command "L" to the microcontroller which is programmed to
-        move the XY Stage to the last position when receiving this command. Simulatenously
-        also updates the current position of the XY Stage.
+        This method sends the command "L" to the microcontroller which is programmed to move the XY Stage to the last position when receiving this command.
+        Simulatenously also updates the current position of the XY Stage.
         """
         if self.position > 0:
             self.send("L")
@@ -122,8 +116,8 @@ class Collectador():
 
     def get_info(self):
         """
-        This method sends the command "?" to the microcontroller which is programmed to
-        send back a unique ID. The attribute uniqueID is set to the microcontrollers response.
+        This method sends the command "?" to the microcontroller which is programmed to send back a unique ID.
+        The attribute uniqueID is set to the microcontrollers response.
 
         Returns:
             response (string): The unique ID that the microcontroller sends back through the serial connection.

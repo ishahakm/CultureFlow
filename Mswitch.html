@@ -44,8 +44,7 @@
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt><a href="#MSwitch">MSwitch</a>(my_port)<br>
 &nbsp;<br>
-This&nbsp;class&nbsp;is&nbsp;used&nbsp;for&nbsp;control&nbsp;of&nbsp;the&nbsp;<a href="#MSwitch">MSwitch</a>.&nbsp;A&nbsp;serial&nbsp;connection&nbsp;is&nbsp;established<br>
-with&nbsp;the&nbsp;microcontroller&nbsp;controlling&nbsp;the&nbsp;<a href="#MSwitch">MSwitch</a>.<br>
+This&nbsp;class&nbsp;is&nbsp;used&nbsp;for&nbsp;control&nbsp;of&nbsp;the&nbsp;Manifold&nbsp;Switch.&nbsp;A&nbsp;serial&nbsp;connection&nbsp;is&nbsp;established&nbsp;with&nbsp;the&nbsp;microcontroller&nbsp;controlling&nbsp;the&nbsp;Manifold&nbsp;Switch.<br>
 &nbsp;<br>
 Attributes:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;baud&nbsp;(int):&nbsp;The&nbsp;baud&nbsp;rate&nbsp;the&nbsp;serial&nbsp;connection&nbsp;is&nbsp;using.<br>
@@ -67,8 +66,7 @@ The&nbsp;carriage&nbsp;return&nbsp;and&nbsp;newline&nbsp;is&nbsp;cut&nbsp;off&nb
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Output&nbsp;of&nbsp;the&nbsp;pump&nbsp;without&nbsp;the&nbsp;carraige&nbsp;return&nbsp;and&nbsp;newline&nbsp;at&nbsp;the&nbsp;end.</tt></dd></dl>
 
-<dl><dt><a name="MSwitch-get_info"><strong>get_info</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"?"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
-send&nbsp;back&nbsp;a&nbsp;unique&nbsp;ID.&nbsp;The&nbsp;attribute&nbsp;uniqueID&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;microcontrollers&nbsp;response.<br>
+<dl><dt><a name="MSwitch-get_info"><strong>get_info</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"?"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to&nbsp;send&nbsp;back&nbsp;a&nbsp;unique&nbsp;ID.&nbsp;The&nbsp;attribute&nbsp;uniqueID&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;microcontrollers&nbsp;response.<br>
 &nbsp;<br>
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;response&nbsp;(string):&nbsp;The&nbsp;unique&nbsp;ID&nbsp;that&nbsp;the&nbsp;microcontroller&nbsp;sends&nbsp;back&nbsp;through&nbsp;the&nbsp;serial&nbsp;connection.</tt></dd></dl>
@@ -80,8 +78,7 @@ Parameters:<br>
 
 <dl><dt><a name="MSwitch-serial_connect"><strong>serial_connect</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;establishes&nbsp;the&nbsp;serial&nbsp;connection&nbsp;with&nbsp;the&nbsp;microcontroller.<br>
 &nbsp;<br>
-Once&nbsp;the&nbsp;comport&nbsp;of&nbsp;the&nbsp;pump&nbsp;is&nbsp;known&nbsp;we&nbsp;open&nbsp;a&nbsp;serial&nbsp;connection<br>
-to&nbsp;it&nbsp;using&nbsp;pySerial.</tt></dd></dl>
+Once&nbsp;the&nbsp;comport&nbsp;of&nbsp;the&nbsp;pump&nbsp;is&nbsp;known&nbsp;we&nbsp;open&nbsp;a&nbsp;serial&nbsp;connection&nbsp;to&nbsp;it&nbsp;using&nbsp;pySerial.</tt></dd></dl>
 
 <dl><dt><a name="MSwitch-set_reservoir"><strong>set_reservoir</strong></a>(self, res)</dt><dd><tt>This&nbsp;method&nbsp;sets&nbsp;the&nbsp;reservoir&nbsp;to&nbsp;pull&nbsp;fluid&nbsp;from.</tt></dd></dl>
 

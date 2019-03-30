@@ -1,4 +1,3 @@
-#import serial
 import serial
 import sys
 from serial.tools.list_ports import comports
@@ -16,8 +15,7 @@ myport.connect()
 """
 class ThreePump():
     """
-    This class is used for control of the Pump. A serial connection is established
-    with the microcontroller controlling the Pump.
+    This class is used for control of the Pump. A serial connection is established with the microcontroller controlling the Pump.
 
     Attributes:
         baud (int): The baud rate the serial connection is using.
@@ -56,8 +54,7 @@ class ThreePump():
         """
         This method establishes the serial connection with the microcontroller.
 
-        Once the comport of the pump is known we open a serial connection
-        to it using pySerial.
+        Once the comport of the pump is known we open a serial connection to it using pySerial.
         """
 
         #print("This pump's port is: " + str(self.port) + " !!!!!!!!")
@@ -84,8 +81,7 @@ class ThreePump():
 
     def send_return(self,cmd):
         """
-        This method uses the serial connection opened instance of pump and sends
-        the text written in cmd across that connection.
+        This method uses the serial connection opened instance of pump and sends the text written in cmd across that connection.
 
         Returns:
             response (string): The response or what the microcontroller returns.
@@ -165,8 +161,7 @@ class ThreePump():
 
     def start(self,channel):
         """
-        This method sends a command to the microcontroller which is programmed to
-        start the pump only for the channel chosen.
+        This method sends a command to the microcontroller which is programmed to start the pump only for the channel chosen.
 
         Parameters:
             channel (int): the channel that will start.
@@ -175,8 +170,7 @@ class ThreePump():
 
     def stop(self,channel):
         """
-        This method sends a command to the microcontroller which is programmed to
-        stop the pump only for the channel chosen.
+        This method sends a command to the microcontroller which is programmed to stop the pump only for the channel chosen.
 
         Parameters:
             channel (int): the channel that will stop.
@@ -186,8 +180,7 @@ class ThreePump():
 
     def calibrate(self,channel):
         """
-        This method sends a command to the microcontroller which is programmed to
-        calibrate the pump only for the channel chosen.
+        This method sends a command to the microcontroller which is programmed to calibrate the pump only for the channel chosen.
 
         Parameters:
             channel (int): the channel that will be calibrated.
@@ -197,8 +190,7 @@ class ThreePump():
 
     def abort_calibration(self,channel):
         """
-        This method sends a command to the microcontroller which is programmed to
-        abort calibration of the pump only for the channel chosen.
+        This method sends a command to the microcontroller which is programmed to abort calibration of the pump only for the channel chosen.
 
         Parameters:
             channel (int): the channel that will abort calibration.
@@ -225,8 +217,7 @@ class ThreePump():
 
     def start_all(self):
         """
-        This method sends a command to the microcontroller which is programmed to
-        start the pump for all channels.
+        This method sends a command to the microcontroller which is programmed to start the pump for all channels.
         """
 
         for i in range(3):
@@ -235,8 +226,7 @@ class ThreePump():
 
     def stop_all(self):
         """
-        This method sends a command to the microcontroller which is programmed to
-        stop the pump for all the channels.
+        This method sends a command to the microcontroller which is programmed to stop the pump for all the channels.
         """
 
         for i in range(3):

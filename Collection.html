@@ -44,8 +44,7 @@
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt><a href="#Collectador">Collectador</a>(my_port)<br>
 &nbsp;<br>
-This&nbsp;class&nbsp;is&nbsp;used&nbsp;for&nbsp;control&nbsp;of&nbsp;stepper&nbsp;motors.&nbsp;A&nbsp;serial&nbsp;connection&nbsp;is&nbsp;established<br>
-with&nbsp;the&nbsp;microcontroller&nbsp;controlling&nbsp;the&nbsp;stepper&nbsp;motors.<br>
+This&nbsp;class&nbsp;is&nbsp;used&nbsp;for&nbsp;control&nbsp;of&nbsp;stepper&nbsp;motors.&nbsp;A&nbsp;serial&nbsp;connection&nbsp;is&nbsp;established&nbsp;with&nbsp;the&nbsp;microcontroller&nbsp;controlling&nbsp;the&nbsp;stepper&nbsp;motors.<br>
 &nbsp;<br>
 Attributes:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;baud&nbsp;(int):&nbsp;The&nbsp;baud&nbsp;rate&nbsp;the&nbsp;serial&nbsp;connection&nbsp;is&nbsp;using.<br>
@@ -67,27 +66,23 @@ The&nbsp;carriage&nbsp;return&nbsp;and&nbsp;newline&nbsp;is&nbsp;cut&nbsp;off&nb
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Output&nbsp;of&nbsp;the&nbsp;pump&nbsp;without&nbsp;the&nbsp;carraige&nbsp;return&nbsp;and&nbsp;newline&nbsp;at&nbsp;the&nbsp;end.</tt></dd></dl>
 
-<dl><dt><a name="Collectador-eject"><strong>eject</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"E"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
-move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;eject&nbsp;position&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.&nbsp;Simulatenously<br>
-also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
+<dl><dt><a name="Collectador-eject"><strong>eject</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"E"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to&nbsp;move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;eject&nbsp;position&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.<br>
+Simulatenously&nbsp;also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
 
-<dl><dt><a name="Collectador-get_info"><strong>get_info</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"?"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
-send&nbsp;back&nbsp;a&nbsp;unique&nbsp;ID.&nbsp;The&nbsp;attribute&nbsp;uniqueID&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;microcontrollers&nbsp;response.<br>
+<dl><dt><a name="Collectador-get_info"><strong>get_info</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"?"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to&nbsp;send&nbsp;back&nbsp;a&nbsp;unique&nbsp;ID.<br>
+The&nbsp;attribute&nbsp;uniqueID&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;microcontrollers&nbsp;response.<br>
 &nbsp;<br>
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;response&nbsp;(string):&nbsp;The&nbsp;unique&nbsp;ID&nbsp;that&nbsp;the&nbsp;microcontroller&nbsp;sends&nbsp;back&nbsp;through&nbsp;the&nbsp;serial&nbsp;connection.</tt></dd></dl>
 
-<dl><dt><a name="Collectador-last_site"><strong>last_site</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"L"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
-move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;last&nbsp;position&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.&nbsp;Simulatenously<br>
-also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
+<dl><dt><a name="Collectador-last_site"><strong>last_site</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"L"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to&nbsp;move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;last&nbsp;position&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.<br>
+Simulatenously&nbsp;also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
 
-<dl><dt><a name="Collectador-next_site"><strong>next_site</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"N"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
-move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;next&nbsp;position&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.&nbsp;Simulatenously<br>
-also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
+<dl><dt><a name="Collectador-next_site"><strong>next_site</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"N"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to&nbsp;move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;next&nbsp;position&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.<br>
+Simulatenously&nbsp;also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
 
-<dl><dt><a name="Collectador-reset"><strong>reset</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"Z"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to<br>
-move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;origin&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.&nbsp;Simulatenously<br>
-also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
+<dl><dt><a name="Collectador-reset"><strong>reset</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;the&nbsp;command&nbsp;"Z"&nbsp;to&nbsp;the&nbsp;microcontroller&nbsp;which&nbsp;is&nbsp;programmed&nbsp;to&nbsp;move&nbsp;the&nbsp;XY&nbsp;Stage&nbsp;to&nbsp;the&nbsp;origin&nbsp;when&nbsp;receiving&nbsp;this&nbsp;command.<br>
+Simulatenously&nbsp;also&nbsp;updates&nbsp;the&nbsp;current&nbsp;position&nbsp;of&nbsp;the&nbsp;XY&nbsp;Stage.</tt></dd></dl>
 
 <dl><dt><a name="Collectador-send"><strong>send</strong></a>(self, cmd)</dt><dd><tt>This&nbsp;method&nbsp;sends&nbsp;a&nbsp;command&nbsp;across&nbsp;the&nbsp;serial&nbsp;connection.<br>
 &nbsp;<br>
@@ -96,8 +91,7 @@ Parameters:<br>
 
 <dl><dt><a name="Collectador-serial_connect"><strong>serial_connect</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;establishes&nbsp;the&nbsp;serial&nbsp;connection&nbsp;with&nbsp;the&nbsp;microcontroller.<br>
 &nbsp;<br>
-Once&nbsp;the&nbsp;comport&nbsp;of&nbsp;the&nbsp;pump&nbsp;is&nbsp;known&nbsp;we&nbsp;open&nbsp;a&nbsp;serial&nbsp;connection<br>
-to&nbsp;it&nbsp;using&nbsp;pySerial.</tt></dd></dl>
+Once&nbsp;the&nbsp;comport&nbsp;of&nbsp;the&nbsp;pump&nbsp;is&nbsp;known&nbsp;we&nbsp;open&nbsp;a&nbsp;serial&nbsp;connection&nbsp;to&nbsp;it&nbsp;using&nbsp;pySerial.</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>

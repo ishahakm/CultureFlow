@@ -7,8 +7,7 @@ import time
 
 class TwoSwitch():
     """
-    This class is used for control of the two switches. A serial connection is established
-    with the microcontroller controlling the two switches.
+    This class is used for control of the two switches. A serial connection is established with the microcontroller controlling the two switches.
 
     Attributes:
         baud (int): The baud rate the serial connection is using.
@@ -41,8 +40,7 @@ class TwoSwitch():
         """
         This method establishes the serial connection with the microcontroller.
 
-        Once the comport of the pump is known we open a serial connection
-        to it using pySerial.
+        Once the comport of the pump is known we open a serial connection to it using pySerial.
         """
 
         if self.port == None:
@@ -84,8 +82,7 @@ class TwoSwitch():
 
     def setRecirculate(self, channel):
         """
-        This method sends a command to the microcontroller based on what channel
-        needs to be set to recirculate.
+        This method sends a command to the microcontroller based on what channel needs to be set to recirculate.
 
         Parameters:
             channel (int): The fluidic channel chosen to be set to recirculate.
@@ -101,8 +98,7 @@ class TwoSwitch():
 
     def setCollect(self, channel):
         """
-        This method sends a command to the microcontroller based on what channel
-        needs to be set to recirculate.
+        This method sends a command to the microcontroller based on what channel needs to be set to recirculate.
 
         Parameters:
             channel (int): The fluidic channel chosen to be set to collect.
@@ -118,8 +114,7 @@ class TwoSwitch():
 
     def getIdentifier(self):
         """
-        This method sends the command "?" to the microcontroller which is programmed to
-        send back a unique ID. The attribute uniqueID is set to the microcontrollers response.
+        This method sends the command "?" to the microcontroller which is programmed to send back a unique ID. The attribute uniqueID is set to the microcontrollers response.
 
         Returns:
             response (string): The unique ID that the microcontroller sends back through the serial connection.
