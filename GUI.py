@@ -33,13 +33,25 @@ LARGE_FONT = ("Verdana", 10)
 #we can inherit into our GUI application.
 #Let's try it with the pump class and see how that works.
 def combine_funcs(*funcs):
-    "For putting lots of stuff into buttons ^_^"
+    """
+    This function is used for putting lots of stuff into buttons.
+
+    Returns:
+        combined_func (function): Combined function.
+    """
     def combined_func(*args, **kwargs):
         for f in funcs:
             f(*args, **kwargs)
 
     return combined_func
+
 def message_prompt(message):
+    """
+    This function creates a prompt on the GUI with a message.
+
+    Parameters:
+        message (string): The message to be displayed in the prompt.
+    """
 
     p = tk.Toplevel()
     p.grab_set()
@@ -49,7 +61,20 @@ def message_prompt(message):
 
     label.pack()
     exitbutton.pack()
+
 def check_input(variable, desired_datatype, lower_limit = 0, upper_limit = 0):
+    """
+    This function checks if the inputs are valid.
+
+    Parameters:
+        variable: type of input to check if it's valid.
+        desired_datatype: the type you wish variable to be.
+        lower_limit: the lower limit value the variable could have. Defaulted to 0.
+        upper_limit: the upper limit value the variable could have. Defaulted to 0.
+
+    Returns:
+        inputGood (bool): True/False depending on  if the input is good.
+    """
 
     inputGood = False
     datatypeGood = False
@@ -83,6 +108,7 @@ def check_input(variable, desired_datatype, lower_limit = 0, upper_limit = 0):
         inputGood = True
 
     return inputGood
+
 class App(tk.Tk):
     #init method is a function that just runs. It's seen by Python and just puts it all through
     #self is convention. we could've put anything there as long as we're consistent
