@@ -15,29 +15,34 @@ Table of Contants
 12. main loop
 */
 
+/**
+ *  Imports needed. The Adafruit_MotorShieldV2 library and AccelStepper Library is used.
+ */
 #include <Wire.h>
 #include <Adafruit_MotorShield.h>
 #include <AccelStepper.h>
 #include <MultiStepper.h>
 #include "utility/Adafruit_MS_PWMServoDriver.h"
 
-//INTIAL SETUP
-const int delayRPM = 255;
-const int rows = 8; // Amount of rows on well plate.
-const int columns = 12; // Amount of columns on well plate.
-const int numLocations = ((rows * columns) / 3) + 1; // Amount of triplet wells on well plate. (Plus 1 for the eject location).
-const float maximumSpeed = 255.0; // Max Speed of the Stepper Motors.
-const float acceleration = 2000.0; // Acceleration for the Stepper Motors.
-const int stepsPerRevolution = 200; // Steps per revolution for the Stepper Motor.
-const int stepsPerWell = 225; // Amount of steps needed from center of well to the next.
-const int stepsToEject = 1000; // Amount of steps to eject entire well plate.
-const int limitSwitchT = 37; // Digital Pin Number for Top Stepper Motor Limit Switch.
-const int limitSwitchB = 36; // Digital Pin Number for Bottom Stepper Motor Limit Switch.
-const int TwoSwitchA = 32; // Digital Pin Number for TwoSwitchA.
-const int TwoSwitchB = 33; // Digital Pin Number for TwoSwitchB.
-const int TwoSwitchC = 34; // Digital Pin Number for TwoSwitchC.
+/**
+ *  Global Variables. Constains mostly motor values and digital pin values.
+ */
+const int delayRPM = 255; /**< RPM for the stepper motors. */
+const int rows = 8; /**< Amount of rows on well plate. */
+const int columns = 12; /**< Amount of columns on well plate. */
+const int numLocations = ((rows * columns) / 3) + 1; /**< Amount of triplet wells on well plate. (Plus 1 for the eject location). */
+const float maximumSpeed = 255.0; /**< Max Speed of the Stepper Motors. */
+const float acceleration = 2000.0; /**< Acceleration for the Stepper Motors.*/
+const int stepsPerRevolution = 200; /**< Steps per revolution for the Stepper Motor. */
+const int stepsPerWell = 225; /**< Amount of steps needed from center of well to the next. */
+const int stepsToEject = 1000; /**< Amount of steps to eject entire well plate. */
+const int limitSwitchT = 37; /**< Digital Pin Number for Top Stepper Motor Limit Switch. */
+const int limitSwitchB = 36; /**< Digital Pin Number for Bottom Stepper Motor Limit Switch. */
+const int TwoSwitchA = 32; /**< Digital Pin Number for TwoSwitchA. */
+const int TwoSwitchB = 33; /**< Digital Pin Number for TwoSwitchB. */
+const int TwoSwitchC = 34; /**< Digital Pin Number for TwoSwitchC. */
 
-//Function Declarations
+//Function Decalartions.
 void forwardstep1();
 void backwardstep1();
 void forwardstep2();
@@ -71,10 +76,13 @@ MultiStepper steppers;
 // position[1] is for bottom motor.
 // For Top Motor: Negative is to Left. Positive to Right.
 // For Bottom Motor: Positive is Down. Negative is Up.
-int myPosition = 0;
-long locations[numLocations][2];
-long positions[2];
+int myPosition = 0; /**< Position variable to keep track of which triplet well we are on. */
+long locations[numLocations][2]; /**< Three dimensional array for schematic of positions if MultiStepper is used. */
+long positions[2]; /**< Array for movement needed for using both motors in MultiStepper. */
 
+/**
+ *  Arduino Setup. This only runs once.
+ */
 void setup() {
   Serial.begin(9600);
   while (!Serial) {
@@ -124,7 +132,11 @@ void setup() {
 
 }
 
-//MAIN LOOP
+
+/**
+ *  Arduino Loop Function, this runs continously. Essentially this looks for incoming
+ *  commands which correspond to a certain function for motor movement or Limit Switching.
+ */
 void loop() {
   //ascii to decimal for XY Stage
   //? = 63 Request Identifier
@@ -245,21 +257,36 @@ void loop() {
 
 // You can change these to DOUBLE or INTERLEAVE or MICROSTEP!
 // Wrappers for the first motor!
+/**
+ *  Wrapper Forward Step function for Stepper Motor 1. To be used with the AccelStepper Library.
+ */
 void forwardstep1() {
   myMotorB->onestep(FORWARD, SINGLE);
 }
+/**
+ *  Wrapper Backward Step function for Stepper Motor 1. To be used with the AccelStepper Library.
+ */
 void backwardstep1() {
   myMotorB->onestep(BACKWARD, SINGLE);
 }
-// Wrappers for the second motor!
+/**
+ *  Wrapper Forward Step function for Stepper Motor 2. To be used with the AccelStepper Library.
+ */
 void forwardstep2() {
   myMotorT->onestep(FORWARD, SINGLE);
 }
+/**
+ *  Wrapper Backward Step function for Stepper Motor 2. To be used with the AccelStepper Library.
+ */
 void backwardstep2() {
   myMotorT->onestep(BACKWARD, SINGLE);
 }
-// This function populates the location matrix with the layout
-// for moving to any location on the well plate.
+
+/**
+ *  This function populates the location matrix with the layout
+ *  for moving to any location on the well plate. Not currently being
+ *  used since we are doing a snake pattern but could be used in future.
+ */
 void populateLocations(long (&locations)[numLocations][2]){
   int tripletCol = 1;
 	for (int i = 0; i < numLocations - 1; i++){
@@ -325,7 +352,15 @@ void populateLocations(long (&locations)[numLocations][2]){
 }
 
 
-//GENERIC MOVE FUNCTION
+/**
+ *  Generic Move Function for Stepper Motors. This function takes in a pointer to the motor
+ *  that has to be moved, the speed, the direction, and step type. All of this is used to
+ *  move the correct motor accordingly.
+ *  @param *motor a Adafruit_StepperMotor object pointer for the motor to be moved.
+ *  @param delay the speed or RPM to move the motor at.
+ *  @param myDirection the direction to move the motor in FORWARD or BACKWARD.
+ *  @param stepType the step type to move the motor in: SINGLE, DOUBLE, INTERLEAVE, or MICROSTEP.
+ */
 void moveGen(Adafruit_StepperMotor *motor, int delay, int myDirection, int stepType){
   //steps - total number of steps
   //myDirection - FORWARD 1, BACKWARD 2, BRAKE 3, RELEASE 4.
@@ -343,36 +378,47 @@ void moveGen(Adafruit_StepperMotor *motor, int delay, int myDirection, int stepT
 
 }
 
-//MOVE RIGHT FUNCTION
+/**
+ *  MOVE RIGHT FUNCTION. Moves the top motor to the right. With SINGLE step type.
+ */
 void moveRight(){
   if (myMotorT != NULL){
     moveGen(myMotorT, delayRPM, FORWARD, SINGLE);
   }
 }
 
-//MOVE LEFT FUNCTION
+/**
+ *  MOVE LEFT FUNCTION. Moves the top motor to the left. With SINGLE step type.
+ */
 void moveLeft(){
   if (myMotorT != NULL){
     moveGen(myMotorT, delayRPM, BACKWARD, SINGLE);
   }
 }
 
-//MOVE DOWN FUNCTION
+/**
+ *  MOVE DOWN FUNCTION. Moves the bottom motor to the left. With SINGLE step type.
+ */
 void moveDown(){
   if (myMotorB != NULL){
     moveGen(myMotorB, delayRPM, BACKWARD, SINGLE);
   }
 }
 
-//MOVE UP FUNCTION
+/**
+ *  MOVE UP FUNCTION. Moves the bottom motor to the right. With SINGLE step type.
+ */
 void moveUp(){
   if (myMotorB != NULL){
     moveGen(myMotorB, delayRPM, FORWARD, SINGLE);
   }
 }
 
-// This function moves the stepper motors to the next position and
-// returns the position once its done getting there.
+/**
+ *  MOVE NEXT FUNCTION. Moves the motor accordingly so it goes to the next well plate
+ *  given it is not on the last possible triplet well location. Moves in a snake pattern.
+ *  Decrements myPosition by 1.
+ */
 int moveNext(){
   /* code here */
   // if (myPosition < 31){
@@ -419,8 +465,11 @@ int moveNext(){
   return myPosition;
 }
 
-// This function moves the stepper motors to the last position and
-// returns the position once its done getting there.
+/**
+ *  MOVE NEXT FUNCTION. Moves the motor accordingly so it goes to the previous well plate
+ *  given it is not on the first possible triplet well location. Moves in a snake pattern.
+ *  Increments myPosition by 1.
+ */
 int moveLast(){
   /* code here */
   // if (myPosition > 0){
@@ -474,7 +523,10 @@ int set(){
   return myPosition;
 }
 
-// USER DONE WITH COLLECTION MOVES WELL PLATE TO EJECT.
+/**
+ *  EJECT WELL PLATE FUNCTION. Moves the motor accordingly so it goes to the eject well plate
+ *  position. It moves the well plate down from its current location. Sets myPosition to 32.
+ */
 int eject() {
   /* code here*/
 //  positions[0] = locations[32][1];
@@ -521,7 +573,12 @@ int eject() {
   return myPosition;
 }
 
-// SETS POSITION BACK AT ORIGIN (Limit Swith Locations)
+/**
+ *  RESET FUNCTION. Moves the motor accordingly so it goes to the origin well plate position.
+ *  Moves the motors simultaneously until both limit switches are activated and then moves
+ *  a predetermined amount to origin.
+ *
+ */
 void reset() {
 
   //Start Homing procedure of Stepper Motors at startup.
