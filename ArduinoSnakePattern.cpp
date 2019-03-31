@@ -1,5 +1,5 @@
 /**
- *  @file XYStage_TwoSwitch_Arduino_Serial_ConnectionShielddMulti.ino
+ *  @file ArduinoSnakePattern.cpp
  *  Arduino code for XYStage Movement and TwoSwitch control.
  *  @author Adiel Hernandez
  */

@@ -1,0 +1,163 @@
+\hypertarget{class_collection_1_1_collectador}{}\section{Collection.\+Collectador Class Reference}
+\label{class_collection_1_1_collectador}\index{Collection.Collectador@{Collection.Collectador}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_af9b0ad6313049442cdc6e924a017693e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, my\+\_\+port)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a3d72795fd989947bee15cdd66f277815}{serial\+\_\+connect}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a06c63ef23395dbbc8975e407500ed593}{send}} (self, cmd)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a1fcc60319735e3e18d938c84073aef20}{chop\+\_\+return}} (self, ret)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_ada8c768e4da16031fe01afcef78957e1}{reset}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a4e3a010e6084283e311c019de7f7cc5b}{eject}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_aa156ce605af4adfec1bfb7aa8447eb65}{next\+\_\+site}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a784d44c359c9a4109ccd62b52a9a1e05}{last\+\_\+site}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a23757363741c6dd611d91dd984013d86}{get\+\_\+info}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_collection_1_1_collectador_a06c835183d4c66cf6c91c2e34ee3e2b6}\label{class_collection_1_1_collectador_a06c835183d4c66cf6c91c2e34ee3e2b6}} 
+{\bfseries baud}
+\item 
+\mbox{\Hypertarget{class_collection_1_1_collectador_a550345b45c253014500953908ed1a995}\label{class_collection_1_1_collectador_a550345b45c253014500953908ed1a995}} 
+{\bfseries port}
+\item 
+\mbox{\Hypertarget{class_collection_1_1_collectador_ad9a27d34d324f18bffea08b5aee3a765}\label{class_collection_1_1_collectador_ad9a27d34d324f18bffea08b5aee3a765}} 
+{\bfseries ser}
+\item 
+\mbox{\Hypertarget{class_collection_1_1_collectador_a6118ba10835a3655e0a048fadf444942}\label{class_collection_1_1_collectador_a6118ba10835a3655e0a048fadf444942}} 
+{\bfseries serial\+Connected}
+\item 
+\mbox{\Hypertarget{class_collection_1_1_collectador_aa037ff041a29101bf42cde6fdb21061c}\label{class_collection_1_1_collectador_aa037ff041a29101bf42cde6fdb21061c}} 
+{\bfseries position}
+\item 
+\mbox{\Hypertarget{class_collection_1_1_collectador_a13c3d036cddedace173688b51df275d5}\label{class_collection_1_1_collectador_a13c3d036cddedace173688b51df275d5}} 
+{\bfseries unique\+ID}
+\item 
+\mbox{\Hypertarget{class_collection_1_1_collectador_a63f1c56b2b8bc80791fae03b9f6026ef}\label{class_collection_1_1_collectador_a63f1c56b2b8bc80791fae03b9f6026ef}} 
+{\bfseries connected}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This class is used for control of stepper motors. A serial connection is established with the microcontroller controlling the stepper motors.
+
+Attributes:
+    baud (int): The baud rate the serial connection is using.
+    port (string): the microcontrollers port for the serial connection.
+    ser (serial Object): Instance of serial object representing the serial connection.
+    serialConnected (bool): True/False of whether the serial connection was established.
+    position (int): the position that the XY Stage is currently at.
+    uniqueID (string): the unique identifier the microcontroller returns for automatic port selection.
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_collection_1_1_collectador_af9b0ad6313049442cdc6e924a017693e}\label{class_collection_1_1_collectador_af9b0ad6313049442cdc6e924a017693e}} 
+\index{Collection.Collectador@{Collection.Collectador}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{my\+\_\+port }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The constructor for the Collectador class.
+
+Parameters:
+    my_port (string): the microcontrollers port for the serial connection.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collection_1_1_collectador_a1fcc60319735e3e18d938c84073aef20}\label{class_collection_1_1_collectador_a1fcc60319735e3e18d938c84073aef20}} 
+\index{Collection.Collectador@{Collection.Collectador}!chop\_return@{chop\_return}}
+\index{chop\_return@{chop\_return}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{chop\_return()}{chop\_return()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+chop\+\_\+return (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ret }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method modifies the output of the pump which comes with a carriage return and newline at the end of itself.
+The carriage return and newline is cut off here.
+
+Returns:
+    Output of the pump without the carraige return and newline at the end.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_a4e3a010e6084283e311c019de7f7cc5b}\label{class_collection_1_1_collectador_a4e3a010e6084283e311c019de7f7cc5b}} 
+\index{Collection.Collectador@{Collection.Collectador}!eject@{eject}}
+\index{eject@{eject}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{eject()}{eject()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+eject (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends the command "E" to the microcontroller which is programmed to move the XY Stage to the eject position when receiving this command.
+Simulatenously also updates the current position of the XY Stage.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_a23757363741c6dd611d91dd984013d86}\label{class_collection_1_1_collectador_a23757363741c6dd611d91dd984013d86}} 
+\index{Collection.Collectador@{Collection.Collectador}!get\_info@{get\_info}}
+\index{get\_info@{get\_info}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{get\_info()}{get\_info()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+get\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends the command "?" to the microcontroller which is programmed to send back a unique ID.
+The attribute uniqueID is set to the microcontrollers response.
+
+Returns:
+    response (string): The unique ID that the microcontroller sends back through the serial connection.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_a784d44c359c9a4109ccd62b52a9a1e05}\label{class_collection_1_1_collectador_a784d44c359c9a4109ccd62b52a9a1e05}} 
+\index{Collection.Collectador@{Collection.Collectador}!last\_site@{last\_site}}
+\index{last\_site@{last\_site}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{last\_site()}{last\_site()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+last\+\_\+site (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends the command "L" to the microcontroller which is programmed to move the XY Stage to the last position when receiving this command.
+Simulatenously also updates the current position of the XY Stage.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_aa156ce605af4adfec1bfb7aa8447eb65}\label{class_collection_1_1_collectador_aa156ce605af4adfec1bfb7aa8447eb65}} 
+\index{Collection.Collectador@{Collection.Collectador}!next\_site@{next\_site}}
+\index{next\_site@{next\_site}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{next\_site()}{next\_site()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+next\+\_\+site (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends the command "N" to the microcontroller which is programmed to move the XY Stage to the next position when receiving this command.
+Simulatenously also updates the current position of the XY Stage.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_ada8c768e4da16031fe01afcef78957e1}\label{class_collection_1_1_collectador_ada8c768e4da16031fe01afcef78957e1}} 
+\index{Collection.Collectador@{Collection.Collectador}!reset@{reset}}
+\index{reset@{reset}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends the command "Z" to the microcontroller which is programmed to move the XY Stage to the origin when receiving this command.
+Simulatenously also updates the current position of the XY Stage.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_a06c63ef23395dbbc8975e407500ed593}\label{class_collection_1_1_collectador_a06c63ef23395dbbc8975e407500ed593}} 
+\index{Collection.Collectador@{Collection.Collectador}!send@{send}}
+\index{send@{send}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cmd }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends a command across the serial connection.
+
+Parameters:
+    cmd (string): The command or string that is to be sent to the microcontroller.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_a3d72795fd989947bee15cdd66f277815}\label{class_collection_1_1_collectador_a3d72795fd989947bee15cdd66f277815}} 
+\index{Collection.Collectador@{Collection.Collectador}!serial\_connect@{serial\_connect}}
+\index{serial\_connect@{serial\_connect}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{serial\_connect()}{serial\_connect()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+serial\+\_\+connect (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method establishes the serial connection with the microcontroller.
+
+Once the comport of the pump is known we open a serial connection to it using pySerial.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Collection.\+py\end{DoxyCompactItemize}

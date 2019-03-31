@@ -1,0 +1,144 @@
+\hypertarget{class_two_switch_1_1_two_switch}{}\section{Two\+Switch.\+Two\+Switch Class Reference}
+\label{class_two_switch_1_1_two_switch}\index{TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_two_switch_1_1_two_switch_a762f6622ca527b12104b0593378f87fb}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, my\+\_\+port)
+\item 
+def \mbox{\hyperlink{class_two_switch_1_1_two_switch_ad816a09389ad0fb8ea56471aa4e8819f}{serial\+\_\+connect}} (self)
+\item 
+def \mbox{\hyperlink{class_two_switch_1_1_two_switch_a00b015b6f700f4d524056ff1c9de7c72}{send}} (self, cmd)
+\item 
+def \mbox{\hyperlink{class_two_switch_1_1_two_switch_a99d8b3d50bedbf126e1fbe10506e501f}{chop\+\_\+return}} (self, ret)
+\item 
+def \mbox{\hyperlink{class_two_switch_1_1_two_switch_a9c0f7d8f4a2af542cf574c11a9cee709}{set\+Recirculate}} (self, channel)
+\item 
+def \mbox{\hyperlink{class_two_switch_1_1_two_switch_a755481c98e9abd57c5307217df83795b}{set\+Collect}} (self, channel)
+\item 
+def \mbox{\hyperlink{class_two_switch_1_1_two_switch_ac5eb2e77087de5dc473a0722b16863a5}{get\+Identifier}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_two_switch_1_1_two_switch_a9fe7ee9555de6382e4be1419d7580203}\label{class_two_switch_1_1_two_switch_a9fe7ee9555de6382e4be1419d7580203}} 
+{\bfseries baud}
+\item 
+\mbox{\Hypertarget{class_two_switch_1_1_two_switch_a125dcd40f5242394787f7f5b1f3cfe71}\label{class_two_switch_1_1_two_switch_a125dcd40f5242394787f7f5b1f3cfe71}} 
+{\bfseries port}
+\item 
+\mbox{\Hypertarget{class_two_switch_1_1_two_switch_a8b0bb4497dcb4bdba19597fa296e698b}\label{class_two_switch_1_1_two_switch_a8b0bb4497dcb4bdba19597fa296e698b}} 
+{\bfseries ser}
+\item 
+\mbox{\Hypertarget{class_two_switch_1_1_two_switch_a06a3303adcbe39405325e87cd7d2bd8f}\label{class_two_switch_1_1_two_switch_a06a3303adcbe39405325e87cd7d2bd8f}} 
+{\bfseries serial\+Connected}
+\item 
+\mbox{\Hypertarget{class_two_switch_1_1_two_switch_a5facaddf7386248c105cedd41fb4812d}\label{class_two_switch_1_1_two_switch_a5facaddf7386248c105cedd41fb4812d}} 
+{\bfseries unique\+ID}
+\item 
+\mbox{\Hypertarget{class_two_switch_1_1_two_switch_a31490d5047814007931a7b700d028a12}\label{class_two_switch_1_1_two_switch_a31490d5047814007931a7b700d028a12}} 
+{\bfseries will\+Recirculate}
+\item 
+\mbox{\Hypertarget{class_two_switch_1_1_two_switch_a643bdc6e214c03d08cba1b722be10e40}\label{class_two_switch_1_1_two_switch_a643bdc6e214c03d08cba1b722be10e40}} 
+{\bfseries connected}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This class is used for control of the two switches. A serial connection is established with the microcontroller controlling the two switches.
+
+Attributes:
+    baud (int): The baud rate the serial connection is using.
+    port (string): the microcontrollers port for the serial connection.
+    ser (serial Object): Instance of serial object representing the serial connection.
+    serialConnected (bool): True/False of whether the serial connection was established.
+    uniqueID (string): the unique identifier the microcontroller returns for automatic port selection.
+    willRecirculate (bool): True/False as to if the two switches are set to recirculate.
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_two_switch_1_1_two_switch_a762f6622ca527b12104b0593378f87fb}\label{class_two_switch_1_1_two_switch_a762f6622ca527b12104b0593378f87fb}} 
+\index{TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Two\+Switch.\+Two\+Switch.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{my\+\_\+port }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The constructor for the TwoSwitch class.
+
+Parameters:
+    my_port (string): the microcontrollers port for the serial connection.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_two_switch_1_1_two_switch_a99d8b3d50bedbf126e1fbe10506e501f}\label{class_two_switch_1_1_two_switch_a99d8b3d50bedbf126e1fbe10506e501f}} 
+\index{TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}!chop\_return@{chop\_return}}
+\index{chop\_return@{chop\_return}!TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}}
+\subsubsection{\texorpdfstring{chop\_return()}{chop\_return()}}
+{\footnotesize\ttfamily def Two\+Switch.\+Two\+Switch.\+chop\+\_\+return (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ret }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method modifies the output of the two switch which comes with a carriage return and newline at the end of itself.
+The carriage return and newline is cut off here.
+
+Returns:
+    Output of the pump without the carraige return and newline at the end.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_two_switch_1_1_two_switch_ac5eb2e77087de5dc473a0722b16863a5}\label{class_two_switch_1_1_two_switch_ac5eb2e77087de5dc473a0722b16863a5}} 
+\index{TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}!getIdentifier@{getIdentifier}}
+\index{getIdentifier@{getIdentifier}!TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}}
+\subsubsection{\texorpdfstring{getIdentifier()}{getIdentifier()}}
+{\footnotesize\ttfamily def Two\+Switch.\+Two\+Switch.\+get\+Identifier (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends the command "?" to the microcontroller which is programmed to send back a unique ID. The attribute uniqueID is set to the microcontrollers response.
+
+Returns:
+    response (string): The unique ID that the microcontroller sends back through the serial connection.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_two_switch_1_1_two_switch_a00b015b6f700f4d524056ff1c9de7c72}\label{class_two_switch_1_1_two_switch_a00b015b6f700f4d524056ff1c9de7c72}} 
+\index{TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}!send@{send}}
+\index{send@{send}!TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily def Two\+Switch.\+Two\+Switch.\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cmd }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends a command across the serial connection.
+
+Parameters:
+    cmd (string): The command or string that is to be sent to the microcontroller.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_two_switch_1_1_two_switch_ad816a09389ad0fb8ea56471aa4e8819f}\label{class_two_switch_1_1_two_switch_ad816a09389ad0fb8ea56471aa4e8819f}} 
+\index{TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}!serial\_connect@{serial\_connect}}
+\index{serial\_connect@{serial\_connect}!TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}}
+\subsubsection{\texorpdfstring{serial\_connect()}{serial\_connect()}}
+{\footnotesize\ttfamily def Two\+Switch.\+Two\+Switch.\+serial\+\_\+connect (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method establishes the serial connection with the microcontroller.
+
+Once the comport of the pump is known we open a serial connection to it using pySerial.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_two_switch_1_1_two_switch_a755481c98e9abd57c5307217df83795b}\label{class_two_switch_1_1_two_switch_a755481c98e9abd57c5307217df83795b}} 
+\index{TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}!setCollect@{setCollect}}
+\index{setCollect@{setCollect}!TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}}
+\subsubsection{\texorpdfstring{setCollect()}{setCollect()}}
+{\footnotesize\ttfamily def Two\+Switch.\+Two\+Switch.\+set\+Collect (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{channel }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends a command to the microcontroller based on what channel needs to be set to recirculate.
+
+Parameters:
+    channel (int): The fluidic channel chosen to be set to collect.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_two_switch_1_1_two_switch_a9c0f7d8f4a2af542cf574c11a9cee709}\label{class_two_switch_1_1_two_switch_a9c0f7d8f4a2af542cf574c11a9cee709}} 
+\index{TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}!setRecirculate@{setRecirculate}}
+\index{setRecirculate@{setRecirculate}!TwoSwitch.TwoSwitch@{TwoSwitch.TwoSwitch}}
+\subsubsection{\texorpdfstring{setRecirculate()}{setRecirculate()}}
+{\footnotesize\ttfamily def Two\+Switch.\+Two\+Switch.\+set\+Recirculate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{channel }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends a command to the microcontroller based on what channel needs to be set to recirculate.
+
+Parameters:
+    channel (int): The fluidic channel chosen to be set to recirculate.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Two\+Switch.\+py\end{DoxyCompactItemize}
