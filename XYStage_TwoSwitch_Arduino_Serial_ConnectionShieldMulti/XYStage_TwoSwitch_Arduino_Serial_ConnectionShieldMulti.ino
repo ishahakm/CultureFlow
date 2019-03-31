@@ -14,6 +14,11 @@ Table of Contants
 11. setup function (Arduino)
 12. main loop
 */
+/**
+ *  @file XYStage_TwoSwitch_Arduino_Serial_ConnectionShiledMulti.ino
+ *  Arduino code for XYStage Movement and TwoSwitch control.
+ *  @author Adiel Hernandez
+ */
 
 /**
  *  Imports needed. The Adafruit_MotorShieldV2 library and AccelStepper Library is used.
