@@ -1,21 +1,5 @@
-
-/*
-Table of Contants
-1. forwardstep1 function
-2. backwardstep1 fucntion
-3. forwardstep2 function
-4. backwardstep2 function
-5. populateLocations function
-6. moveNext function - moves the motors to the next location on well plate.
-7. moveLast function - opposite of moveNext
-8. set function - moves to a user specified position on well plate
-9. eject function - ejects the well plate
-10. reset function - starts homing procedure for XY stage
-11. setup function (Arduino)
-12. main loop
-*/
 /**
- *  @file XYStage_TwoSwitch_Arduino_Serial_ConnectionShiledMulti.ino
+ *  @file XYStage_TwoSwitch_Arduino_Serial_ConnectionShielddMulti.ino
  *  Arduino code for XYStage Movement and TwoSwitch control.
  *  @author Adiel Hernandez
  */

@@ -1,3 +1,13 @@
+"""
+Fluidic Handling Software
+Ashutosh Agarwal Lab
+University of Miami
+
+by:
+Liev Birman
+Adiel Hernandez
+"""
+
 import fakeSerial as serial
 #import serial
 import sys
