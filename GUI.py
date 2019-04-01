@@ -33,7 +33,7 @@ LARGE_FONT = ("Verdana", 10)
 #we can inherit into our GUI application.
 #Let's try it with the pump class and see how that works.
 def combine_funcs(*funcs):
-    "For putting lots of stuff into buttons ^_^"
+    """Use this function for executing multiple functions simultaneously with Tkinter buttons"""
     def combined_func(*args, **kwargs):
         for f in funcs:
             f(*args, **kwargs)
@@ -241,7 +241,6 @@ class App(tk.Tk):
         label = tk.Label(window,text = message, bg = '#00fff2')
         label.grid(column = 1, row = 1, columnspan = 1,sticky=tk.W)
         abortbutton.grid(column = 1, row = 2)
-
 class WelcomePage(tk.Frame):
     #Port and device selection
     #Running function instantiating devices via their respective classes
@@ -1130,9 +1129,7 @@ class SettingsPage(tk.Frame):
 
         #default channel direction
         #
-
         tk.Frame.__init__(self,parent)
-
         self.configure(bg='#00fff2')
 
         self.channels = 3
