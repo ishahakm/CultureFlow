@@ -1,0 +1,460 @@
+\hypertarget{_arduino_snake_pattern_8cpp}{}\section{Arduino\+Snake\+Pattern.\+cpp File Reference}
+\label{_arduino_snake_pattern_8cpp}\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+
+
+Arduino code for X\+Y\+Stage Movement and \mbox{\hyperlink{namespace_two_switch}{Two\+Switch}} control.  
+
+
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+Motor\+Shield.\+h$>$}\newline
+{\ttfamily \#include $<$Accel\+Stepper.\+h$>$}\newline
+{\ttfamily \#include $<$Multi\+Stepper.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}utility/\+Adafruit\+\_\+\+M\+S\+\_\+\+P\+W\+M\+Servo\+Driver.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ae933a1d01686efee75e586ad6d197d98}{forwardstep1}} ()
+\begin{DoxyCompactList}\small\item\em Wrapper Forward Step function for Stepper Motor 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ad6b6931f0b4937203dd052ee19489ddc}{backwardstep1}} ()
+\begin{DoxyCompactList}\small\item\em Wrapper Backward Step function for Stepper Motor 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a6e41058f483aa5ac6f6282d0a3aa5e20}{forwardstep2}} ()
+\begin{DoxyCompactList}\small\item\em Wrapper Forward Step function for Stepper Motor 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a72cfe623034af5b82da003b8e6ada5ea}{backwardstep2}} ()
+\begin{DoxyCompactList}\small\item\em Wrapper Backward Step function for Stepper Motor 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a8891d0e7e055eb6243dfacd33f703956}{populate\+Locations}} (long(\&\mbox{\hyperlink{_arduino_snake_pattern_8cpp_a4dd37a657a4a2106672f2dcdc2fed88c}{locations}})\mbox{[}\mbox{\hyperlink{_arduino_snake_pattern_8cpp_a8e7d7b387f29f94a9fdd51ffe47974ad}{num\+Locations}}\mbox{]}\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function populates the location matrix with the layout for moving to any location on the well plate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ab64921b7045e8de5b2bcf21b6d4b347e}{move\+Gen}} (Adafruit\+\_\+\+Stepper\+Motor $\ast$motor, int delay, int my\+Direction, int step\+Type)
+\begin{DoxyCompactList}\small\item\em Generic Move Function for Stepper Motors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a8f1aff0fabeb87f42932d5ce436f4d5c}{move\+Right}} ()
+\begin{DoxyCompactList}\small\item\em M\+O\+VE R\+I\+G\+HT F\+U\+N\+C\+T\+I\+ON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a7a5379770a3d9a90ee4d827046d26eb0}{move\+Left}} ()
+\begin{DoxyCompactList}\small\item\em M\+O\+VE L\+E\+FT F\+U\+N\+C\+T\+I\+ON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a486267210dfc8118e23e6b1bc6090286}{move\+Down}} ()
+\begin{DoxyCompactList}\small\item\em M\+O\+VE D\+O\+WN F\+U\+N\+C\+T\+I\+ON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a75e03afeaf9e13a6399279ed36c0c59f}{move\+Up}} ()
+\begin{DoxyCompactList}\small\item\em M\+O\+VE UP F\+U\+N\+C\+T\+I\+ON. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a6d56dbedfe652173de49a37c15353018}{move\+Next}} ()
+\begin{DoxyCompactList}\small\item\em M\+O\+VE N\+E\+XT F\+U\+N\+C\+T\+I\+ON. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a9ef44956adf41920891aa399d59c4110}{move\+Last}} ()
+\begin{DoxyCompactList}\small\item\em M\+O\+VE N\+E\+XT F\+U\+N\+C\+T\+I\+ON. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a9ebeda15a38c8cf90dbdb3733767e646}\label{_arduino_snake_pattern_8cpp_a9ebeda15a38c8cf90dbdb3733767e646}} 
+int {\bfseries set} ()
+\item 
+int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_aa02677b3fbadee3ce7139fca7f3a9363}{eject}} ()
+\begin{DoxyCompactList}\small\item\em E\+J\+E\+CT W\+E\+LL P\+L\+A\+TE F\+U\+N\+C\+T\+I\+ON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ad20897c5c8bd47f5d4005989bead0e55}{reset}} ()
+\begin{DoxyCompactList}\small\item\em R\+E\+S\+ET F\+U\+N\+C\+T\+I\+ON. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_aa509902a5d7afea1db185706a7502a82}\label{_arduino_snake_pattern_8cpp_aa509902a5d7afea1db185706a7502a82}} 
+Accel\+Stepper {\bfseries stepperB} (\mbox{\hyperlink{_arduino_snake_pattern_8cpp_ae933a1d01686efee75e586ad6d197d98}{forwardstep1}}, \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ad6b6931f0b4937203dd052ee19489ddc}{backwardstep1}})
+\item 
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ae6e034898f9594d7ca41ab3e8aa414fe}\label{_arduino_snake_pattern_8cpp_ae6e034898f9594d7ca41ab3e8aa414fe}} 
+Accel\+Stepper {\bfseries stepperT} (\mbox{\hyperlink{_arduino_snake_pattern_8cpp_a6e41058f483aa5ac6f6282d0a3aa5e20}{forwardstep2}}, \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a72cfe623034af5b82da003b8e6ada5ea}{backwardstep2}})
+\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Arduino Setup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_snake_pattern_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Arduino Loop Function, this runs continously. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a0679230c21da51fdec64b677a7293320}{delay\+R\+PM}} = 255
+\begin{DoxyCompactList}\small\item\em Imports needed. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a157b993c60eb39741c69aeb616a11e70}{rows}} = 8
+\begin{DoxyCompactList}\small\item\em Amount of rows on well plate. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ae68a25c0023d8b777603c0f8b05e591a}{columns}} = 12
+\begin{DoxyCompactList}\small\item\em Amount of columns on well plate. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a8e7d7b387f29f94a9fdd51ffe47974ad}{num\+Locations}} = ((\mbox{\hyperlink{_arduino_snake_pattern_8cpp_a157b993c60eb39741c69aeb616a11e70}{rows}} $\ast$ \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ae68a25c0023d8b777603c0f8b05e591a}{columns}}) / 3) + 1
+\begin{DoxyCompactList}\small\item\em Amount of triplet wells on well plate. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a6ab133bd746f71cbcd082e0924b4b719}{maximum\+Speed}} = 255.\+0
+\begin{DoxyCompactList}\small\item\em Max Speed of the Stepper Motors. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ac062d8c5f7870c2798c97b8bf4fe9651}{acceleration}} = 2000.\+0
+\begin{DoxyCompactList}\small\item\em Acceleration for the Stepper Motors. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a0dffab4a0297ba1dfc85381688a235bb}{steps\+Per\+Revolution}} = 200
+\begin{DoxyCompactList}\small\item\em Steps per revolution for the Stepper Motor. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a313ea143f04b4753dc16560a0ebe0e03}{steps\+Per\+Well}} = 225
+\begin{DoxyCompactList}\small\item\em Amount of steps needed from center of well to the next. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a2d8a3aab41e26db02ae7184eba471522}{steps\+To\+Eject}} = 1000
+\begin{DoxyCompactList}\small\item\em Amount of steps to eject entire well plate. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_acb439c2f42739bf8d4a320ff104046fe}{limit\+SwitchT}} = 37
+\begin{DoxyCompactList}\small\item\em Digital Pin Number for Top Stepper Motor Limit Switch. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ac42049f44bbbe37957984cf72fdedcfa}{limit\+SwitchB}} = 36
+\begin{DoxyCompactList}\small\item\em Digital Pin Number for Bottom Stepper Motor Limit Switch. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ac0602b9a1498a88d5e9a807b597da1ad}{Two\+SwitchA}} = 32
+\begin{DoxyCompactList}\small\item\em Digital Pin Number for Two\+SwitchA. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a56f684dbe86f8a9f6c087352eb1d0179}{Two\+SwitchB}} = 33
+\begin{DoxyCompactList}\small\item\em Digital Pin Number for Two\+SwitchB. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ac8d5148acdff26e9c05fe8d277a450b9}{Two\+SwitchC}} = 34
+\begin{DoxyCompactList}\small\item\em Digital Pin Number for Two\+SwitchC. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a7e8151031cf9a913ec4a28a5f56ed7c0}\label{_arduino_snake_pattern_8cpp_a7e8151031cf9a913ec4a28a5f56ed7c0}} 
+Adafruit\+\_\+\+Motor\+Shield {\bfseries A\+F\+MS} = Adafruit\+\_\+\+Motor\+Shield()
+\item 
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a57eec582e3d574e653ef500f51522d42}\label{_arduino_snake_pattern_8cpp_a57eec582e3d574e653ef500f51522d42}} 
+Adafruit\+\_\+\+Stepper\+Motor $\ast$ {\bfseries my\+MotorT} = A\+F\+M\+S.\+get\+Stepper(\mbox{\hyperlink{_arduino_snake_pattern_8cpp_a0dffab4a0297ba1dfc85381688a235bb}{steps\+Per\+Revolution}}, 1)
+\item 
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a490ac71d81a2513da29e43c0d5e2af0e}\label{_arduino_snake_pattern_8cpp_a490ac71d81a2513da29e43c0d5e2af0e}} 
+Adafruit\+\_\+\+Stepper\+Motor $\ast$ {\bfseries my\+MotorB} = A\+F\+M\+S.\+get\+Stepper(\mbox{\hyperlink{_arduino_snake_pattern_8cpp_a0dffab4a0297ba1dfc85381688a235bb}{steps\+Per\+Revolution}}, 2)
+\item 
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ac42d9bf2e81a2c1f93af1e83bc43d81e}\label{_arduino_snake_pattern_8cpp_ac42d9bf2e81a2c1f93af1e83bc43d81e}} 
+Multi\+Stepper {\bfseries steppers}
+\item 
+int \mbox{\hyperlink{_arduino_snake_pattern_8cpp_aa99822364ba6559126ca38bb5362b9ca}{my\+Position}} = 0
+\begin{DoxyCompactList}\small\item\em Position variable to keep track of which triplet well we are on. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a4dd37a657a4a2106672f2dcdc2fed88c}{locations}} \mbox{[}\mbox{\hyperlink{_arduino_snake_pattern_8cpp_a8e7d7b387f29f94a9fdd51ffe47974ad}{num\+Locations}}\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em Three dimensional array for schematic of positions if Multi\+Stepper is used. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{_arduino_snake_pattern_8cpp_a843a18dd28fa7a7f9288bd6f7d6c6621}{positions}} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array for movement needed for using both motors in Multi\+Stepper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arduino code for X\+Y\+Stage Movement and \mbox{\hyperlink{namespace_two_switch}{Two\+Switch}} control. 
+
+\begin{DoxyAuthor}{Author}
+Adiel Hernandez 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ad6b6931f0b4937203dd052ee19489ddc}\label{_arduino_snake_pattern_8cpp_ad6b6931f0b4937203dd052ee19489ddc}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!backwardstep1@{backwardstep1}}
+\index{backwardstep1@{backwardstep1}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{backwardstep1()}{backwardstep1()}}
+{\footnotesize\ttfamily void backwardstep1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wrapper Backward Step function for Stepper Motor 1. 
+
+To be used with the Accel\+Stepper Library. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a72cfe623034af5b82da003b8e6ada5ea}\label{_arduino_snake_pattern_8cpp_a72cfe623034af5b82da003b8e6ada5ea}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!backwardstep2@{backwardstep2}}
+\index{backwardstep2@{backwardstep2}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{backwardstep2()}{backwardstep2()}}
+{\footnotesize\ttfamily void backwardstep2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wrapper Backward Step function for Stepper Motor 2. 
+
+To be used with the Accel\+Stepper Library. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_aa02677b3fbadee3ce7139fca7f3a9363}\label{_arduino_snake_pattern_8cpp_aa02677b3fbadee3ce7139fca7f3a9363}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!eject@{eject}}
+\index{eject@{eject}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{eject()}{eject()}}
+{\footnotesize\ttfamily int eject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+E\+J\+E\+CT W\+E\+LL P\+L\+A\+TE F\+U\+N\+C\+T\+I\+ON. 
+
+Moves the motor accordingly so it goes to the eject well plate position. It moves the well plate down from its current location. Sets my\+Position to 32. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ae933a1d01686efee75e586ad6d197d98}\label{_arduino_snake_pattern_8cpp_ae933a1d01686efee75e586ad6d197d98}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!forwardstep1@{forwardstep1}}
+\index{forwardstep1@{forwardstep1}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{forwardstep1()}{forwardstep1()}}
+{\footnotesize\ttfamily void forwardstep1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wrapper Forward Step function for Stepper Motor 1. 
+
+To be used with the Accel\+Stepper Library. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a6e41058f483aa5ac6f6282d0a3aa5e20}\label{_arduino_snake_pattern_8cpp_a6e41058f483aa5ac6f6282d0a3aa5e20}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!forwardstep2@{forwardstep2}}
+\index{forwardstep2@{forwardstep2}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{forwardstep2()}{forwardstep2()}}
+{\footnotesize\ttfamily void forwardstep2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wrapper Forward Step function for Stepper Motor 2. 
+
+To be used with the Accel\+Stepper Library. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{_arduino_snake_pattern_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!loop@{loop}}
+\index{loop@{loop}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Arduino Loop Function, this runs continously. 
+
+Essentially this looks for incoming commands which correspond to a certain function for motor movement or Limit Switching. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a486267210dfc8118e23e6b1bc6090286}\label{_arduino_snake_pattern_8cpp_a486267210dfc8118e23e6b1bc6090286}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!moveDown@{moveDown}}
+\index{moveDown@{moveDown}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{moveDown()}{moveDown()}}
+{\footnotesize\ttfamily void move\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+M\+O\+VE D\+O\+WN F\+U\+N\+C\+T\+I\+ON. 
+
+Moves the bottom motor to the left. With S\+I\+N\+G\+LE step type. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ab64921b7045e8de5b2bcf21b6d4b347e}\label{_arduino_snake_pattern_8cpp_ab64921b7045e8de5b2bcf21b6d4b347e}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!moveGen@{moveGen}}
+\index{moveGen@{moveGen}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{moveGen()}{moveGen()}}
+{\footnotesize\ttfamily void move\+Gen (\begin{DoxyParamCaption}\item[{Adafruit\+\_\+\+Stepper\+Motor $\ast$}]{motor,  }\item[{int}]{delay,  }\item[{int}]{my\+Direction,  }\item[{int}]{step\+Type }\end{DoxyParamCaption})}
+
+
+
+Generic Move Function for Stepper Motors. 
+
+This function takes in a pointer to the motor that has to be moved, the speed, the direction, and step type. All of this is used to move the correct motor accordingly. 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$motor} & a Adafruit\+\_\+\+Stepper\+Motor object pointer for the motor to be moved. \\
+\hline
+{\em delay} & the speed or R\+PM to move the motor at. \\
+\hline
+{\em my\+Direction} & the direction to move the motor in F\+O\+R\+W\+A\+RD or B\+A\+C\+K\+W\+A\+RD. \\
+\hline
+{\em step\+Type} & the step type to move the motor in\+: S\+I\+N\+G\+LE, D\+O\+U\+B\+LE, I\+N\+T\+E\+R\+L\+E\+A\+VE, or M\+I\+C\+R\+O\+S\+T\+EP. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a9ef44956adf41920891aa399d59c4110}\label{_arduino_snake_pattern_8cpp_a9ef44956adf41920891aa399d59c4110}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!moveLast@{moveLast}}
+\index{moveLast@{moveLast}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{moveLast()}{moveLast()}}
+{\footnotesize\ttfamily int move\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+M\+O\+VE N\+E\+XT F\+U\+N\+C\+T\+I\+ON. 
+
+Moves the motor accordingly so it goes to the previous well plate given it is not on the first possible triplet well location. Moves in a snake pattern. Increments my\+Position by 1. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a7a5379770a3d9a90ee4d827046d26eb0}\label{_arduino_snake_pattern_8cpp_a7a5379770a3d9a90ee4d827046d26eb0}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!moveLeft@{moveLeft}}
+\index{moveLeft@{moveLeft}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{moveLeft()}{moveLeft()}}
+{\footnotesize\ttfamily void move\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+M\+O\+VE L\+E\+FT F\+U\+N\+C\+T\+I\+ON. 
+
+Moves the top motor to the left. With S\+I\+N\+G\+LE step type. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a6d56dbedfe652173de49a37c15353018}\label{_arduino_snake_pattern_8cpp_a6d56dbedfe652173de49a37c15353018}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!moveNext@{moveNext}}
+\index{moveNext@{moveNext}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{moveNext()}{moveNext()}}
+{\footnotesize\ttfamily int move\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+M\+O\+VE N\+E\+XT F\+U\+N\+C\+T\+I\+ON. 
+
+Moves the motor accordingly so it goes to the next well plate given it is not on the last possible triplet well location. Moves in a snake pattern. Decrements my\+Position by 1. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a8f1aff0fabeb87f42932d5ce436f4d5c}\label{_arduino_snake_pattern_8cpp_a8f1aff0fabeb87f42932d5ce436f4d5c}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!moveRight@{moveRight}}
+\index{moveRight@{moveRight}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{moveRight()}{moveRight()}}
+{\footnotesize\ttfamily void move\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+M\+O\+VE R\+I\+G\+HT F\+U\+N\+C\+T\+I\+ON. 
+
+Moves the top motor to the right. With S\+I\+N\+G\+LE step type. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a75e03afeaf9e13a6399279ed36c0c59f}\label{_arduino_snake_pattern_8cpp_a75e03afeaf9e13a6399279ed36c0c59f}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!moveUp@{moveUp}}
+\index{moveUp@{moveUp}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{moveUp()}{moveUp()}}
+{\footnotesize\ttfamily void move\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+M\+O\+VE UP F\+U\+N\+C\+T\+I\+ON. 
+
+Moves the bottom motor to the right. With S\+I\+N\+G\+LE step type. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a8891d0e7e055eb6243dfacd33f703956}\label{_arduino_snake_pattern_8cpp_a8891d0e7e055eb6243dfacd33f703956}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!populateLocations@{populateLocations}}
+\index{populateLocations@{populateLocations}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{populateLocations()}{populateLocations()}}
+{\footnotesize\ttfamily void populate\+Locations (\begin{DoxyParamCaption}\item[{long(\&)}]{locations\mbox{[}num\+Locations\mbox{]}\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function populates the location matrix with the layout for moving to any location on the well plate. 
+
+Not currently being used since we are doing a snake pattern but could be used in future. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ad20897c5c8bd47f5d4005989bead0e55}\label{_arduino_snake_pattern_8cpp_ad20897c5c8bd47f5d4005989bead0e55}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!reset@{reset}}
+\index{reset@{reset}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+R\+E\+S\+ET F\+U\+N\+C\+T\+I\+ON. 
+
+Moves the motor accordingly so it goes to the origin well plate position. Moves the motors simultaneously until both limit switches are activated and then moves a predetermined amount to origin. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{_arduino_snake_pattern_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!setup@{setup}}
+\index{setup@{setup}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Arduino Setup. 
+
+This only runs once. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ac062d8c5f7870c2798c97b8bf4fe9651}\label{_arduino_snake_pattern_8cpp_ac062d8c5f7870c2798c97b8bf4fe9651}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!acceleration@{acceleration}}
+\index{acceleration@{acceleration}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{acceleration}{acceleration}}
+{\footnotesize\ttfamily const float acceleration = 2000.\+0}
+
+
+
+Acceleration for the Stepper Motors. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ae68a25c0023d8b777603c0f8b05e591a}\label{_arduino_snake_pattern_8cpp_ae68a25c0023d8b777603c0f8b05e591a}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!columns@{columns}}
+\index{columns@{columns}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily const int columns = 12}
+
+
+
+Amount of columns on well plate. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a0679230c21da51fdec64b677a7293320}\label{_arduino_snake_pattern_8cpp_a0679230c21da51fdec64b677a7293320}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!delayRPM@{delayRPM}}
+\index{delayRPM@{delayRPM}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{delayRPM}{delayRPM}}
+{\footnotesize\ttfamily const int delay\+R\+PM = 255}
+
+
+
+Imports needed. 
+
+The Adafruit\+\_\+\+Motor\+Shield\+V2 library and Accel\+Stepper Library is used.\+Global Variables. Constains mostly motor values and digital pin values.\+R\+PM for the stepper motors. \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ac42049f44bbbe37957984cf72fdedcfa}\label{_arduino_snake_pattern_8cpp_ac42049f44bbbe37957984cf72fdedcfa}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!limitSwitchB@{limitSwitchB}}
+\index{limitSwitchB@{limitSwitchB}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{limitSwitchB}{limitSwitchB}}
+{\footnotesize\ttfamily const int limit\+SwitchB = 36}
+
+
+
+Digital Pin Number for Bottom Stepper Motor Limit Switch. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_acb439c2f42739bf8d4a320ff104046fe}\label{_arduino_snake_pattern_8cpp_acb439c2f42739bf8d4a320ff104046fe}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!limitSwitchT@{limitSwitchT}}
+\index{limitSwitchT@{limitSwitchT}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{limitSwitchT}{limitSwitchT}}
+{\footnotesize\ttfamily const int limit\+SwitchT = 37}
+
+
+
+Digital Pin Number for Top Stepper Motor Limit Switch. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a4dd37a657a4a2106672f2dcdc2fed88c}\label{_arduino_snake_pattern_8cpp_a4dd37a657a4a2106672f2dcdc2fed88c}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!locations@{locations}}
+\index{locations@{locations}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{locations}{locations}}
+{\footnotesize\ttfamily long locations\mbox{[}\mbox{\hyperlink{_arduino_snake_pattern_8cpp_a8e7d7b387f29f94a9fdd51ffe47974ad}{num\+Locations}}\mbox{]}\mbox{[}2\mbox{]}}
+
+
+
+Three dimensional array for schematic of positions if Multi\+Stepper is used. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a6ab133bd746f71cbcd082e0924b4b719}\label{_arduino_snake_pattern_8cpp_a6ab133bd746f71cbcd082e0924b4b719}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!maximumSpeed@{maximumSpeed}}
+\index{maximumSpeed@{maximumSpeed}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{maximumSpeed}{maximumSpeed}}
+{\footnotesize\ttfamily const float maximum\+Speed = 255.\+0}
+
+
+
+Max Speed of the Stepper Motors. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_aa99822364ba6559126ca38bb5362b9ca}\label{_arduino_snake_pattern_8cpp_aa99822364ba6559126ca38bb5362b9ca}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!myPosition@{myPosition}}
+\index{myPosition@{myPosition}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{myPosition}{myPosition}}
+{\footnotesize\ttfamily int my\+Position = 0}
+
+
+
+Position variable to keep track of which triplet well we are on. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a8e7d7b387f29f94a9fdd51ffe47974ad}\label{_arduino_snake_pattern_8cpp_a8e7d7b387f29f94a9fdd51ffe47974ad}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!numLocations@{numLocations}}
+\index{numLocations@{numLocations}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{numLocations}{numLocations}}
+{\footnotesize\ttfamily const int num\+Locations = ((\mbox{\hyperlink{_arduino_snake_pattern_8cpp_a157b993c60eb39741c69aeb616a11e70}{rows}} $\ast$ \mbox{\hyperlink{_arduino_snake_pattern_8cpp_ae68a25c0023d8b777603c0f8b05e591a}{columns}}) / 3) + 1}
+
+
+
+Amount of triplet wells on well plate. 
+
+(Plus 1 for the eject location). \mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a843a18dd28fa7a7f9288bd6f7d6c6621}\label{_arduino_snake_pattern_8cpp_a843a18dd28fa7a7f9288bd6f7d6c6621}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!positions@{positions}}
+\index{positions@{positions}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{positions}{positions}}
+{\footnotesize\ttfamily long positions\mbox{[}2\mbox{]}}
+
+
+
+Array for movement needed for using both motors in Multi\+Stepper. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a157b993c60eb39741c69aeb616a11e70}\label{_arduino_snake_pattern_8cpp_a157b993c60eb39741c69aeb616a11e70}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!rows@{rows}}
+\index{rows@{rows}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily const int rows = 8}
+
+
+
+Amount of rows on well plate. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a0dffab4a0297ba1dfc85381688a235bb}\label{_arduino_snake_pattern_8cpp_a0dffab4a0297ba1dfc85381688a235bb}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!stepsPerRevolution@{stepsPerRevolution}}
+\index{stepsPerRevolution@{stepsPerRevolution}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{stepsPerRevolution}{stepsPerRevolution}}
+{\footnotesize\ttfamily const int steps\+Per\+Revolution = 200}
+
+
+
+Steps per revolution for the Stepper Motor. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a313ea143f04b4753dc16560a0ebe0e03}\label{_arduino_snake_pattern_8cpp_a313ea143f04b4753dc16560a0ebe0e03}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!stepsPerWell@{stepsPerWell}}
+\index{stepsPerWell@{stepsPerWell}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{stepsPerWell}{stepsPerWell}}
+{\footnotesize\ttfamily const int steps\+Per\+Well = 225}
+
+
+
+Amount of steps needed from center of well to the next. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a2d8a3aab41e26db02ae7184eba471522}\label{_arduino_snake_pattern_8cpp_a2d8a3aab41e26db02ae7184eba471522}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!stepsToEject@{stepsToEject}}
+\index{stepsToEject@{stepsToEject}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{stepsToEject}{stepsToEject}}
+{\footnotesize\ttfamily const int steps\+To\+Eject = 1000}
+
+
+
+Amount of steps to eject entire well plate. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ac0602b9a1498a88d5e9a807b597da1ad}\label{_arduino_snake_pattern_8cpp_ac0602b9a1498a88d5e9a807b597da1ad}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!TwoSwitchA@{TwoSwitchA}}
+\index{TwoSwitchA@{TwoSwitchA}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{TwoSwitchA}{TwoSwitchA}}
+{\footnotesize\ttfamily const int Two\+SwitchA = 32}
+
+
+
+Digital Pin Number for Two\+SwitchA. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_a56f684dbe86f8a9f6c087352eb1d0179}\label{_arduino_snake_pattern_8cpp_a56f684dbe86f8a9f6c087352eb1d0179}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!TwoSwitchB@{TwoSwitchB}}
+\index{TwoSwitchB@{TwoSwitchB}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{TwoSwitchB}{TwoSwitchB}}
+{\footnotesize\ttfamily const int Two\+SwitchB = 33}
+
+
+
+Digital Pin Number for Two\+SwitchB. 
+
+\mbox{\Hypertarget{_arduino_snake_pattern_8cpp_ac8d5148acdff26e9c05fe8d277a450b9}\label{_arduino_snake_pattern_8cpp_ac8d5148acdff26e9c05fe8d277a450b9}} 
+\index{ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}!TwoSwitchC@{TwoSwitchC}}
+\index{TwoSwitchC@{TwoSwitchC}!ArduinoSnakePattern.cpp@{ArduinoSnakePattern.cpp}}
+\subsubsection{\texorpdfstring{TwoSwitchC}{TwoSwitchC}}
+{\footnotesize\ttfamily const int Two\+SwitchC = 34}
+
+
+
+Digital Pin Number for Two\+SwitchC. 
+

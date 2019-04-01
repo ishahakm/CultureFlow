@@ -1,0 +1,199 @@
+\hypertarget{classfake_serial_1_1_serial}{}\section{fake\+Serial.\+Serial Class Reference}
+\label{classfake_serial_1_1_serial}\index{fakeSerial.Serial@{fakeSerial.Serial}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_abcf3b27b5edb193420574f383ff1603c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, port=\textquotesingle{}C\+O\+M1\textquotesingle{}, baudrate=19200, timeout=1, bytesize=8, parity=\textquotesingle{}N\textquotesingle{}, stopbits=1, xonxoff=0, rtscts=0)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_a69cc2297e7c5bfb87de4df789774f3a2}{is\+Open}} (self)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_a2e4137a108e41f23e49735667d9b4c05}{open}} (self)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_a183f0034571d103c4c90c041e6643557}{close}} (self)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_abc4ef915d782f9e4a8d1d6f398298a6d}{write}} (self, string)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_a46f1021e19572ff944e886e53a51a1d1}{read}} (self, n=1)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_a3c34cb0659b6d0dd5924ac79d79ad6bf}{flush}} (self)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_a6abb75597f64f245df8e0c7f62c7fde5}{flush\+Input}} (self)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_afecff2730c11a9a8e7f687c57a2c738a}{flush\+Output}} (self)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_a58f35303f074c25e972c0b16c6382bf4}{readline}} (self)
+\item 
+def \mbox{\hyperlink{classfake_serial_1_1_serial_a597b04385c851077ccc3363f4bfb32c1}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfake_serial_1_1_serial_af3d8449c9f1992bbe479981375083651}\label{classfake_serial_1_1_serial_af3d8449c9f1992bbe479981375083651}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classfake_serial_1_1_serial_a53d2e25f2f6b6654ba6740cb57242758}\label{classfake_serial_1_1_serial_a53d2e25f2f6b6654ba6740cb57242758}} 
+{\bfseries port}
+\item 
+\mbox{\Hypertarget{classfake_serial_1_1_serial_aac1940cde2e2c8018d9be60b53bd6644}\label{classfake_serial_1_1_serial_aac1940cde2e2c8018d9be60b53bd6644}} 
+{\bfseries timeout}
+\item 
+\mbox{\Hypertarget{classfake_serial_1_1_serial_a0b5e1c24e2dd47ba832bd4a26b5c0027}\label{classfake_serial_1_1_serial_a0b5e1c24e2dd47ba832bd4a26b5c0027}} 
+{\bfseries parity}
+\item 
+\mbox{\Hypertarget{classfake_serial_1_1_serial_afe5ee18e12722951265fdd9d4fa81a51}\label{classfake_serial_1_1_serial_afe5ee18e12722951265fdd9d4fa81a51}} 
+{\bfseries baudrate}
+\item 
+\mbox{\Hypertarget{classfake_serial_1_1_serial_afc2c7273bcb952833c250bda88ba2d08}\label{classfake_serial_1_1_serial_afc2c7273bcb952833c250bda88ba2d08}} 
+{\bfseries bytesize}
+\item 
+\mbox{\Hypertarget{classfake_serial_1_1_serial_ac0e590a34ac343c929e4a8543e933cce}\label{classfake_serial_1_1_serial_ac0e590a34ac343c929e4a8543e933cce}} 
+{\bfseries stopbits}
+\item 
+\mbox{\Hypertarget{classfake_serial_1_1_serial_a66d563b6efbcddbe5b6b295f5446a268}\label{classfake_serial_1_1_serial_a66d563b6efbcddbe5b6b295f5446a268}} 
+{\bfseries xonxoff}
+\item 
+\mbox{\Hypertarget{classfake_serial_1_1_serial_aadb7fe53208ef570c79b1b66d8eb2ad7}\label{classfake_serial_1_1_serial_aadb7fe53208ef570c79b1b66d8eb2ad7}} 
+{\bfseries rtscts}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This class is used for simulation of an Arduino Serial Connection.
+
+Attributes:
+    name (string): the name of the port.
+    port (string): the microcontrollers port for the serial connection.
+    baudrate (int): The baud rate the serial connection is using.
+    timeout (int): maximum milliseconds to wait for serial data.
+    parity (string): parity bit type.
+    stopbits (int): amount of stop bits.
+    xonxoff (int): whether xonxoff is on or off for flow control.
+    rtscts (int): whether rtscts flow control is on or off.
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfake_serial_1_1_serial_abcf3b27b5edb193420574f383ff1603c}\label{classfake_serial_1_1_serial_abcf3b27b5edb193420574f383ff1603c}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{port = {\ttfamily \textquotesingle{}COM1\textquotesingle{}},  }\item[{}]{baudrate = {\ttfamily 19200},  }\item[{}]{timeout = {\ttfamily 1},  }\item[{}]{bytesize = {\ttfamily 8},  }\item[{}]{parity = {\ttfamily \textquotesingle{}N\textquotesingle{}},  }\item[{}]{stopbits = {\ttfamily 1},  }\item[{}]{xonxoff = {\ttfamily 0},  }\item[{}]{rtscts = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The constructor for the Serial class.
+
+Parameters:
+    port (string): the microcontrollers port for the serial connection. Defaulted to 'COM1'.
+    baudrate (int): The baud rate the serial connection is using. Defaulted to 19200.
+    timeout (int): maximum milliseconds to wait for serial data. Defaulted to 1.
+    bytesize (int): The size of bytes. Defaulted to 8.
+    parity (string): parity bit type. Defaulted to 'N'.
+    stopbits (int): amount of stop bits. Defaulted to 1.
+    xonxoff (int): whether xonxoff is on or off for flow control. Defaulted to 0.
+    rtscts (int): whether rtscts flow control is on or off. Defaulted to 0
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfake_serial_1_1_serial_a597b04385c851077ccc3363f4bfb32c1}\label{classfake_serial_1_1_serial_a597b04385c851077ccc3363f4bfb32c1}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method creates a string representation of the Serial class.
+
+Returns:
+    string: String representation of Serial class.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfake_serial_1_1_serial_a183f0034571d103c4c90c041e6643557}\label{classfake_serial_1_1_serial_a183f0034571d103c4c90c041e6643557}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!close@{close}}
+\index{close@{close}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method closes the port artificially.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfake_serial_1_1_serial_a3c34cb0659b6d0dd5924ac79d79ad6bf}\label{classfake_serial_1_1_serial_a3c34cb0659b6d0dd5924ac79d79ad6bf}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!flush@{flush}}
+\index{flush@{flush}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+flush (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method flushes the port artificially.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfake_serial_1_1_serial_a6abb75597f64f245df8e0c7f62c7fde5}\label{classfake_serial_1_1_serial_a6abb75597f64f245df8e0c7f62c7fde5}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!flushInput@{flushInput}}
+\index{flushInput@{flushInput}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{flushInput()}{flushInput()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+flush\+Input (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method flushes the input of the port artificially.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfake_serial_1_1_serial_afecff2730c11a9a8e7f687c57a2c738a}\label{classfake_serial_1_1_serial_afecff2730c11a9a8e7f687c57a2c738a}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!flushOutput@{flushOutput}}
+\index{flushOutput@{flushOutput}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{flushOutput()}{flushOutput()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+flush\+Output (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method flushes the output of the port artificially.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfake_serial_1_1_serial_a69cc2297e7c5bfb87de4df789774f3a2}\label{classfake_serial_1_1_serial_a69cc2297e7c5bfb87de4df789774f3a2}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+is\+Open (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method returns True if the port to the arduino is open. False otherwise.
+
+Returns:
+    _isOpen (bool): True/False depending if serial connection is open.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfake_serial_1_1_serial_a2e4137a108e41f23e49735667d9b4c05}\label{classfake_serial_1_1_serial_a2e4137a108e41f23e49735667d9b4c05}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!open@{open}}
+\index{open@{open}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+open (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method opens the port artificially.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfake_serial_1_1_serial_a46f1021e19572ff944e886e53a51a1d1}\label{classfake_serial_1_1_serial_a46f1021e19572ff944e886e53a51a1d1}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!read@{read}}
+\index{read@{read}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+read (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method simulates reading a pretermined amount of characters from the Arduino.
+
+Parameters:
+    n (int): number of characters to read.
+
+Returns:
+    s (string): the characters read from the Arduino.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfake_serial_1_1_serial_a58f35303f074c25e972c0b16c6382bf4}\label{classfake_serial_1_1_serial_a58f35303f074c25e972c0b16c6382bf4}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!readline@{readline}}
+\index{readline@{readline}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{readline()}{readline()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+readline (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method simulates reading an entire line of characters until a "\n" is encountered.
+
+Returns:
+    s (string): The line of characters read if there is one. Otherwise, an empty string.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfake_serial_1_1_serial_abc4ef915d782f9e4a8d1d6f398298a6d}\label{classfake_serial_1_1_serial_abc4ef915d782f9e4a8d1d6f398298a6d}} 
+\index{fakeSerial.Serial@{fakeSerial.Serial}!write@{write}}
+\index{write@{write}!fakeSerial.Serial@{fakeSerial.Serial}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def fake\+Serial.\+Serial.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{string }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method simulates writing a string of characters to the Arduino.
+
+Returns:
+    An empty string.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+fake\+Serial.\+py\end{DoxyCompactItemize}

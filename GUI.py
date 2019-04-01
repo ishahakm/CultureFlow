@@ -40,7 +40,7 @@ def combine_funcs(*funcs):
 
     return combined_func
 def message_prompt(message):
-
+    """Creates a pop-up message of your choice"""
     p = tk.Toplevel()
     p.grab_set()
 
@@ -84,11 +84,7 @@ def check_input(variable, desired_datatype, lower_limit = 0, upper_limit = 0):
 
     return inputGood
 class App(tk.Tk):
-    #init method is a function that just runs. It's seen by Python and just puts it all through
-    #self is convention. we could've put anything there as long as we're consistent
-    #args are variables being passed through (anything goes) We night pass in the serial baud rate of our pump
-    #kwargs are passing through dictionaries as we might for the command list of out pump
-    #Device variables and frame handling
+    """"""
     def __init__(self,*args,**kwargs):
 
         tk.Tk.__init__(self,*args,**kwargs)

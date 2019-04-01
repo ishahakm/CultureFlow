@@ -1,0 +1,87 @@
+\hypertarget{namespace_g_u_i}{}\section{G\+UI Namespace Reference}
+\label{namespace_g_u_i}\index{GUI@{GUI}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_u_i_1_1_app}{App}}
+\item 
+class \mbox{\hyperlink{class_g_u_i_1_1_automatic_page}{Automatic\+Page}}
+\item 
+class \mbox{\hyperlink{class_g_u_i_1_1_manual_page}{Manual\+Page}}
+\item 
+class \mbox{\hyperlink{class_g_u_i_1_1_settings_page}{Settings\+Page}}
+\item 
+class \mbox{\hyperlink{class_g_u_i_1_1_welcome_page}{Welcome\+Page}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_g_u_i_a4906784b90d5a5544ca9023bee63983e}{combine\+\_\+funcs}} ($\ast$funcs)
+\item 
+def \mbox{\hyperlink{namespace_g_u_i_aae078fdef2bd79cc7c7c1f2a917c18b1}{message\+\_\+prompt}} (message)
+\item 
+def \mbox{\hyperlink{namespace_g_u_i_ab5eebe1279ba51c95948fa550f2bc96c}{check\+\_\+input}} (variable, desired\+\_\+datatype, lower\+\_\+limit=0, upper\+\_\+limit=0)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_g_u_i_a0a43ec6a3ff3feb9855ba08afbe1cff4}\label{namespace_g_u_i_a0a43ec6a3ff3feb9855ba08afbe1cff4}} 
+tuple {\bfseries L\+A\+R\+G\+E\+\_\+\+F\+O\+NT} = (\char`\"{}Verdana\char`\"{}, 10)
+\item 
+\mbox{\Hypertarget{namespace_g_u_i_aa8865a45ffd83d7c6062a02c169bc287}\label{namespace_g_u_i_aa8865a45ffd83d7c6062a02c169bc287}} 
+{\bfseries app} = \mbox{\hyperlink{class_g_u_i_1_1_app}{App}}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Fluidic Handling Software
+Ashutosh Agarwal Lab
+University of Miami
+
+by:
+Liev Birman
+Adiel Hernandez
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_g_u_i_ab5eebe1279ba51c95948fa550f2bc96c}\label{namespace_g_u_i_ab5eebe1279ba51c95948fa550f2bc96c}} 
+\index{GUI@{GUI}!check\_input@{check\_input}}
+\index{check\_input@{check\_input}!GUI@{GUI}}
+\subsubsection{\texorpdfstring{check\_input()}{check\_input()}}
+{\footnotesize\ttfamily def G\+U\+I.\+check\+\_\+input (\begin{DoxyParamCaption}\item[{}]{variable,  }\item[{}]{desired\+\_\+datatype,  }\item[{}]{lower\+\_\+limit = {\ttfamily 0},  }\item[{}]{upper\+\_\+limit = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function checks if the inputs are valid.
+
+Parameters:
+    variable: type of input to check if it's valid.
+    desired_datatype: the type you wish variable to be.
+    lower_limit: the lower limit value the variable could have. Defaulted to 0.
+    upper_limit: the upper limit value the variable could have. Defaulted to 0.
+
+Returns:
+    inputGood (bool): True/False depending on  if the input is good.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_g_u_i_a4906784b90d5a5544ca9023bee63983e}\label{namespace_g_u_i_a4906784b90d5a5544ca9023bee63983e}} 
+\index{GUI@{GUI}!combine\_funcs@{combine\_funcs}}
+\index{combine\_funcs@{combine\_funcs}!GUI@{GUI}}
+\subsubsection{\texorpdfstring{combine\_funcs()}{combine\_funcs()}}
+{\footnotesize\ttfamily def G\+U\+I.\+combine\+\_\+funcs (\begin{DoxyParamCaption}\item[{$\ast$}]{funcs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function is used for putting lots of stuff into buttons.
+
+Returns:
+    combined_func (function): Combined function.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_g_u_i_aae078fdef2bd79cc7c7c1f2a917c18b1}\label{namespace_g_u_i_aae078fdef2bd79cc7c7c1f2a917c18b1}} 
+\index{GUI@{GUI}!message\_prompt@{message\_prompt}}
+\index{message\_prompt@{message\_prompt}!GUI@{GUI}}
+\subsubsection{\texorpdfstring{message\_prompt()}{message\_prompt()}}
+{\footnotesize\ttfamily def G\+U\+I.\+message\+\_\+prompt (\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function creates a prompt on the GUI with a message.
+
+Parameters:
+    message (string): The message to be displayed in the prompt.
+\end{DoxyVerb}
+ 
