@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['file_5fload',['file_load',['../class_g_u_i_1_1_automatic_page.html#aa442c41a4f0959a30bf296a4384a7a0f',1,'GUI::AutomaticPage']]],
+  ['file_5fsave',['file_save',['../class_g_u_i_1_1_automatic_page.html#a55efb4084de63f91f76fc7d9f8e85e4f',1,'GUI::AutomaticPage']]],
   ['flip',['flip',['../class_g_u_i_1_1_welcome_page.html#a7612699922f2f3789aa58e098797b949',1,'GUI::WelcomePage']]],
   ['flush',['flush',['../classfake_serial_1_1_serial.html#a3c34cb0659b6d0dd5924ac79d79ad6bf',1,'fakeSerial::Serial']]],
   ['flushinput',['flushInput',['../classfake_serial_1_1_serial.html#a6abb75597f64f245df8e0c7f62c7fde5',1,'fakeSerial::Serial']]],

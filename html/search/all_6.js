@@ -1,7 +1,11 @@
 var searchData=
 [
   ['fakeserial',['fakeSerial',['../namespacefake_serial.html',1,'']]],
+  ['fakeserial_2epy',['fakeSerial.py',['../fake_serial_8py.html',1,'']]],
+  ['file_5fload',['file_load',['../class_g_u_i_1_1_automatic_page.html#aa442c41a4f0959a30bf296a4384a7a0f',1,'GUI::AutomaticPage']]],
+  ['file_5fsave',['file_save',['../class_g_u_i_1_1_automatic_page.html#a55efb4084de63f91f76fc7d9f8e85e4f',1,'GUI::AutomaticPage']]],
   ['flip',['flip',['../class_g_u_i_1_1_welcome_page.html#a7612699922f2f3789aa58e098797b949',1,'GUI::WelcomePage']]],
+  ['flowrateentrylist',['flowrateentrylist',['../class_g_u_i_1_1_manual_page.html#af99dfa99bc1f8b8ac6e5a6b6f5944c71',1,'GUI::ManualPage']]],
   ['flush',['flush',['../classfake_serial_1_1_serial.html#a3c34cb0659b6d0dd5924ac79d79ad6bf',1,'fakeSerial::Serial']]],
   ['flushinput',['flushInput',['../classfake_serial_1_1_serial.html#a6abb75597f64f245df8e0c7f62c7fde5',1,'fakeSerial::Serial']]],
   ['flushoutput',['flushOutput',['../classfake_serial_1_1_serial.html#afecff2730c11a9a8e7f687c57a2c738a',1,'fakeSerial::Serial']]],

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['sampleslabel',['sampleslabel',['../class_g_u_i_1_1_manual_page.html#a4261b536bf3e9823187a8876200469ea',1,'GUI::ManualPage']]],
+  ['samplingrate',['samplingrate',['../class_g_u_i_1_1_manual_page.html#ae5e98e67c7a343d823fa512c2a4083e6',1,'GUI::ManualPage']]],
+  ['samplingrateentry',['samplingrateentry',['../class_g_u_i_1_1_manual_page.html#ad0a53d6de20ebb42b3173ad37b8e858d',1,'GUI::ManualPage']]],
+  ['savebutton',['savebutton',['../class_g_u_i_1_1_automatic_page.html#a9ee7f4dda48ab61dedd110ea61b2744d',1,'GUI::AutomaticPage']]],
+  ['ser',['ser',['../class_collection_1_1_collectador.html#ad9a27d34d324f18bffea08b5aee3a765',1,'Collection.Collectador.ser()'],['../class_mswitch_1_1_m_switch.html#a936eb8588d8a9b8d5f5219867b5ca952',1,'Mswitch.MSwitch.ser()'],['../class_pump_1_1_three_pump.html#affc15ae738d1b9a9f6c330314138a8be',1,'Pump.ThreePump.ser()'],['../class_two_switch_1_1_two_switch.html#a8b0bb4497dcb4bdba19597fa296e698b',1,'TwoSwitch.TwoSwitch.ser()']]],
+  ['serialconnected',['serialConnected',['../class_collection_1_1_collectador.html#a6118ba10835a3655e0a048fadf444942',1,'Collection.Collectador.serialConnected()'],['../class_mswitch_1_1_m_switch.html#a1dedffaf31ad772486347a9ceca3ccf2',1,'Mswitch.MSwitch.serialConnected()'],['../class_pump_1_1_three_pump.html#a3fe83154cc2e42c20cf211fd812db5e9',1,'Pump.ThreePump.serialConnected()'],['../class_two_switch_1_1_two_switch.html#a06a3303adcbe39405325e87cd7d2bd8f',1,'TwoSwitch.TwoSwitch.serialConnected()']]],
+  ['settingsbutton',['settingsbutton',['../class_g_u_i_1_1_manual_page.html#aface3d80161cf81b2cd2d586527bc9a2',1,'GUI.ManualPage.settingsbutton()'],['../class_g_u_i_1_1_automatic_page.html#ad59c8360368b61cf90f5a54bdaddb50a',1,'GUI.AutomaticPage.settingsbutton()']]],
+  ['should_5fbe_5frunning',['should_be_running',['../class_g_u_i_1_1_app.html#a58cdd38768a4e442d47fc18c9926e5db',1,'GUI::App']]],
+  ['sites',['sites',['../class_g_u_i_1_1_manual_page.html#adaed6e62dc70abebd6a2016633c1ef5b',1,'GUI::ManualPage']]],
+  ['sitesentry',['sitesentry',['../class_g_u_i_1_1_manual_page.html#aa344022e47bac51b67ba51f189ebf006',1,'GUI::ManualPage']]],
+  ['startallbutton',['startallbutton',['../class_g_u_i_1_1_manual_page.html#aa1e08b154b3ec4ada5bc9d7327e23f4c',1,'GUI::ManualPage']]],
+  ['startandcollectbutton',['startandcollectbutton',['../class_g_u_i_1_1_manual_page.html#a89d11a0a301940bac985baac9e6e197c',1,'GUI::ManualPage']]],
+  ['startbuttonlist',['startbuttonlist',['../class_g_u_i_1_1_manual_page.html#a16fa24c8f70b2c149b72c3875b8a0970',1,'GUI::ManualPage']]],
+  ['steplist',['steplist',['../class_g_u_i_1_1_automatic_page.html#a09b2a20e8203753f1bc64924af04a0fb',1,'GUI::AutomaticPage']]],
+  ['stepnumbers',['stepnumbers',['../class_g_u_i_1_1_automatic_page.html#a871d9b1cfc8f2ba61defb2bfdc93cf78',1,'GUI::AutomaticPage']]],
+  ['steppers',['steppers',['../_arduino_snake_pattern_8cpp.html#ac42d9bf2e81a2c1f93af1e83bc43d81e',1,'ArduinoSnakePattern.cpp']]],
+  ['stepsperwell',['stepsPerWell',['../location_populate_8cpp.html#a313ea143f04b4753dc16560a0ebe0e03',1,'locationPopulate.cpp']]],
+  ['stepstoeject',['stepsToEject',['../location_populate_8cpp.html#a2d8a3aab41e26db02ae7184eba471522',1,'locationPopulate.cpp']]],
+  ['stopallbutton',['stopallbutton',['../class_g_u_i_1_1_manual_page.html#ad4276bdf3965d48dea53674218e19999',1,'GUI::ManualPage']]],
+  ['stopbits',['stopbits',['../classfake_serial_1_1_serial.html#ac0e590a34ac343c929e4a8543e933cce',1,'fakeSerial::Serial']]],
+  ['stopbuttonlist',['stopbuttonlist',['../class_g_u_i_1_1_manual_page.html#a5bd37d36a07ba48306378791eecf95d4',1,'GUI::ManualPage']]],
+  ['sublabelframe',['sublabelframe',['../class_g_u_i_1_1_welcome_page.html#a82599f77f38933702392daab0cf6a396',1,'GUI::WelcomePage']]]
+];

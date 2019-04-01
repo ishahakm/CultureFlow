@@ -83,9 +83,19 @@ def check_input(variable, desired_datatype, lower_limit = 0, upper_limit = 0):
         inputGood = True
 
     return inputGood
+
 class App(tk.Tk):
-    """"""
+    """
+    The App class
+    - Does window handling
+    - Holds objects and variables that need to be referenced by multiple windows
+    """
     def __init__(self,*args,**kwargs):
+        """
+        - define window size and expandability
+        - define fonts
+        - instantiates windows
+        """
 
         tk.Tk.__init__(self,*args,**kwargs)
         self.geometry('500x750')
@@ -94,15 +104,15 @@ class App(tk.Tk):
         self.appHighlightFont = font.Font(family='Arial', size=16, weight='bold')
         self.buttonFont = font.Font(family='Verdana', size=12, weight='bold')
         self.pageFont = font.Font(family='Faktos', size=18, weight='bold')
+
         self.ports = self.get_ports()
 
         self.max_flowrate_1 = None
         self.max_flowrate_2 = None
         self.max_flowrate_3 = None
+        self.max_flowrate_list = [self.max_flowrate_1,self.max_flowrate_2,self.max_flowrate_3]
 
         self.default_diameter_index = 5
-
-        self.max_flowrate_list = [self.max_flowrate_1,self.max_flowrate_2,self.max_flowrate_3]
 
         self.well_working_volume = 300 #uL/well
 
@@ -130,30 +140,37 @@ class App(tk.Tk):
         ############# FRAME HANDLING ##############
         ###########################################
 
+
         container = tk.Frame(self)
         #container.geometry('500x500')
         container.pack(side="top", fill="both", expand = True)
         container.grid_rowconfigure(0,weight = 1)
         container.grid_columnconfigure(0,weight = 1)
 
-        #creates dictionary of frames
+        #define dictionary of frames
         self.frames = {}
 
+        #
         for F in (WelcomePage,ManualPage,AutomaticPage,SettingsPage):
 
+            #instance of object takes in container as parent and self as controller
             frame = F(container, self)
+            #adds the object to the dictionary
             self.frames[F] = frame
             frame.grid(row=0, column=0,sticky="nsew")
-            #frame.geometry('500x500')
 
         self.show_frame(WelcomePage)
     def show_frame(self, cont):
         """
-        Raises frame from dictionary of frames
+        Raises frame from self.frames dictionary
         """
         frame = self.frames[cont]
         frame.tkraise()
     def get_comport(self,cmd,response):
+        """Use this function to automatically identify
+        a device. Input a command the device recognizes and a response you know
+        it should return. Make sure to use unique commands when spotting multiple devices.
+        """
         #Uncomment later when using full functioning system.
         response = response[:2] #Put this just in case some extra stuff gets appended to the end of the repsonse
         if len(self.ports) == 0:
@@ -186,13 +203,16 @@ class App(tk.Tk):
                 print("Error accesing comports!")
     def get_ports(self):
         """
-        Uses serial module's comports command to get and return serial ports
+        fills self.ports list with comports currently connected to device
         """
         ports = []
         for n, (port, desc, hwid) in enumerate(sorted(comports()), 1):
             ports.append(port)
         self.ports = ports
     def set_defaults(self):
+        """
+        Sets defaults as defined within function
+        """
 
         self.myPump.ser.read()
         self.myPump.ser.flush()
@@ -225,10 +245,19 @@ class App(tk.Tk):
         self.set_defaults()
         self.show_frame(ManualPage)
     def positive_run_status(self):
+        """
+        sets self.should_be_running to True.
+        """
         self.should_be_running = True
     def negative_run_status(self):
+        """
+        sets self.should_be_running to Fasle.
+        """
         self.should_be_running = False
     def message_window(self,message):
+        """Creates a pop-up message of your choice formatted with
+        formatting from App class"""
+
         window = tk.Toplevel()
         window.grab_set()
         window.configure(bg='#00fff2')
@@ -241,6 +270,10 @@ class WelcomePage(tk.Frame):
     #Port and device selection
     #Running function instantiating devices via their respective classes
     def __init__(self, parent, controller):
+    """
+
+    """
+
         tk.Frame.__init__(self,parent)
         #Organization and label frames for the buttons and labels
         self.mainlabel = tk.Label(self, text = "Welcome to FLUIPLEX!", font = LARGE_FONT)
@@ -249,7 +282,6 @@ class WelcomePage(tk.Frame):
         self.collectorframe = tk.LabelFrame(self.sublabelframe, text = "COLLECTADOR", font = LARGE_FONT)
         ####################Port & Device Selection############################
         #finding all of the ports
-
         self.manilabel = tk.Label(self.perfusorframe,text='M-Switch: Not Found')
         self.pumplabel= tk.Label(self.perfusorframe,text='ISMATEC Pump: Not Found')
         self.coll_label = tk.Label(self.perfusorframe,text='XYStage/TwoSwitch Not Found')
@@ -315,6 +347,7 @@ class WelcomePage(tk.Frame):
         self.coll_label.pack(fill=tk.BOTH)
         #self.collcheck.pack(fill=tk.BOTH)
         self.donebutton.pack()
+
     def flip(self,widget):
         """
         Enables or disables a widget. It is run by the checkbuttons on the WelcomPage
