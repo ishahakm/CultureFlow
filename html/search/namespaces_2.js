@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mswitch',['Mswitch',['../namespace_mswitch.html',1,'']]]
+  ['gui',['GUI',['../namespace_g_u_i.html',1,'']]]
 ];

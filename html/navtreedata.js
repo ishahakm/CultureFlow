@@ -55,8 +55,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-".html",
-"class_two_switch_1_1_two_switch.html#a31490d5047814007931a7b700d028a12"
+"_arduino_snake_pattern_8cpp.html",
+"class_two_switch_1_1_two_switch.html#a5facaddf7386248c105cedd41fb4812d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

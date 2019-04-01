@@ -1,16 +1,50 @@
-# D. Thiebaut
-# A very crude simulator for PySerial assuming it
-# is emulating an Arduino.
+"""
+Fluidic Handling Software
+Ashutosh Agarwal Lab
+University of Miami
 
+A very crude simulator for PySerial Assuming it is emulating an Arduino.
+
+by:
+Liev Birman
+Adiel Hernandez
+
+Written by:
+D. Thiebaut
+"""
 
 # a Serial class emulator
 class Serial:
+    """
+    This class is used for simulation of an Arduino Serial Connection.
 
-    ## init(): the constructor.  Many of the arguments have default values
-    # and can be skipped when calling the constructor.
+    Attributes:
+        name (string): the name of the port.
+        port (string): the microcontrollers port for the serial connection.
+        baudrate (int): The baud rate the serial connection is using.
+        timeout (int): maximum milliseconds to wait for serial data.
+        parity (string): parity bit type.
+        stopbits (int): amount of stop bits.
+        xonxoff (int): whether xonxoff is on or off for flow control.
+        rtscts (int): whether rtscts flow control is on or off.
+    """
     def __init__( self, port='COM1', baudrate = 19200, timeout=1,
                   bytesize = 8, parity = 'N', stopbits = 1, xonxoff=0,
                   rtscts = 0):
+        """
+        The constructor for the Serial class.
+
+        Parameters:
+            port (string): the microcontrollers port for the serial connection. Defaulted to 'COM1'.
+            baudrate (int): The baud rate the serial connection is using. Defaulted to 19200.
+            timeout (int): maximum milliseconds to wait for serial data. Defaulted to 1.
+            bytesize (int): The size of bytes. Defaulted to 8.
+            parity (string): parity bit type. Defaulted to 'N'.
+            stopbits (int): amount of stop bits. Defaulted to 1.
+            xonxoff (int): whether xonxoff is on or off for flow control. Defaulted to 0.
+            rtscts (int): whether rtscts flow control is on or off. Defaulted to 0
+        """
+
         self.name     = port
         self.port     = port
         self.timeout  = timeout
@@ -24,49 +58,87 @@ class Serial:
         self._receivedData = ""
         self._data = "It was the best of times.\nIt was the worst of times.\n"
 
-    ## isOpen()
-    # returns True if the port to the Arduino is open.  False otherwise
     def isOpen( self ):
+        """
+        This method returns True if the port to the arduino is open. False otherwise.
+
+        Returns:
+            _isOpen (bool): True/False depending if serial connection is open.
+        """
+
         return self._isOpen
 
-    ## open()
-    # opens the port
     def open( self ):
+        """
+        This method opens the port artificially.
+        """
+
         self._isOpen = True
 
-    ## close()
-    # closes the port
     def close( self ):
+        """
+        This method closes the port artificially.
+        """
+
         self._isOpen = False
 
-    ## write()
-    # writes a string of characters to the Arduino
     def write( self, string ):
+        """
+        This method simulates writing a string of characters to the Arduino.
+
+        Returns:
+            An empty string.
+        """
+
         print(string)
         #self._receivedData += string
         return ""
 
-    ## read()
-    # reads n characters from the fake Arduino. Actually n characters
-    # are read from the string _data and returned to the caller.
     def read( self, n=1 ):
+        """
+        This method simulates reading a pretermined amount of characters from the Arduino.
+
+        Parameters:
+            n (int): number of characters to read.
+
+        Returns:
+            s (string): the characters read from the Arduino.
+        """
+
         s = self._data[0:n]
         self._data = self._data[n:]
         #print( "read: now self._data = ", self._data )
         return s
 
     def flush(self):
+        """
+        This method flushes the port artificially.
+        """
+
         pass
 
     def flushInput(self):
+        """
+        This method flushes the input of the port artificially.
+        """
+
         pass
 
     def flushOutput(self):
+        """
+        This method flushes the output of the port artificially.
+        """
+
         pass
-        
-    ## readline()
-    # reads characters from the fake Arduino until a \n is found.
+
     def readline( self ):
+        """
+        This method simulates reading an entire line of characters until a "\n" is encountered.
+
+        Returns:
+            s (string): The line of characters read if there is one. Otherwise, an empty string.
+        """
+
         returnIndex = self._data.index( "\n" )
         if returnIndex != -1:
             s = self._data[0:returnIndex+1]
@@ -75,9 +147,14 @@ class Serial:
         else:
             return ""
 
-    ## __str__()
-    # returns a string representation of the serial class
     def __str__( self ):
+        """
+        This method creates a string representation of the Serial class.
+
+        Returns:
+            string: String representation of Serial class.
+        """
+        
         return  "Serial<id=0xa81c10, open=%s>( port='%s', baudrate=%d," \
                % ( str(self.isOpen), self.port, self.baudrate ) \
                + " bytesize=%d, parity='%s', stopbits=%d, xonxoff=%d, rtscts=%d)"\

@@ -1,6 +1,5 @@
 var NAVTREEINDEX0 =
 {
-".html":[2,0,1],
 "_arduino_snake_pattern_8cpp.html":[3,0,0],
 "_arduino_snake_pattern_8cpp.html#a0679230c21da51fdec64b677a7293320":[3,0,0,22],
 "_arduino_snake_pattern_8cpp.html#a0dffab4a0297ba1dfc85381688a235bb":[3,0,0,34],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "class_two_switch_1_1_two_switch.html":[2,0,5,0],
 "class_two_switch_1_1_two_switch.html#a00b015b6f700f4d524056ff1c9de7c72":[2,0,5,0,3],
 "class_two_switch_1_1_two_switch.html#a06a3303adcbe39405325e87cd7d2bd8f":[2,0,5,0,11],
-"class_two_switch_1_1_two_switch.html#a125dcd40f5242394787f7f5b1f3cfe71":[2,0,5,0,9]
+"class_two_switch_1_1_two_switch.html#a125dcd40f5242394787f7f5b1f3cfe71":[2,0,5,0,9],
+"class_two_switch_1_1_two_switch.html#a31490d5047814007931a7b700d028a12":[2,0,5,0,13]
 };
