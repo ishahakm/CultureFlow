@@ -1,14 +1,4 @@
 """
-Fluidic Handling Software
-Ashutosh Agarwal Lab
-University of Miami
-
-A very crude simulator for PySerial Assuming it is emulating an Arduino.
-
-by:
-Liev Birman
-Adiel Hernandez
-
 Written by:
 D. Thiebaut
 """
@@ -154,7 +144,7 @@ class Serial:
         Returns:
             string: String representation of Serial class.
         """
-        
+
         return  "Serial<id=0xa81c10, open=%s>( port='%s', baudrate=%d," \
                % ( str(self.isOpen), self.port, self.baudrate ) \
                + " bytesize=%d, parity='%s', stopbits=%d, xonxoff=%d, rtscts=%d)"\

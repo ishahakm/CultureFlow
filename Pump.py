@@ -7,7 +7,6 @@ by:
 Liev Birman
 Adiel Hernandez
 """
-
 import serial
 import sys
 from serial.tools.list_ports import comports
