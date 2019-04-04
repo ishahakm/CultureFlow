@@ -270,9 +270,6 @@ class WelcomePage(tk.Frame):
     #Port and device selection
     #Running function instantiating devices via their respective classes
     def __init__(self, parent, controller):
-    """
-
-    """
 
         tk.Frame.__init__(self,parent)
         #Organization and label frames for the buttons and labels
@@ -1251,14 +1248,18 @@ class SettingsPage(tk.Frame):
             controller.myPump.setDir(i+1,direction)
             tubing_diameter = self.diameterlist[i].get()
             controller.myPump.send(str(i+1)+'+'+tubing_diameter)
-        #controller.max_flowrate = controller.myPump.send_return('1?')
+
+        #Here we assume the same tubing diameter for each (initially)
+        controller.max_flowrate_1 = controller.myPump.send_return('1?')
+        controller.max_flowrate_2 = controller.max_flowrate_1
+        controller.max_flowrate_3 = controller.max_flowrate_1
         time.sleep(2)
         controller.myPump.ser.readline()
         controller.myPump.ser.flush()
         time.sleep(2)
-        controller.max_flowrate_1 = float(controller.myPump.send_return('1?')[:5])
-        controller.max_flowrate_2 = float(controller.myPump.send_return('2?')[:5])
-        controller.max_flowrate_3 = float(controller.myPump.send_return('3?')[:5])
+        #controller.max_flowrate_1 = float(controller.myPump.send_return('1?')[:5])
+        #controller.max_flowrate_2 = float(controller.myPump.send_return('2?')[:5])
+        #controller.max_flowrate_3 = float(controller.myPump.send_return('3?')[:5])
     def calibrate(self,controller):
 
         window = tk.Toplevel(controller)
