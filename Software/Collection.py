@@ -8,16 +8,11 @@ Liev Birman
 Adiel Hernandez
 """
 
-<<<<<<< HEAD
 import fakeSerial as serial
-=======
-import serial
->>>>>>> eeb227ed5b470a426c61279098ec675da4f06097
 #import serial
 import sys
 from serial.tools.list_ports import comports
 import time
-import numpy
 
 class Collectador():
     """
