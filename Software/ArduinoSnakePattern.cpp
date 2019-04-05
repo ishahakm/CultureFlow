@@ -580,7 +580,7 @@ void reset() {
 
   //Start Homing procedure of Stepper Motors at startup.
   //Homing Procedure Top Steper Motor. MULTI STEPPER.
- while (!digitalRead(limitSwitchT) || digitalRead(limitSwitchB)){
+ while (digitalRead(limitSwitchT) || digitalRead(limitSwitchB)){
    // Serial.println(digitalRead(limitSwitchT));
    // Serial.println(digitalRead(limitSwitchB));
    if (!digitalRead(limitSwitchT) && digitalRead(limitSwitchB)){
