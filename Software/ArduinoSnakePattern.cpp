@@ -13,23 +13,6 @@
 #include <MultiStepper.h>
 #include "utility/Adafruit_MS_PWMServoDriver.h"
 
-<<<<<<< HEAD:XYStage_TwoSwitch_Arduino_Serial_ConnectionShieldMulti/XYStage_TwoSwitch_Arduino_Serial_ConnectionShieldMulti.ino
-//INTIAL SETUP
-const int delayRPM = 255;
-const int rows = 8; // Amount of rows on well plate.
-const int columns = 12; // Amount of columns on well plate.
-const int numLocations = ((rows * columns) / 3) + 1; // Amount of triplet wells on well plate. (Plus 1 for the eject location).
-const float maximumSpeed = 255.0; // Max Speed of the Stepper Motors.
-const float acceleration = 2000.0; // Acceleration for the Stepper Motors.
-const int stepsPerRevolution = 200; // Steps per revolution for the Stepper Motor.
-const int stepsPerWell = 225; // Amount of steps needed from center of well to the next.
-const int stepsToEject = 1000; // Amount of steps to eject entire well plate.
-const int limitSwitchT = 37; // Digital Pin Number for Top Stepper Motor Limit Switch.
-const int limitSwitchB = 36; // Digital Pin Number for Bottom Stepper Motor Limit Switch.
-const int TwoSwitchA = 22; // Digital Pin Number for TwoSwitchA.
-const int TwoSwitchB = 27; // Digital Pin Number for TwoSwitchB.
-const int TwoSwitchC = 30; // Digital Pin Number for TwoSwitchC.
-
 //Function Declarations
 =======
 /**
@@ -51,7 +34,6 @@ const int TwoSwitchB = 33; /**< Digital Pin Number for TwoSwitchB. */
 const int TwoSwitchC = 34; /**< Digital Pin Number for TwoSwitchC. */
 
 //Function Decalartions.
->>>>>>> 0a2b5ee7df60c0cd7a1d0b9b06c2d39de20125b0:ArduinoSnakePattern.cpp
 void forwardstep1();
 void backwardstep1();
 void forwardstep2();
@@ -591,32 +573,6 @@ int eject() {
 void reset() {
 
   //Start Homing procedure of Stepper Motors at startup.
-  //Homing Procedure Top Steper Motor. SINGLE MOTOTS CONTROL.
-//    while (digitalRead(limitSwitchT)) {  // Do this until the switch is activated
-//      myMotorT -> onestep(FORWARD,SINGLE);
-//      delay(5);                       // Delay to slow down speed of Stepper
-//    }
-//
-//    while (!digitalRead(limitSwitchT)) { // Do this until the switch is not activated
-//      myMotorT -> onestep(BACKWARD, SINGLE);
-//      delay(10);                       // More delay to slow even more while moving away from switch
-//    }
-//    myMotorT -> step(50, BACKWARD, SINGLE);
-//
-//   while (digitalRead(limitSwitchB)) {  // Do this until the switch is activated
-//     myMotorB -> onestep(BACKWARD, SINGLE);
-//     delay(5);                       // Delay to slow down speed of Stepper
-//     //Serial.println("Switch not activated");
-//   }
-//
-//   while (!digitalRead(limitSwitchB)) { // Do this until the switch is not activated
-//     myMotorB -> onestep(FORWARD, SINGLE);
-//     delay(10);                       // More delay to slow even more while moving away from switch
-//     //Serial.println("Switch activated");
-//   }
-//   myMotorB -> step(50, FORWARD, SINGLE);
-
-  //Start Homing procedure of Stepper Motors at startup.
   //Homing Procedure Top Steper Motor. MULTI STEPPER.
  while (digitalRead(limitSwitchT) || digitalRead(limitSwitchB)){
    // Serial.println(digitalRead(limitSwitchT));
@@ -639,13 +595,6 @@ void reset() {
    steppers.runSpeedToPosition();
 
   }
-
-// while (!digitalRead(limitSwitchT) || !digitalRead(limitSwitchB)){
-//   positions[0] = positions[0] - 1;
-//   positions[1] = positions[1] + 1;
-//   steppers.moveTo(positions);
-//   steppers.runSpeedToPosition();
-// }
 
   //CODE TO MOVE THE WELL PLATE TO WHERE THE OUTLETS ARE ON TOP LEFT THREE WELLS.
   positions[0] = positions[0] - 4349;
