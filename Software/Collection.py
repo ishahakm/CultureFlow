@@ -13,6 +13,7 @@ import serial
 import sys
 from serial.tools.list_ports import comports
 import time
+import numpy
 
 class Collectador():
     """
