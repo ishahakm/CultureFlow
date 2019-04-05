@@ -58,7 +58,6 @@ class ThreePump():
         self.setDefaults()
 
         self.isOn = None
-
     def serial_connect(self):
         """
         This method establishes the serial connection with the microcontroller.
@@ -76,7 +75,6 @@ class ThreePump():
                 self.connected = True
             else:
                 self.connected = False
-
     def send(self,cmd):
         """
         This method sends a command across the serial connection.
@@ -87,7 +85,6 @@ class ThreePump():
 
         self.ser.write(cmd.encode('ascii') + '\r'.encode('ascii'))
         print("Sent a serial command: %s %s "%("Pump",cmd))
-
     def send_return(self,cmd):
         """
         This method uses the serial connection opened instance of pump and sends the text written in cmd across that connection.
@@ -107,7 +104,6 @@ class ThreePump():
         print(response)
 
         return response
-
     def chop_return(self,ret):
         """
         This method modifies the output of the two switch which comes with a carriage return and newline at the end of itself.
@@ -119,7 +115,6 @@ class ThreePump():
         if ret.endswith('\r\n'):
             ret = ret[:-2]
         return ret
-
     def FormatVolume(self,V,unit):
         """
         This method formats the volume.
@@ -138,7 +133,6 @@ class ThreePump():
         D = str(int(float(A[:5])*1000))
         E = D+C
         return E
-
     def setFlow(self,channel,flowrate):
         """
         This method sets the flow rate of the pump.
@@ -150,7 +144,6 @@ class ThreePump():
         flowrate = self.FormatVolume(flowrate,"uL")
         print(flowrate)
         self.send(str(channel)+"f"+flowrate)
-
     def setDir(self,channel,direction):
         """
         This method sets the direction for the flow of fluid.
@@ -167,7 +160,6 @@ class ThreePump():
         if direction == "CCW":
             self.send(str(channel) + "K")
             self.send(str(channel) + "xRK")
-
     def start(self,channel):
         """
         This method sends a command to the microcontroller which is programmed to start the pump only for the channel chosen.
@@ -176,7 +168,6 @@ class ThreePump():
             channel (int): the channel that will start.
         """
         self.send(str(channel)+"H")
-
     def stop(self,channel):
         """
         This method sends a command to the microcontroller which is programmed to stop the pump only for the channel chosen.
@@ -186,7 +177,6 @@ class ThreePump():
         """
 
         self.send(str(channel)+"I")
-
     def calibrate(self,channel):
         """
         This method sends a command to the microcontroller which is programmed to calibrate the pump only for the channel chosen.
@@ -196,7 +186,6 @@ class ThreePump():
         """
 
         self.send(str(channel)+"xY")
-
     def abort_calibration(self,channel):
         """
         This method sends a command to the microcontroller which is programmed to abort calibration of the pump only for the channel chosen.
@@ -206,7 +195,6 @@ class ThreePump():
         """
 
         self.send(str(channel)+"xZ")
-
     def setTargetCalibrationVolume(self):
         """
         This method sets the target calibration volume.
@@ -215,7 +203,6 @@ class ThreePump():
         for i in range(3):
             to_send = str(i+1)+"x"+self.FormatVolume(self.calibrationvolume,self.calibrationunit)
             self.send(to_send)
-
     def setMeasuredVolume(self,channel,volume):
         """
         This method sets the measured volume.
@@ -223,15 +210,14 @@ class ThreePump():
 
         volume = self.FormatVolume(volume,"mL")
         self.send_return(str(channel)+"xV"+volume)
-
     def start_all(self):
         """
         This method sends a command to the microcontroller which is programmed to start the pump for all channels.
         """
-
-        for i in range(3):
-            self.send(str(i+1)+"H")
-        self.isOn = True
+        self.send("0H")
+        # for i in range(3):
+        #     self.send(str(i+1)+"H")
+        # self.isOn = True
 
     def stop_all(self):
         """
@@ -241,17 +227,31 @@ class ThreePump():
         for i in range(3):
             self.send(str(i+1)+"I")
         self.isOn = False
-
     def setDefaults(self):
         """
         This method sets the deafults for the pump.
         """
+        self.send_return('1M')
+        self.send_return('2M')
+        self.send_return('3M')
+
+        self.send_return('1xM')
+        self.send_return('2xM')
+        self.send_return('3xM')
+
+
+
 
         #setting to flowrate mode
         for channel in range(3):
             self.send(str(channel+1)+"xU1000+0")
             self.send(str(channel+1)+"xW00002400")
-        self.send("M")
+
+        # self.send("1f")
+        # self.send("2f")
+        # self.send("3f")
+
+
 
 def get_ports():
     """
