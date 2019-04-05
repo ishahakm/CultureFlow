@@ -154,6 +154,13 @@ void loop() {
 //    Serial.println("It is pressed! BOT");
 //  }
 
+  if (digitalRead(limitSwitchB)){
+    Serial.println("Switch B Pressed");
+  }
+  if (digitalRead(limitSwitchT)){
+    Serial.println("Switch T Pressed");
+  }
+
   int incomingByte;
   if (Serial.available() > 0){
     incomingByte = Serial.read();
