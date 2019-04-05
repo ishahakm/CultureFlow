@@ -10,9 +10,12 @@ Adiel Hernandez
 
 import fakeSerial as serial
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e55b4b0ecccc9a90761215126e60636af8760d22
+=======
+>>>>>>> refs/remotes/origin/master
 #import serial
 import sys
 from serial.tools.list_ports import comports
