@@ -84,13 +84,11 @@ class MSwitch():
         if ret.endswith('\r\n'):
             ret = ret[:-2]
         return ret
-
     def set_reservoir(self,res):
         """
         This method sets the reservoir to pull fluid from.
         """
         self.send("P0"+str(res))
-
     def get_info(self):
         """
         This method sends the command "?" to the microcontroller which is programmed to send back a unique ID. The attribute uniqueID is set to the microcontrollers response.

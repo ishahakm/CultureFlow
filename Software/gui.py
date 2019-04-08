@@ -243,6 +243,7 @@ class App(tk.Tk):
             self.my2Switch = TwoSwitch(self.portColl.get())
 
         self.set_defaults()
+
         self.show_frame(ManualPage)
     def positive_run_status(self):
         """
@@ -266,6 +267,7 @@ class App(tk.Tk):
         label = tk.Label(window,text = message, bg = '#00fff2')
         label.grid(column = 1, row = 1, columnspan = 1,sticky=tk.W)
         abortbutton.grid(column = 1, row = 2)
+
 class WelcomePage(tk.Frame):
     #Port and device selection
     #Running function instantiating devices via their respective classes
@@ -344,7 +346,6 @@ class WelcomePage(tk.Frame):
         self.coll_label.pack(fill=tk.BOTH)
         #self.collcheck.pack(fill=tk.BOTH)
         self.donebutton.pack()
-
     def flip(self,widget):
         """
         Enables or disables a widget. It is run by the checkbuttons on the WelcomPage
@@ -567,7 +568,7 @@ class ManualPage(tk.Frame):
                     counter += 1
                 elif setting.get() == self.twoSwitchValues[1]:
                     controller.my2Switch.setRecirculate(counter)
-                    counter += 1
+                    counter += 1                
     def start_and_collect(self,controller,sampling_rate):
 
         goodToGo = self.check_all_manual_and_sampling(controller)
@@ -661,6 +662,8 @@ class ManualPage(tk.Frame):
     def eject(self,controller):
         controller.myColl.eject()
         self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
+
+    #error checking
     def check_all_manual_and_sampling(self,controller):
         """
         use when running all channels together
@@ -718,6 +721,7 @@ class ManualPage(tk.Frame):
             controller.message_window("Entry must be between %s and %s! uL/m"%(0,1000*controller.max_flowrate_list[channel-1]))
 
         return goodToGo
+
 class AutomaticPage(tk.Frame):
 
     def __init__(self, parent, controller):

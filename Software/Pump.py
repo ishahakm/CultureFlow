@@ -215,44 +215,33 @@ class ThreePump():
         This method sends a command to the microcontroller which is programmed to start the pump for all channels.
         """
         self.send("0H")
-        # for i in range(3):
-        #     self.send(str(i+1)+"H")
-        # self.isOn = True
-
     def stop_all(self):
         """
         This method sends a command to the microcontroller which is programmed to stop the pump for all the channels.
         """
-
-        for i in range(3):
-            self.send(str(i+1)+"I")
-        self.isOn = False
+        self.send("0I")
     def setDefaults(self):
         """
         This method sets the deafults for the pump.
         """
-        self.send_return('1M')
-        self.send_return('2M')
-        self.send_return('3M')
+        # self.send_return('1M')
+        # self.send_return('2M')
+        # self.send_return('3M')
 
-        self.send_return('1xM')
-        self.send_return('2xM')
-        self.send_return('3xM')
-
-
+        self.send_return('0xM')
+        self.send_return('0xM')
+        self.send_return("0xU1000+0")
+        self.send_return("0xW00003000")
 
 
         #setting to flowrate mode
-        for channel in range(3):
-            self.send(str(channel+1)+"xU1000+0")
-            self.send(str(channel+1)+"xW00002400")
+        # for channel in range(3):
+        #     self.send(str(channel+1)+"xU1000+0")
+        #     self.send(str(channel+1)+"xW00002400")
 
         # self.send("1f")
         # self.send("2f")
         # self.send("3f")
-
-
-
 def get_ports():
     """
     This method uses serial module's comports command to get and return serial ports.
