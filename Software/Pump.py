@@ -136,10 +136,9 @@ class ThreePump():
     def setFlow(self,channel,flowrate):
         """
         This method sets the flow rate of the pump.
-
         Parameters:
             channel (int): The channel whose flow rate will be set.
-            flowrate (int): The flow rate which is to be set.
+            flowrate (float): The flow rate which is to be set.
         """
         flowrate = self.FormatVolume(flowrate,"uL")
         print(flowrate)
@@ -232,7 +231,6 @@ class ThreePump():
         self.send_return('0xM')
         self.send_return("0xU1000+0")
         self.send_return("0xW00003000")
-
 
         #setting to flowrate mode
         # for channel in range(3):

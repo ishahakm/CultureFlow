@@ -72,7 +72,6 @@ class Collectador():
         self.ser.write(cmd.encode('ascii') + '\r'.encode('ascii'))
         #self.ser.write(cmd.encode('ascii'))
         print("Sent a serial command: %s %s"%("Collectador",cmd))
-
     def chop_return(self,ret):
         """
         This method modifies the output of the pump which comes with a carriage return and newline at the end of itself.
@@ -84,7 +83,6 @@ class Collectador():
         if ret.endswith('\r\n'):
             ret = ret[:-2]
         return ret
-
     def reset(self):
         """
         This method sends the command "Z" to the microcontroller which is programmed to move the XY Stage to the origin when receiving this command.
@@ -93,7 +91,6 @@ class Collectador():
         self.send('Z')
         self.position = 0
         #print(self.position)
-
     def eject(self):
         """
         This method sends the command "E" to the microcontroller which is programmed to move the XY Stage to the eject position when receiving this command.
