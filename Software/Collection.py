@@ -120,6 +120,13 @@ class Collectador():
             self.position -= 1
             #print(self.position)
 
+    def toggle_pattern(self):
+        """
+        This method sends the command "X" to the microcontroller which is programmed to toggle the movement layout.
+        The two movement patterns currently supported are snake pattern and top down pattern.
+        """
+        self.send("X")
+
     def get_info(self):
         """
         This method sends the command "?" to the microcontroller which is programmed to send back a unique ID.
