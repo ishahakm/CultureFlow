@@ -12,6 +12,7 @@ import tkinter as tk
 from tkinter import font
 from tkinter import ttk
 from tkinter import filedialog
+from tkinter import messagebox
 
 
 from decimal import Decimal
@@ -656,11 +657,11 @@ class ManualPage(tk.Frame):
     def eject(self,controller):
         controller.myColl.eject()
         self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
-
     def toggle(self,controller):
-        controller.message_window("Changing Collection Pattern! Stage will be reset!")
-        controller.myColl.toggle_pattern()
-        self.patternLabel['text'] = "Current Pattern: " + controller.myColl.currentPattern
+        if messagebox.askyesno("Collection Pattern Change", "You sure you want to change the collection pattern? (WARNING: Stage will reset!)"):
+            controller.message_window("Changing Collection Pattern! Stage will be reset!")
+            controller.myColl.toggle_pattern()
+            self.patternLabel['text'] = "Current Pattern: " + controller.myColl.currentPattern
 
     def prime_window(self,controller):
         """
