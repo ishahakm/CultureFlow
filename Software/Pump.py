@@ -7,7 +7,7 @@ by:
 Liev Birman
 Adiel Hernandez
 """
-import fakeSerial as serial
+import serial
 import sys
 from serial.tools.list_ports import comports
 import time
@@ -55,7 +55,7 @@ class ThreePump():
         self.calibrationvolume = 1
         self.calibrationunit = "mL"
         self.setTargetCalibrationVolume()
-        #self.setDefaults()
+        self.setDefaults()
 
         self.isOn = None
     def serial_connect(self):
@@ -99,11 +99,11 @@ class ThreePump():
         self.ser.write(cmd.encode('ascii') + '\r'.encode('ascii'))
         time.sleep(.1)
         print("Sent a serial command: %s %s "%("Pump",cmd))
-        # response = self.ser.readline().decode()
-        # response = self.chop_return(response)
-        # print(response)
+        response = self.ser.readline().decode()
+        response = self.chop_return(response)
+        print(response)
 
-        # return response
+        return response
     def chop_return(self,ret):
         """
         This method modifies the output of the two switch which comes with a carriage return and newline at the end of itself.
