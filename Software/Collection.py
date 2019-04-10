@@ -24,6 +24,8 @@ class Collectador():
         serialConnected (bool): True/False of whether the serial connection was established.
         position (int): the position that the XY Stage is currently at.
         uniqueID (string): the unique identifier the microcontroller returns for automatic port selection.
+        usingSnakePattern (bool): True/False whether the collection pattern is currently a snake pattern.
+        currentPattern (string): string representation of the current pattern.
     """
     def __init__(self,my_port):
         """
@@ -39,6 +41,8 @@ class Collectador():
         self.serialConnected = False
         self.position = None
         self.uniqueID = ""
+        self.usingSnakePattern = True
+        self.currentPattern = "Snake"
 
         self.serial_connect()
 
@@ -126,6 +130,12 @@ class Collectador():
         The two movement patterns currently supported are snake pattern and top down pattern.
         """
         self.send("X")
+        if self.usingSnakePattern:
+            self.currentPattern = "Top Down"
+            self.usingSnakePattern = False
+        else:
+            self.currentPattern = "Snake"
+            self.usingSnakePattern = True
 
     def get_info(self):
         """
