@@ -25,11 +25,11 @@ const float acceleration = 2000.0; /**< Acceleration for the Stepper Motors.*/
 const int stepsPerRevolution = 200; /**< Steps per revolution for the Stepper Motor. */
 const int stepsPerWell = 225; /**< Amount of steps needed from center of well to the next. */
 const int stepsToEject = 1000; /**< Amount of steps to eject entire well plate. */
-const int limitSwitchT = 37; /**< Digital Pin Number for Top Stepper Motor Limit Switch. */
-const int limitSwitchB = 36; /**< Digital Pin Number for Bottom Stepper Motor Limit Switch. */
-const int TwoSwitchA = 40; /**< Digital Pin Number for TwoSwitchA. */
-const int TwoSwitchB = 43; /**< Digital Pin Number for TwoSwitchB. */
-const int TwoSwitchC = 44; /**< Digital Pin Number for TwoSwitchC. */
+const int limitSwitchT = 41; /**< Digital Pin Number for Top Stepper Motor Limit Switch. */
+const int limitSwitchB = 43; /**< Digital Pin Number for Bottom Stepper Motor Limit Switch. */
+const int TwoSwitchA = 31; /**< Digital Pin Number for TwoSwitchA. */
+const int TwoSwitchB = 33; /**< Digital Pin Number for TwoSwitchB. */
+const int TwoSwitchC = 35; /**< Digital Pin Number for TwoSwitchC. */
 
 //Function Decalartions.
 void forwardstep1();
