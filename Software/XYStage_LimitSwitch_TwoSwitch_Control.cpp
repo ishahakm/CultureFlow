@@ -135,6 +135,11 @@ void loop() {
   //L = 76 Previous/Last function
   //E = 69 Done/Eject function
   //X = 88 Set collection pattern
+  //U = 85 Move Left one step
+  //I = 73 Move Right one step
+  //O = 79 Move Down one step
+  //P = 80 Move Up one step
+  //M = 77 Set Origin 
 
   //Ascii to Decimal for TwoSwitches
   //TwoSwitch A: Collection(A) = 65, Recirculation(S) = 83
@@ -214,6 +219,48 @@ void loop() {
     if (incomingByte == 69) {
       //Serial.println("Finished Collecting!");
       eject();
+    }
+
+    //Move Up one step function. (P)
+    if (incomingByte == 85) {
+      positions[0] = positions[0] + 5;
+      positions[1] = positions[1];
+      steppers.moveTo(positions);
+      steppers.runSpeedToPosition();
+    }
+
+    //Move Down one step function. (O)
+    if (incomingByte == 73) {
+      positions[0] = positions[0] - 5;
+      positions[1] = positions[1];
+      steppers.moveTo(positions);
+      steppers.runSpeedToPosition();
+    }
+
+    //Move Right one step function. (I)
+    if (incomingByte == 79) {
+      positions[0] = positions[0];
+      positions[1] = positions[1] + 5;
+      steppers.moveTo(positions);
+      steppers.runSpeedToPosition();
+    }
+
+    //Move Left one step function. (U)
+    if (incomingByte == 80) {
+      positions[0] = positions[0];
+      positions[1] = positions[1] - 5;
+      steppers.moveTo(positions);
+      steppers.runSpeedToPosition();
+    }
+
+    //Set origin.
+    if (incomingByte == 77){
+      stepperB.setCurrentPosition(0);
+      stepperT.setCurrentPosition(0);
+
+      myPosition = 0;  // Reset position variable to zero.
+      positions[0] = locations[myPosition][1];
+      positions[1] = locations[myPosition][0];
     }
 //////////////////////////////////////////////
     // Two Switch Collection Protocol.
