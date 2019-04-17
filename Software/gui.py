@@ -244,7 +244,7 @@ class App(tk.Tk):
             self.my2Switch = TwoSwitch(self.portColl.get())
             self.my2Switch.ser = self.myColl.ser
 
-        #self.set_defaults()
+        self.set_defaults()
 
         self.show_frame(ManualPage)
     def positive_run_status(self):
