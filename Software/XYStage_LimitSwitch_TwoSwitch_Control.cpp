@@ -135,10 +135,10 @@ void loop() {
   //L = 76 Previous/Last function
   //E = 69 Done/Eject function
   //X = 88 Set collection pattern
-  //U = 85 Move Up one step
-  //I = 73 Move Down one step
-  //O = 79 Move Right one step
-  //P = 80 Move Left one step
+  //U = 85 Move Left one step
+  //I = 73 Move Right one step
+  //O = 79 Move Down one step
+  //P = 80 Move Up one step
   //M = 77 Set Origin 
 
   //Ascii to Decimal for TwoSwitches
@@ -221,28 +221,40 @@ void loop() {
       eject();
     }
 
-    //Move Up one step function.
+    //Move Up one step function. (P)
     if (incomingByte == 85) {
-      forwardstep2();
+      positions[0] = positions[0] + 5;
+      positions[1] = positions[1];
+      steppers.moveTo(positions);
+      steppers.runSpeedToPosition();
     }
 
-    //Move Down one step function.
+    //Move Down one step function. (O)
     if (incomingByte == 73) {
-      backwardstep2();
+      positions[0] = positions[0] - 5;
+      positions[1] = positions[1];
+      steppers.moveTo(positions);
+      steppers.runSpeedToPosition();
     }
 
-    //Move Right one step function.
+    //Move Right one step function. (I)
     if (incomingByte == 79) {
-      forwardstep1();
+      positions[0] = positions[0];
+      positions[1] = positions[1] + 5;
+      steppers.moveTo(positions);
+      steppers.runSpeedToPosition();
     }
 
-    //Move Left one step function.
+    //Move Left one step function. (U)
     if (incomingByte == 80) {
-      backwardstep1();
+      positions[0] = positions[0];
+      positions[1] = positions[1] - 5;
+      steppers.moveTo(positions);
+      steppers.runSpeedToPosition();
     }
 
     //Set origin.
-    if (incomingByte = 77){
+    if (incomingByte == 77){
       stepperB.setCurrentPosition(0);
       stepperT.setCurrentPosition(0);
 

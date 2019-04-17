@@ -720,6 +720,7 @@ class ManualPage(tk.Frame):
 
     def done(self, controller, window):
         controller.myColl.setOrigin()
+        self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
         window.destroy()
 
 

@@ -131,25 +131,25 @@ class Collectador():
         """
         This method makes the top motor move one step up.
         """
-        self.send("U")
+        self.send("P")
 
     def moveOneDown(self):
         """
         This method makes the top motor move one step down.
         """
-        self.send("I")
+        self.send("O")
 
     def moveOneRight(self):
         """
         This method makes the bottom motor move one step to the right.
         """
-        self.send("O")
+        self.send("I")
 
     def moveOneLeft(self):
         """
         This method makes the bottom motor move one step to the left.
         """
-        self.send("P")
+        self.send("U")
 
     def setOrigin(self):
         """
@@ -157,6 +157,7 @@ class Collectador():
         Should be the upper left corner of well plate.
         """
         self.send("M")
+        self.position = 0
 
     def toggle_pattern(self):
         """
