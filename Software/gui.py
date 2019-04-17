@@ -12,6 +12,7 @@ import tkinter as tk
 from tkinter import font
 from tkinter import ttk
 from tkinter import filedialog
+from tkinter import messagebox
 
 
 from decimal import Decimal
@@ -382,6 +383,7 @@ class ManualPage(tk.Frame):
         self.lastwellbutton = tk.Button(self, text = "PREVIOUS WELL",font = controller.buttonFont,bg = "white",command = lambda: self.prev(controller) , height = 1, width = 20)
         self.resetbutton = tk.Button(self, text = "RESET STAGE",font = controller.buttonFont,bg = "white",command = lambda: self.reset(controller) , height = 1, width = 20)
         self.ejectbutton = tk.Button(self, text = "EJECT PLATE",font = controller.buttonFont,bg = "white",command = lambda: self.eject(controller) , height = 1, width = 20)
+        self.togglebutton = tk.Button(self, text = "TOGGLE PATTERN",font = controller.buttonFont,bg = "white",command = lambda: self.toggle(controller) , height = 1, width = 20)
         #self.calibratebutton = tk.Button(self, text = "Calibrate", command = lambda: controller.myPump.calibrate() )
         #self.entercalibratedbutton = tk.Button(self, text = "Enter", command = lambda: controller.myPump.setMeasuredVolume() )
 
@@ -399,6 +401,7 @@ class ManualPage(tk.Frame):
 
         self.CollectionControlLabel = tk.Label(self, text = "                        Collection Control",bg='#00fff2', font =controller.appHighlightFont)
         self.positionLabel = tk.Label(self, text = "Current Position: 1", bg = '#00fff2', font = controller.appHighlightFont)
+        self.patternLabel = tk.Label(self, text = "Current Pattern: Snake", bg = '#00fff2', font = controller.appHighlightFont)
 
         #creating the number of channels that we specified
         self.create_channels(controller,self.channels,self.reservoirs)
@@ -452,6 +455,11 @@ class ManualPage(tk.Frame):
 
         #row 11
         self.positionLabel.grid(column = 1, row = 11, columnspan = 2, sticky=tk.W, pady=5)
+        self.togglebutton.grid(column = 2, row = 11, columnspan = 4, sticky = tk.W, pady =5)
+
+        #row 12
+        self.positionLabel.grid(column = 1, row = 12, columnspan = 2, sticky=tk.W, pady=5)
+        self.patternLabel.grid(column = 3, row = 12, columnspan = 2, sticky = tk.W, pady=5)
     def create_channels(self,controller,channels,reservoirs):
         """creates each channel for manual page. properties of channels are stored in lists in self.
         channels and reservoirs variables refer to res and ch number

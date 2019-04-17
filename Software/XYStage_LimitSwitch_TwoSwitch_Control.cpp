@@ -643,8 +643,8 @@ void reset() {
   }
 
   //CODE TO MOVE THE WELL PLATE TO WHERE THE OUTLETS ARE ON TOP LEFT THREE WELLS.
-  positions[0] = positions[0] - 4349;
-  positions[1] = positions[1] + 2570;
+  positions[0] = positions[0] - 4310;
+  positions[1] = positions[1] + 2600;
 
   steppers.moveTo(positions);
   steppers.runSpeedToPosition();
