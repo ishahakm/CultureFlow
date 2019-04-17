@@ -244,7 +244,7 @@ class App(tk.Tk):
             self.my2Switch = TwoSwitch(self.portColl.get())
             self.my2Switch.ser = self.myColl.ser
 
-        self.set_defaults()
+        #self.set_defaults()
 
         self.show_frame(ManualPage)
     def positive_run_status(self):
@@ -384,7 +384,7 @@ class ManualPage(tk.Frame):
         self.resetbutton = tk.Button(self, text = "RESET STAGE",font = controller.buttonFont,bg = "white",command = lambda: self.reset(controller) , height = 1, width = 20)
         self.ejectbutton = tk.Button(self, text = "EJECT PLATE",font = controller.buttonFont,bg = "white",command = lambda: self.eject(controller) , height = 1, width = 20)
         self.togglebutton = tk.Button(self, text = "TOGGLE PATTERN",font = controller.buttonFont,bg = "white",command = lambda: self.toggle(controller) , height = 1, width = 20)
-        self.setOriginButton = tk.Button(self, text = "SET ORIGIN",font = controller.buttonFont,bg = "white",command = lambda: self.setOrigin(controller) , height = 1, width = 20)
+        self.setOriginButton = tk.Button(self, text = "SET ORIGIN/MANUAL CONTROL",font = controller.buttonFont,bg = "white",command = lambda: self.setOrigin(controller) , height = 1, width = 25)
         #self.calibratebutton = tk.Button(self, text = "Calibrate", command = lambda: controller.myPump.calibrate() )
         #self.entercalibratedbutton = tk.Button(self, text = "Enter", command = lambda: controller.myPump.setMeasuredVolume() )
 
@@ -686,7 +686,7 @@ class ManualPage(tk.Frame):
 
     def setOrigin(self,controller):
         window = tk.Tk()
-        window.title("Set Origin")
+        window.title("Set Origin/Manual Control")
         upButton = tk.Button(window, text = "UP",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneUp(controller) , height = 5, width = 10)
         downButton = tk.Button(window, text = "DOWN",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneDown(controller) , height = 5, width = 10)
         rightButton = tk.Button(window, text = "RIGHT",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneRight(controller) , height = 5, width = 10)
