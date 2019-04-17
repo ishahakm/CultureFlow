@@ -7,7 +7,7 @@ by:
 Liev Birman
 Adiel Hernandez
 """
-import fakeSerial as serial
+import serial
 import sys
 from serial.tools.list_ports import comports
 import time
