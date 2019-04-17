@@ -384,6 +384,7 @@ class ManualPage(tk.Frame):
         self.resetbutton = tk.Button(self, text = "RESET STAGE",font = controller.buttonFont,bg = "white",command = lambda: self.reset(controller) , height = 1, width = 20)
         self.ejectbutton = tk.Button(self, text = "EJECT PLATE",font = controller.buttonFont,bg = "white",command = lambda: self.eject(controller) , height = 1, width = 20)
         self.togglebutton = tk.Button(self, text = "TOGGLE PATTERN",font = controller.buttonFont,bg = "white",command = lambda: self.toggle(controller) , height = 1, width = 20)
+        self.setOriginButton = tk.Button(self, text = "SET ORIGIN",font = controller.buttonFont,bg = "white",command = lambda: self.setOrigin(controller) , height = 1, width = 20)
         #self.calibratebutton = tk.Button(self, text = "Calibrate", command = lambda: controller.myPump.calibrate() )
         #self.entercalibratedbutton = tk.Button(self, text = "Enter", command = lambda: controller.myPump.setMeasuredVolume() )
 
@@ -440,7 +441,7 @@ class ManualPage(tk.Frame):
         self.samplingrateentry.grid(column = 3, row = 6,columnspan = 2,sticky=tk.W)
 
         #row 7
-        self.startandcollectbutton.grid(column = 1, row = 7,columnspan = 2,sticky=tk.W, pady=10)
+        self.startandcollectbutton.grid(column = 2, row = 7,columnspan = 2,sticky=tk.W, pady=10)
 
         #row 8
         self.CollectionControlLabel.grid(column = 1, row = 8,columnspan = 4,sticky=tk.W)
@@ -460,6 +461,9 @@ class ManualPage(tk.Frame):
         #row 12
         self.positionLabel.grid(column = 1, row = 12, columnspan = 2, sticky=tk.W, pady=5)
         self.patternLabel.grid(column = 3, row = 12, columnspan = 2, sticky = tk.W, pady=5)
+
+        #row 13
+        self.setOriginButton.grid(column = 2, row = 13, columnspan = 2, sticky = tk.W, pady=5)
     def create_channels(self,controller,channels,reservoirs):
         """creates each channel for manual page. properties of channels are stored in lists in self.
         channels and reservoirs variables refer to res and ch number
@@ -679,6 +683,46 @@ class ManualPage(tk.Frame):
             controller.myColl.toggle_pattern()
             self.patternLabel['text'] = "Current Pattern: " + controller.myColl.currentPattern
             self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
+
+    def setOrigin(self,controller):
+        window = tk.Tk()
+        window.title("Set Origin")
+        upButton = tk.Button(window, text = "UP",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneUp(controller) , height = 5, width = 10)
+        downButton = tk.Button(window, text = "DOWN",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneDown(controller) , height = 5, width = 10)
+        rightButton = tk.Button(window, text = "RIGHT",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneRight(controller) , height = 5, width = 10)
+        leftButton = tk.Button(window, text = "LEFT",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneLeft(controller) , height = 5, width = 10)
+        doneButton = tk.Button(window, text = "DONE", font = controller.buttonFont, bg = "white", command = lambda: self.done(controller, window), height = 5, width = 10)
+
+        #row 1
+        upButton.grid(row = 1, column = 2, sticky = tk.W)
+
+        #row 2
+        leftButton.grid(row = 2, column = 1, sticky = tk.W)
+        rightButton.grid(row = 2, column = 3, sticky = tk.W)
+
+        #row 3
+        downButton.grid(row = 3, column = 2, sticky = tk.W)
+
+        #row 4
+        doneButton.grid(row = 4, column = 2, sticky = tk.W, pady = 40)
+
+    def moveOneUp(self, controller):
+        controller.myColl.moveOneUp()
+
+    def moveOneDown(self, controller):
+        controller.myColl.moveOneDown()
+
+    def moveOneRight(self, controller):
+        controller.myColl.moveOneRight()
+
+    def moveOneLeft(self, controller):
+        controller.myColl.moveOneLeft()
+
+    def done(self, controller, window):
+        controller.myColl.setOrigin()
+        window.destroy()
+
+
     #
     # def prime_window(self,controller):
     #     """

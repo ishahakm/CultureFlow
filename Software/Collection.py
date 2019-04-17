@@ -127,6 +127,37 @@ class Collectador():
             self.position -= 1
             #print(self.position)
 
+    def moveOneUp(self):
+        """
+        This method makes the top motor move one step up.
+        """
+        self.send("U")
+
+    def moveOneDown(self):
+        """
+        This method makes the top motor move one step down.
+        """
+        self.send("I")
+
+    def moveOneRight(self):
+        """
+        This method makes the bottom motor move one step to the right.
+        """
+        self.send("O")
+
+    def moveOneLeft(self):
+        """
+        This method makes the bottom motor move one step to the left.
+        """
+        self.send("P")
+
+    def setOrigin(self):
+        """
+        This method sets the origin once the user has manually moved it to his liking.
+        Should be the upper left corner of well plate.
+        """
+        self.send("M")
+
     def toggle_pattern(self):
         """
         This method sends the command "X" to the microcontroller which is programmed to toggle the movement layout.

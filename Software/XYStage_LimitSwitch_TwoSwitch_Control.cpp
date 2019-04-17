@@ -135,6 +135,11 @@ void loop() {
   //L = 76 Previous/Last function
   //E = 69 Done/Eject function
   //X = 88 Set collection pattern
+  //U = 85 Move Up one step
+  //I = 73 Move Down one step
+  //O = 79 Move Right one step
+  //P = 80 Move Left one step
+  //M = 77 Set Origin 
 
   //Ascii to Decimal for TwoSwitches
   //TwoSwitch A: Collection(A) = 65, Recirculation(S) = 83
@@ -214,6 +219,36 @@ void loop() {
     if (incomingByte == 69) {
       //Serial.println("Finished Collecting!");
       eject();
+    }
+
+    //Move Up one step function.
+    if (incomingByte == 85) {
+      forwardstep2();
+    }
+
+    //Move Down one step function.
+    if (incomingByte == 73) {
+      backwardstep2();
+    }
+
+    //Move Right one step function.
+    if (incomingByte == 79) {
+      forwardstep1();
+    }
+
+    //Move Left one step function.
+    if (incomingByte == 80) {
+      backwardstep1();
+    }
+
+    //Set origin.
+    if (incomingByte = 77){
+      stepperB.setCurrentPosition(0);
+      stepperT.setCurrentPosition(0);
+
+      myPosition = 0;  // Reset position variable to zero.
+      positions[0] = locations[myPosition][1];
+      positions[1] = locations[myPosition][0];
     }
 //////////////////////////////////////////////
     // Two Switch Collection Protocol.
