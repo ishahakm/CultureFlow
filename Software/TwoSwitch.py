@@ -8,7 +8,7 @@ Liev Birman
 Adiel Hernandez
 """
 
-import fakeSerial as serial
+import serial
 #import serial
 import sys
 from serial.tools.list_ports import comports
@@ -42,7 +42,7 @@ class TwoSwitch():
         self.serialConnected = False
         self.uniqueID = ""
 
-        self.serial_connect()
+        #self.serial_connect()
 
         self.willRecirculate = False
 
