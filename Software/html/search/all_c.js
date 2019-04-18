@@ -1,12 +1,12 @@
 var searchData=
 [
   ['name',['name',['../classfake_serial_1_1_serial.html#af3d8449c9f1992bbe479981375083651',1,'fakeSerial::Serial']]],
-  ['negative_5frun_5fstatus',['negative_run_status',['../class_g_u_i_1_1_app.html#a9547dcee8b0b3ece61097567d64dd091',1,'GUI::App']]],
-  ['newstep',['newstep',['../class_g_u_i_1_1_automatic_page.html#a4b73aabc00a5e160038d678bdccecb5f',1,'GUI::AutomaticPage']]],
-  ['next',['next',['../class_g_u_i_1_1_manual_page.html#a3edbdcd63e5dcb8fc7e1c9b21110206e',1,'GUI::ManualPage']]],
+  ['negative_5frun_5fstatus',['negative_run_status',['../classgui_1_1_app.html#acf736cd539fe969738a7f74d8232d2fb',1,'gui::App']]],
+  ['newstep',['newstep',['../classgui_1_1_automatic_page.html#a356e4aa433a2fc1d033a3463632dc9fb',1,'gui::AutomaticPage']]],
+  ['next',['next',['../classgui_1_1_manual_page.html#a28ccffcefb06e61579ed0f583719a5cb',1,'gui::ManualPage']]],
   ['next_5fsite',['next_site',['../class_collection_1_1_collectador.html#aa156ce605af4adfec1bfb7aa8447eb65',1,'Collection::Collectador']]],
-  ['nextwellbutton',['nextwellbutton',['../class_g_u_i_1_1_manual_page.html#a57fafae1e707e59ebbd1219249e390f0',1,'GUI::ManualPage']]],
-  ['number_5fdeleted',['number_deleted',['../class_g_u_i_1_1_automatic_page.html#a88c9bd3cae3ed5df9e15741ddafc1b9f',1,'GUI::AutomaticPage']]],
-  ['numberlist',['numberlist',['../class_g_u_i_1_1_automatic_page.html#aa0a9e5674ac9f72ee28583e47bdc7e98',1,'GUI::AutomaticPage']]],
-  ['numlocations',['numLocations',['../location_populate_8cpp.html#a8e7d7b387f29f94a9fdd51ffe47974ad',1,'locationPopulate.cpp']]]
+  ['nextwellbutton',['nextwellbutton',['../classgui_1_1_manual_page.html#a7e31eb0aa8abe07fd58ffa23dd66f09e',1,'gui::ManualPage']]],
+  ['number_5fdeleted',['number_deleted',['../classgui_1_1_automatic_page.html#a8445b7f6e0359f78a926e8a904bd2d59',1,'gui::AutomaticPage']]],
+  ['numberlist',['numberlist',['../classgui_1_1_automatic_page.html#a208bec8e2ffcdf37665b930c1c00d888',1,'gui::AutomaticPage']]],
+  ['numlocations',['numLocations',['../_arduino_snake_pattern_8cpp.html#a8e7d7b387f29f94a9fdd51ffe47974ad',1,'numLocations():&#160;ArduinoSnakePattern.cpp'],['../location_populate_8cpp.html#a8e7d7b387f29f94a9fdd51ffe47974ad',1,'numLocations():&#160;locationPopulate.cpp'],['../_x_y_stage___limit_switch___two_switch___control_8cpp.html#a8e7d7b387f29f94a9fdd51ffe47974ad',1,'numLocations():&#160;XYStage_LimitSwitch_TwoSwitch_Control.cpp']]]
 ];

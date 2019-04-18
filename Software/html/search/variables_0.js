@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['afms',['AFMS',['../_arduino_snake_pattern_8cpp.html#a7e8151031cf9a913ec4a28a5f56ed7c0',1,'ArduinoSnakePattern.cpp']]],
-  ['app',['app',['../namespace_g_u_i.html#aa8865a45ffd83d7c6062a02c169bc287',1,'GUI']]],
-  ['apphighlightfont',['appHighlightFont',['../class_g_u_i_1_1_app.html#ab8ce0bfa762e104b0e6d6e9f0bcef13f',1,'GUI::App']]],
-  ['autocollectlabel',['autocollectlabel',['../class_g_u_i_1_1_manual_page.html#a4f62f9cd9b897df513e1fc8818218f35',1,'GUI::ManualPage']]],
-  ['autopagebutton',['autopagebutton',['../class_g_u_i_1_1_manual_page.html#adec327f6ec4e8c17378376ebf99cf0e2',1,'GUI.ManualPage.autopagebutton()'],['../class_g_u_i_1_1_settings_page.html#a856b22dfda4b6ff01ceb0b00da8a7900',1,'GUI.SettingsPage.autopagebutton()']]]
+  ['acceleration',['acceleration',['../_arduino_snake_pattern_8cpp.html#ac062d8c5f7870c2798c97b8bf4fe9651',1,'acceleration():&#160;ArduinoSnakePattern.cpp'],['../_x_y_stage___limit_switch___two_switch___control_8cpp.html#ac062d8c5f7870c2798c97b8bf4fe9651',1,'acceleration():&#160;XYStage_LimitSwitch_TwoSwitch_Control.cpp']]],
+  ['afms',['AFMS',['../_arduino_snake_pattern_8cpp.html#a7e8151031cf9a913ec4a28a5f56ed7c0',1,'AFMS():&#160;ArduinoSnakePattern.cpp'],['../_x_y_stage___limit_switch___two_switch___control_8cpp.html#a7e8151031cf9a913ec4a28a5f56ed7c0',1,'AFMS():&#160;XYStage_LimitSwitch_TwoSwitch_Control.cpp']]],
+  ['app',['app',['../namespacegui.html#af263120175dda5fb802cbe5ce9490b93',1,'gui']]],
+  ['apphighlightfont',['appHighlightFont',['../classgui_1_1_app.html#aaa721570191997007c3664129d3cdeb1',1,'gui::App']]],
+  ['autocollectlabel',['autocollectlabel',['../classgui_1_1_manual_page.html#a20a0a4a3fc1d793fc086a49378e4d2a5',1,'gui::ManualPage']]],
+  ['autopagebutton',['autopagebutton',['../classgui_1_1_manual_page.html#a79da4eaba5adc9eab0ceb2da294a44d7',1,'gui.ManualPage.autopagebutton()'],['../classgui_1_1_settings_page.html#a244f69ad9a1606d1c5d7cd29970eb892',1,'gui.SettingsPage.autopagebutton()']]]
 ];

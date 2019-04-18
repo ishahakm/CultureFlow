@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gui_2epy',['GUI.py',['../_g_u_i_8py.html',1,'']]]
+  ['gui_2epy',['gui.py',['../gui_8py.html',1,'']]]
 ];

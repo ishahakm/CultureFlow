@@ -1,0 +1,27 @@
+var classgui_1_1_settings_page =
+[
+    [ "__init__", "classgui_1_1_settings_page.html#a83cb55146a85b6aa6a42326179e86c3e", null ],
+    [ "calibrate", "classgui_1_1_settings_page.html#acf80cd46922483e88c69a77df3a0d4c2", null ],
+    [ "update", "classgui_1_1_settings_page.html#ac2445b28977183112566153e4040ea09", null ],
+    [ "autopagebutton", "classgui_1_1_settings_page.html#a244f69ad9a1606d1c5d7cd29970eb892", null ],
+    [ "calibratebutton", "classgui_1_1_settings_page.html#a4aab78aef30f6259c8ac7124ffaaab63", null ],
+    [ "calibratecombobox", "classgui_1_1_settings_page.html#afea11f565c6d495382334c32113b7d4b", null ],
+    [ "calibrationlabel", "classgui_1_1_settings_page.html#a94bb3b68ce6a5bd9e55f0b0309f77b27", null ],
+    [ "channelcaliblabel", "classgui_1_1_settings_page.html#ac1bea32b8364a1d2acae35c6685b2ab9", null ],
+    [ "channels", "classgui_1_1_settings_page.html#a1c5e90e8faf482bd7889022f6e071a55", null ],
+    [ "channelvalues", "classgui_1_1_settings_page.html#a4adda89ac2b19fe9635db0ded6263254", null ],
+    [ "diameterlabel", "classgui_1_1_settings_page.html#a29329f4afd2779beb192868416c05dd5", null ],
+    [ "diameterlist", "classgui_1_1_settings_page.html#a0d54112cb3619e3148968ec853a00f19", null ],
+    [ "diametervalues", "classgui_1_1_settings_page.html#a6c8d831dbf1d4b98fdea0927eadb7b4b", null ],
+    [ "directionheading", "classgui_1_1_settings_page.html#a543df99e680b7b2c6e788ae1878bbe8e", null ],
+    [ "directionlabellist", "classgui_1_1_settings_page.html#a21cfd2eff92a22ad836fbc7d691fabb7", null ],
+    [ "directions", "classgui_1_1_settings_page.html#abd18115319e94ab60ef4d26e0ca5ce33", null ],
+    [ "directionslist", "classgui_1_1_settings_page.html#a958bc2d59118435d66dd0401ae046c59", null ],
+    [ "entercalibratedbutton", "classgui_1_1_settings_page.html#ab49b535727d53dfafd5b903a335be1f6", null ],
+    [ "mainlabel", "classgui_1_1_settings_page.html#a3e3eb465cc187fc73c0a13d057dc973e", null ],
+    [ "manualbutton", "classgui_1_1_settings_page.html#ae07663134fd244a2c1609ee85aaec03b", null ],
+    [ "measuredVolume", "classgui_1_1_settings_page.html#a4231170288c7640286577a8a6654f10b", null ],
+    [ "measuredVolumeEntry", "classgui_1_1_settings_page.html#aaa398afd46dc035efcb7a1a6063a4bc2", null ],
+    [ "reservoirs", "classgui_1_1_settings_page.html#a6540b0cddb528016810caa40902d23eb", null ],
+    [ "updatebutton", "classgui_1_1_settings_page.html#a8b32a4df0cd42d070635c54eab948859", null ]
+];

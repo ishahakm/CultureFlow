@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write',['write',['../classfake_serial_1_1_serial.html#abc4ef915d782f9e4a8d1d6f398298a6d',1,'fakeSerial::Serial']]]
+  ['update',['update',['../classgui_1_1_settings_page.html#ac2445b28977183112566153e4040ea09',1,'gui::SettingsPage']]]
 ];
