@@ -687,10 +687,10 @@ class ManualPage(tk.Frame):
     def setOrigin(self,controller):
         window = tk.Tk()
         window.title("Set Origin/Manual Control")
-        upButton = tk.Button(window, text = "UP",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneUp(controller) , height = 5, width = 10)
-        downButton = tk.Button(window, text = "DOWN",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneDown(controller) , height = 5, width = 10)
-        rightButton = tk.Button(window, text = "RIGHT",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneRight(controller) , height = 5, width = 10)
-        leftButton = tk.Button(window, text = "LEFT",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneLeft(controller) , height = 5, width = 10)
+        upButton = tk.Button(window, text = "UP",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneUp(controller), repeatdelay = 500, repeatinterval = 10, height = 5, width = 10)
+        downButton = tk.Button(window, text = "DOWN",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneDown(controller), repeatdelay = 500, repeatinterval = 10, height = 5, width = 10)
+        rightButton = tk.Button(window, text = "RIGHT",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneRight(controller), repeatdelay = 500, repeatinterval = 10, height = 5, width = 10)
+        leftButton = tk.Button(window, text = "LEFT",font = controller.buttonFont,bg = "white",command = lambda: self.moveOneLeft(controller), repeatdelay = 500, repeatinterval = 10, height = 5, width = 10)
         doneButton = tk.Button(window, text = "DONE", font = controller.buttonFont, bg = "white", command = lambda: self.done(controller, window), height = 5, width = 10)
 
         #row 1

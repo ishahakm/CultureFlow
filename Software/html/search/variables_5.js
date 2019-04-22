@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['flowrateentrylist',['flowrateentrylist',['../class_g_u_i_1_1_manual_page.html#af99dfa99bc1f8b8ac6e5a6b6f5944c71',1,'GUI::ManualPage']]],
-  ['frames',['frames',['../class_g_u_i_1_1_app.html#a20a736d09e838e4c083949e67d001ab0',1,'GUI::App']]]
+  ['flowrateentrylist',['flowrateentrylist',['../classgui_1_1_manual_page.html#a517224e5644c198d0547c74498750d32',1,'gui::ManualPage']]],
+  ['frames',['frames',['../classgui_1_1_app.html#ac51ff9d8a930644ef1dd9ac7651b5c00',1,'gui::App']]]
 ];

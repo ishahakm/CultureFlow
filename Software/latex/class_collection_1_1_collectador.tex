@@ -19,6 +19,18 @@ def \mbox{\hyperlink{class_collection_1_1_collectador_aa156ce605af4adfec1bfb7aa8
 \item 
 def \mbox{\hyperlink{class_collection_1_1_collectador_a784d44c359c9a4109ccd62b52a9a1e05}{last\+\_\+site}} (self)
 \item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_adab834abec1ab30ea7041d4f3637a7f7}{move\+One\+Up}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a2a68201ca55e22ec63e306da0aaeec39}{move\+One\+Down}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a14b9821e1685764187122c92b6079adb}{move\+One\+Right}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a129fbb777f2556972e92f4858b44fb16}{move\+One\+Left}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_a062823e41a786cd0f1577b02bf14ed67}{set\+Origin}} (self)
+\item 
+def \mbox{\hyperlink{class_collection_1_1_collectador_afe1f8b5d2328cf6ea624682ea716401a}{toggle\+\_\+pattern}} (self)
+\item 
 def \mbox{\hyperlink{class_collection_1_1_collectador_a23757363741c6dd611d91dd984013d86}{get\+\_\+info}} (self)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
@@ -36,6 +48,10 @@ def \mbox{\hyperlink{class_collection_1_1_collectador_a23757363741c6dd611d91dd98
 \item 
 \mbox{\hyperlink{class_collection_1_1_collectador_a13c3d036cddedace173688b51df275d5}{unique\+ID}}
 \item 
+\mbox{\hyperlink{class_collection_1_1_collectador_a7f70d1594de2d80376651c27572a6c1a}{using\+Snake\+Pattern}}
+\item 
+\mbox{\hyperlink{class_collection_1_1_collectador_a00073580ab88239050ae7be768fe8b23}{current\+Pattern}}
+\item 
 \mbox{\hyperlink{class_collection_1_1_collectador_a63f1c56b2b8bc80791fae03b9f6026ef}{connected}}
 \end{DoxyCompactItemize}
 
@@ -50,6 +66,8 @@ Attributes:
     serialConnected (bool): True/False of whether the serial connection was established.
     position (int): the position that the XY Stage is currently at.
     uniqueID (string): the unique identifier the microcontroller returns for automatic port selection.
+    usingSnakePattern (bool): True/False whether the collection pattern is currently a snake pattern.
+    currentPattern (string): string representation of the current pattern.
 \end{DoxyVerb}
  
 
@@ -110,6 +128,38 @@ Returns:
 \begin{DoxyVerb}This method sends the command "L" to the microcontroller which is programmed to move the XY Stage to the last position when receiving this command.
 Simulatenously also updates the current position of the XY Stage.
 \end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_a2a68201ca55e22ec63e306da0aaeec39}\label{class_collection_1_1_collectador_a2a68201ca55e22ec63e306da0aaeec39}} 
+\index{Collection.Collectador@{Collection.Collectador}!moveOneDown@{moveOneDown}}
+\index{moveOneDown@{moveOneDown}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{moveOneDown()}{moveOneDown()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+move\+One\+Down (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method makes the top motor move one step down.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_a129fbb777f2556972e92f4858b44fb16}\label{class_collection_1_1_collectador_a129fbb777f2556972e92f4858b44fb16}} 
+\index{Collection.Collectador@{Collection.Collectador}!moveOneLeft@{moveOneLeft}}
+\index{moveOneLeft@{moveOneLeft}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{moveOneLeft()}{moveOneLeft()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+move\+One\+Left (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method makes the bottom motor move one step to the left.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_a14b9821e1685764187122c92b6079adb}\label{class_collection_1_1_collectador_a14b9821e1685764187122c92b6079adb}} 
+\index{Collection.Collectador@{Collection.Collectador}!moveOneRight@{moveOneRight}}
+\index{moveOneRight@{moveOneRight}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{moveOneRight()}{moveOneRight()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+move\+One\+Right (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method makes the bottom motor move one step to the right.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_adab834abec1ab30ea7041d4f3637a7f7}\label{class_collection_1_1_collectador_adab834abec1ab30ea7041d4f3637a7f7}} 
+\index{Collection.Collectador@{Collection.Collectador}!moveOneUp@{moveOneUp}}
+\index{moveOneUp@{moveOneUp}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{moveOneUp()}{moveOneUp()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+move\+One\+Up (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method makes the top motor move one step up.
+\end{DoxyVerb}
  \mbox{\Hypertarget{class_collection_1_1_collectador_aa156ce605af4adfec1bfb7aa8447eb65}\label{class_collection_1_1_collectador_aa156ce605af4adfec1bfb7aa8447eb65}} 
 \index{Collection.Collectador@{Collection.Collectador}!next\_site@{next\_site}}
 \index{next\_site@{next\_site}!Collection.Collectador@{Collection.Collectador}}
@@ -149,6 +199,24 @@ Parameters:
 
 Once the comport of the pump is known we open a serial connection to it using pySerial.
 \end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_a062823e41a786cd0f1577b02bf14ed67}\label{class_collection_1_1_collectador_a062823e41a786cd0f1577b02bf14ed67}} 
+\index{Collection.Collectador@{Collection.Collectador}!setOrigin@{setOrigin}}
+\index{setOrigin@{setOrigin}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{setOrigin()}{setOrigin()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+set\+Origin (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sets the origin once the user has manually moved it to his liking.
+Should be the upper left corner of well plate.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_collection_1_1_collectador_afe1f8b5d2328cf6ea624682ea716401a}\label{class_collection_1_1_collectador_afe1f8b5d2328cf6ea624682ea716401a}} 
+\index{Collection.Collectador@{Collection.Collectador}!toggle\_pattern@{toggle\_pattern}}
+\index{toggle\_pattern@{toggle\_pattern}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{toggle\_pattern()}{toggle\_pattern()}}
+{\footnotesize\ttfamily def Collection.\+Collectador.\+toggle\+\_\+pattern (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method sends the command "X" to the microcontroller which is programmed to toggle the movement layout.
+The two movement patterns currently supported are snake pattern and top down pattern.
+\end{DoxyVerb}
  
 
 \subsection{Member Data Documentation}
@@ -163,6 +231,12 @@ Once the comport of the pump is known we open a serial connection to it using py
 \index{connected@{connected}!Collection.Collectador@{Collection.Collectador}}
 \subsubsection{\texorpdfstring{connected}{connected}}
 {\footnotesize\ttfamily Collection.\+Collectador.\+connected}
+
+\mbox{\Hypertarget{class_collection_1_1_collectador_a00073580ab88239050ae7be768fe8b23}\label{class_collection_1_1_collectador_a00073580ab88239050ae7be768fe8b23}} 
+\index{Collection.Collectador@{Collection.Collectador}!currentPattern@{currentPattern}}
+\index{currentPattern@{currentPattern}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{currentPattern}{currentPattern}}
+{\footnotesize\ttfamily Collection.\+Collectador.\+current\+Pattern}
 
 \mbox{\Hypertarget{class_collection_1_1_collectador_a550345b45c253014500953908ed1a995}\label{class_collection_1_1_collectador_a550345b45c253014500953908ed1a995}} 
 \index{Collection.Collectador@{Collection.Collectador}!port@{port}}
@@ -193,6 +267,12 @@ Once the comport of the pump is known we open a serial connection to it using py
 \index{uniqueID@{uniqueID}!Collection.Collectador@{Collection.Collectador}}
 \subsubsection{\texorpdfstring{uniqueID}{uniqueID}}
 {\footnotesize\ttfamily Collection.\+Collectador.\+unique\+ID}
+
+\mbox{\Hypertarget{class_collection_1_1_collectador_a7f70d1594de2d80376651c27572a6c1a}\label{class_collection_1_1_collectador_a7f70d1594de2d80376651c27572a6c1a}} 
+\index{Collection.Collectador@{Collection.Collectador}!usingSnakePattern@{usingSnakePattern}}
+\index{usingSnakePattern@{usingSnakePattern}!Collection.Collectador@{Collection.Collectador}}
+\subsubsection{\texorpdfstring{usingSnakePattern}{usingSnakePattern}}
+{\footnotesize\ttfamily Collection.\+Collectador.\+using\+Snake\+Pattern}
 
 
 

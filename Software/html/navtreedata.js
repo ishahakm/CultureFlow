@@ -24,7 +24,6 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Automated Microfluidic Platform", "index.html", [
-    [ "MicrofluidicPlatform", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -57,7 +56,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_arduino_snake_pattern_8cpp.html",
-"class_two_switch_1_1_two_switch.html#a755481c98e9abd57c5307217df83795b"
+"classgui_1_1_automatic_page.html#ad4b9b8d05eba7460d0d4069223959459"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

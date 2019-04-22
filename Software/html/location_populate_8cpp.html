@@ -98,8 +98,9 @@ $(document).ready(function(){initNavTree('location_populate_8cpp.html','');});
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8891d0e7e055eb6243dfacd33f703956"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="location_populate_8cpp.html#a8891d0e7e055eb6243dfacd33f703956">populateLocations</a> (long(&amp;<a class="el" href="_arduino_snake_pattern_8cpp.html#a4dd37a657a4a2106672f2dcdc2fed88c">locations</a>)[<a class="el" href="location_populate_8cpp.html#a8e7d7b387f29f94a9fdd51ffe47974ad">numLocations</a>][2])</td></tr>
-<tr class="separator:a8891d0e7e055eb6243dfacd33f703956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991530e281355961890c5f0c4e0e616d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="location_populate_8cpp.html#a991530e281355961890c5f0c4e0e616d">populateLocations</a> (long(&amp;<a class="el" href="_x_y_stage___limit_switch___two_switch___control_8cpp.html#a4dd37a657a4a2106672f2dcdc2fed88c">locations</a>)[<a class="el" href="_x_y_stage___limit_switch___two_switch___control_8cpp.html#a8e7d7b387f29f94a9fdd51ffe47974ad">numLocations</a>][2], int choice=1)</td></tr>
+<tr class="memdesc:a991530e281355961890c5f0c4e0e616d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function populates the location matrix with the layout for moving to any location on the well plate.  <a href="#a991530e281355961890c5f0c4e0e616d">More...</a><br /></td></tr>
+<tr class="separator:a991530e281355961890c5f0c4e0e616d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="location_populate_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -109,7 +110,7 @@ Variables</h2></td></tr>
 <tr class="separator:a157b993c60eb39741c69aeb616a11e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae68a25c0023d8b777603c0f8b05e591a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="location_populate_8cpp.html#ae68a25c0023d8b777603c0f8b05e591a">columns</a> = 12</td></tr>
 <tr class="separator:ae68a25c0023d8b777603c0f8b05e591a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e7d7b387f29f94a9fdd51ffe47974ad"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="location_populate_8cpp.html#a8e7d7b387f29f94a9fdd51ffe47974ad">numLocations</a> = ((<a class="el" href="location_populate_8cpp.html#a157b993c60eb39741c69aeb616a11e70">rows</a> * <a class="el" href="location_populate_8cpp.html#ae68a25c0023d8b777603c0f8b05e591a">columns</a>) / 3) + 1</td></tr>
+<tr class="memitem:a8e7d7b387f29f94a9fdd51ffe47974ad"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="location_populate_8cpp.html#a8e7d7b387f29f94a9fdd51ffe47974ad">numLocations</a> = ((<a class="el" href="_x_y_stage___limit_switch___two_switch___control_8cpp.html#a157b993c60eb39741c69aeb616a11e70">rows</a> * <a class="el" href="_x_y_stage___limit_switch___two_switch___control_8cpp.html#ae68a25c0023d8b777603c0f8b05e591a">columns</a>) / 3) + 1</td></tr>
 <tr class="separator:a8e7d7b387f29f94a9fdd51ffe47974ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a313ea143f04b4753dc16560a0ebe0e03"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="location_populate_8cpp.html#a313ea143f04b4753dc16560a0ebe0e03">stepsPerWell</a> = 225</td></tr>
 <tr class="separator:a313ea143f04b4753dc16560a0ebe0e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,8 +135,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8891d0e7e055eb6243dfacd33f703956"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8891d0e7e055eb6243dfacd33f703956">&#9670;&nbsp;</a></span>populateLocations()</h2>
+<a id="a991530e281355961890c5f0c4e0e616d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991530e281355961890c5f0c4e0e616d">&#9670;&nbsp;</a></span>populateLocations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,11 +145,24 @@ Variables</h2></td></tr>
           <td class="memname">void populateLocations </td>
           <td>(</td>
           <td class="paramtype">long(&amp;)&#160;</td>
-          <td class="paramname"><em>locations</em>[numLocations][2]</td><td>)</td>
+          <td class="paramname"><em>locations</em>[numLocations][2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>choice</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This function populates the location matrix with the layout for moving to any location on the well plate. </p>
+<p>Gives the user the choice for a snake pattern Choice = 1, or top to bottom pattern Choice != 1. </p>
 
 </div>
 </div>
@@ -174,7 +188,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int numLocations = ((<a class="el" href="location_populate_8cpp.html#a157b993c60eb39741c69aeb616a11e70">rows</a> * <a class="el" href="location_populate_8cpp.html#ae68a25c0023d8b777603c0f8b05e591a">columns</a>) / 3) + 1</td>
+          <td class="memname">const int numLocations = ((<a class="el" href="_x_y_stage___limit_switch___two_switch___control_8cpp.html#a157b993c60eb39741c69aeb616a11e70">rows</a> * <a class="el" href="_x_y_stage___limit_switch___two_switch___control_8cpp.html#ae68a25c0023d8b777603c0f8b05e591a">columns</a>) / 3) + 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
