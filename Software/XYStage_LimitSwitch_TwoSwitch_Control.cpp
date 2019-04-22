@@ -27,9 +27,9 @@ const int stepsPerWell = 225; /**< Amount of steps needed from center of well to
 const int stepsToEject = 1000; /**< Amount of steps to eject entire well plate. */
 const int limitSwitchT = 41; /**< Digital Pin Number for Top Stepper Motor Limit Switch. */
 const int limitSwitchB = 43; /**< Digital Pin Number for Bottom Stepper Motor Limit Switch. */
-const int TwoSwitchA = 31; /**< Digital Pin Number for TwoSwitchA. */
+const int TwoSwitchA = 35; /**< Digital Pin Number for TwoSwitchA. */
 const int TwoSwitchB = 33; /**< Digital Pin Number for TwoSwitchB. */
-const int TwoSwitchC = 35; /**< Digital Pin Number for TwoSwitchC. */
+const int TwoSwitchC = 31; /**< Digital Pin Number for TwoSwitchC. */
 
 //Function Decalartions.
 void forwardstep1();
