@@ -1,0 +1,1044 @@
+\begin{theindex}
+
+  \item {\_\_init\_\_}
+    \subitem {Collection.Collectador}, \hyperpage{26}
+    \subitem {fakeSerial.Serial}, \hyperpage{45}
+    \subitem {gui.App}, \hyperpage{14}
+    \subitem {gui.AutomaticPage}, \hyperpage{20}
+    \subitem {gui.ManualPage}, \hyperpage{32}
+    \subitem {gui.SettingsPage}, \hyperpage{50}
+    \subitem {gui.WelcomePage}, \hyperpage{63}
+    \subitem {Mswitch.MSwitch}, \hyperpage{41}
+    \subitem {Pump.ThreePump}, \hyperpage{54}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{60}
+  \item {\_\_str\_\_}
+    \subitem {fakeSerial.Serial}, \hyperpage{45}
+
+  \indexspace
+
+  \item {abort\_calibration}
+    \subitem {Pump.ThreePump}, \hyperpage{54}
+  \item {acceleration}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{72}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{84}
+  \item {add\_step}
+    \subitem {gui.AutomaticPage}, \hyperpage{20}
+  \item {AFMS}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{72}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{85}
+  \item {app}
+    \subitem {gui}, \hyperpage{11}
+  \item {appHighlightFont}
+    \subitem {gui.App}, \hyperpage{16}
+  \item {ArduinoSnakePattern.cpp}, \hyperpage{67}
+    \subitem {acceleration}, \hyperpage{72}
+    \subitem {AFMS}, \hyperpage{72}
+    \subitem {backwardstep1}, \hyperpage{69}
+    \subitem {backwardstep2}, \hyperpage{69}
+    \subitem {columns}, \hyperpage{73}
+    \subitem {delayRPM}, \hyperpage{73}
+    \subitem {eject}, \hyperpage{69}
+    \subitem {forwardstep1}, \hyperpage{69}
+    \subitem {forwardstep2}, \hyperpage{69}
+    \subitem {limitSwitchB}, \hyperpage{73}
+    \subitem {limitSwitchT}, \hyperpage{73}
+    \subitem {locations}, \hyperpage{73}
+    \subitem {loop}, \hyperpage{70}
+    \subitem {maximumSpeed}, \hyperpage{73}
+    \subitem {moveDown}, \hyperpage{70}
+    \subitem {moveGen}, \hyperpage{70}
+    \subitem {moveLast}, \hyperpage{70}
+    \subitem {moveLeft}, \hyperpage{71}
+    \subitem {moveNext}, \hyperpage{71}
+    \subitem {moveRight}, \hyperpage{71}
+    \subitem {moveUp}, \hyperpage{71}
+    \subitem {myMotorB}, \hyperpage{74}
+    \subitem {myMotorT}, \hyperpage{74}
+    \subitem {myPosition}, \hyperpage{74}
+    \subitem {numLocations}, \hyperpage{74}
+    \subitem {populateLocations}, \hyperpage{71}
+    \subitem {positions}, \hyperpage{74}
+    \subitem {reset}, \hyperpage{71}
+    \subitem {rows}, \hyperpage{74}
+    \subitem {set}, \hyperpage{72}
+    \subitem {setup}, \hyperpage{72}
+    \subitem {stepperB}, \hyperpage{72}
+    \subitem {steppers}, \hyperpage{75}
+    \subitem {stepperT}, \hyperpage{72}
+    \subitem {stepsPerRevolution}, \hyperpage{75}
+    \subitem {stepsPerWell}, \hyperpage{75}
+    \subitem {stepsToEject}, \hyperpage{75}
+    \subitem {TwoSwitchA}, \hyperpage{75}
+    \subitem {TwoSwitchB}, \hyperpage{75}
+    \subitem {TwoSwitchC}, \hyperpage{76}
+  \item {autocollectlabel}
+    \subitem {gui.ManualPage}, \hyperpage{36}
+  \item {autopagebutton}
+    \subitem {gui.ManualPage}, \hyperpage{36}
+    \subitem {gui.SettingsPage}, \hyperpage{50}
+
+  \indexspace
+
+  \item {backwardstep1}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{69}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{81}
+  \item {backwardstep2}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{69}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{81}
+  \item {baud}
+    \subitem {Collection.Collectador}, \hyperpage{29}
+    \subitem {Mswitch.MSwitch}, \hyperpage{43}
+    \subitem {Pump.ThreePump}, \hyperpage{58}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{62}
+  \item {baudrate}
+    \subitem {fakeSerial.Serial}, \hyperpage{48}
+  \item {buttonFont}
+    \subitem {gui.App}, \hyperpage{16}
+  \item {bytesize}
+    \subitem {fakeSerial.Serial}, \hyperpage{48}
+
+  \indexspace
+
+  \item {calibrate}
+    \subitem {gui.SettingsPage}, \hyperpage{50}
+    \subitem {Pump.ThreePump}, \hyperpage{54}
+  \item {calibratebutton}
+    \subitem {gui.SettingsPage}, \hyperpage{50}
+  \item {calibratecombobox}
+    \subitem {gui.SettingsPage}, \hyperpage{51}
+  \item {calibrationlabel}
+    \subitem {gui.SettingsPage}, \hyperpage{51}
+  \item {calibrationunit}
+    \subitem {Pump.ThreePump}, \hyperpage{58}
+  \item {calibrationvolume}
+    \subitem {Pump.ThreePump}, \hyperpage{58}
+  \item {channelcaliblabel}
+    \subitem {gui.SettingsPage}, \hyperpage{51}
+  \item {channels}
+    \subitem {gui.AutomaticPage}, \hyperpage{22}
+    \subitem {gui.ManualPage}, \hyperpage{36}
+    \subitem {gui.SettingsPage}, \hyperpage{51}
+  \item {channeltextlist}
+    \subitem {gui.ManualPage}, \hyperpage{36}
+  \item {channelvalues}
+    \subitem {gui.SettingsPage}, \hyperpage{51}
+  \item {check\_all\_manual}
+    \subitem {gui.ManualPage}, \hyperpage{32}
+  \item {check\_all\_manual\_and\_sampling}
+    \subitem {gui.ManualPage}, \hyperpage{32}
+  \item {check\_channel}
+    \subitem {gui.AutomaticPage}, \hyperpage{21}
+    \subitem {gui.ManualPage}, \hyperpage{32}
+  \item {check\_input}
+    \subitem {gui}, \hyperpage{10}
+  \item {chop\_return}
+    \subitem {Collection.Collectador}, \hyperpage{26}
+    \subitem {Mswitch.MSwitch}, \hyperpage{41}
+    \subitem {Pump.ThreePump}, \hyperpage{55}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{60}
+  \item {clear\_recipe}
+    \subitem {gui.AutomaticPage}, \hyperpage{21}
+  \item {clearbutton}
+    \subitem {gui.AutomaticPage}, \hyperpage{22}
+  \item {close}
+    \subitem {fakeSerial.Serial}, \hyperpage{45}
+  \item {coll\_label}
+    \subitem {gui.WelcomePage}, \hyperpage{64}
+  \item {Collection}, \hyperpage{9}
+  \item {Collection.Collectador}, \hyperpage{25}
+    \subitem {\_\_init\_\_}, \hyperpage{26}
+    \subitem {baud}, \hyperpage{29}
+    \subitem {chop\_return}, \hyperpage{26}
+    \subitem {connected}, \hyperpage{29}
+    \subitem {currentPattern}, \hyperpage{29}
+    \subitem {eject}, \hyperpage{26}
+    \subitem {get\_info}, \hyperpage{26}
+    \subitem {last\_site}, \hyperpage{27}
+    \subitem {moveOneDown}, \hyperpage{27}
+    \subitem {moveOneLeft}, \hyperpage{27}
+    \subitem {moveOneRight}, \hyperpage{27}
+    \subitem {moveOneUp}, \hyperpage{27}
+    \subitem {next\_site}, \hyperpage{28}
+    \subitem {port}, \hyperpage{30}
+    \subitem {position}, \hyperpage{30}
+    \subitem {reset}, \hyperpage{28}
+    \subitem {send}, \hyperpage{28}
+    \subitem {ser}, \hyperpage{30}
+    \subitem {serial\_connect}, \hyperpage{28}
+    \subitem {serialConnected}, \hyperpage{30}
+    \subitem {setOrigin}, \hyperpage{29}
+    \subitem {toggle\_pattern}, \hyperpage{29}
+    \subitem {uniqueID}, \hyperpage{30}
+    \subitem {usingSnakePattern}, \hyperpage{30}
+  \item {Collection.py}, \hyperpage{76}
+  \item {CollectionControlLabel}
+    \subitem {gui.ManualPage}, \hyperpage{36}
+  \item {collectionPattern}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{85}
+  \item {collectorframe}
+    \subitem {gui.WelcomePage}, \hyperpage{64}
+  \item {columns}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{73}
+    \subitem {locationPopulate.cpp}, \hyperpage{78}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{85}
+  \item {combine\_funcs}
+    \subitem {gui}, \hyperpage{10}
+  \item {connected}
+    \subitem {Collection.Collectador}, \hyperpage{29}
+    \subitem {Mswitch.MSwitch}, \hyperpage{43}
+    \subitem {Pump.ThreePump}, \hyperpage{59}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{62}
+  \item {create\_channels}
+    \subitem {gui.ManualPage}, \hyperpage{33}
+  \item {create\_step}
+    \subitem {gui.AutomaticPage}, \hyperpage{21}
+  \item {currentPattern}
+    \subitem {Collection.Collectador}, \hyperpage{29}
+
+  \indexspace
+
+  \item {default\_diameter\_index}
+    \subitem {gui.App}, \hyperpage{16}
+  \item {delayRPM}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{73}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{85}
+  \item {delete\_step}
+    \subitem {gui.AutomaticPage}, \hyperpage{21}
+  \item {deletestep}
+    \subitem {gui.AutomaticPage}, \hyperpage{22}
+  \item {deletestepcombo}
+    \subitem {gui.AutomaticPage}, \hyperpage{22}
+  \item {diameterlabel}
+    \subitem {gui.SettingsPage}, \hyperpage{51}
+  \item {diameterlist}
+    \subitem {gui.SettingsPage}, \hyperpage{51}
+  \item {diametervalues}
+    \subitem {gui.SettingsPage}, \hyperpage{51}
+  \item {directionheading}
+    \subitem {gui.SettingsPage}, \hyperpage{52}
+  \item {directionlabellist}
+    \subitem {gui.SettingsPage}, \hyperpage{52}
+  \item {directions}
+    \subitem {gui.SettingsPage}, \hyperpage{52}
+  \item {directionslist}
+    \subitem {gui.SettingsPage}, \hyperpage{52}
+  \item {done}
+    \subitem {gui.ManualPage}, \hyperpage{33}
+  \item {done\_and\_load}
+    \subitem {gui.App}, \hyperpage{14}
+  \item {donebutton}
+    \subitem {gui.WelcomePage}, \hyperpage{64}
+
+  \indexspace
+
+  \item {eject}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{69}
+    \subitem {Collection.Collectador}, \hyperpage{26}
+    \subitem {gui.ManualPage}, \hyperpage{33}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{81}
+  \item {ejectbutton}
+    \subitem {gui.AutomaticPage}, \hyperpage{22}
+    \subitem {gui.ManualPage}, \hyperpage{37}
+  \item {entercalibratedbutton}
+    \subitem {gui.SettingsPage}, \hyperpage{52}
+
+  \indexspace
+
+  \item {fakeSerial}, \hyperpage{9}
+  \item {fakeSerial.py}, \hyperpage{76}
+  \item {fakeSerial.Serial}, \hyperpage{44}
+    \subitem {\_\_init\_\_}, \hyperpage{45}
+    \subitem {\_\_str\_\_}, \hyperpage{45}
+    \subitem {baudrate}, \hyperpage{48}
+    \subitem {bytesize}, \hyperpage{48}
+    \subitem {close}, \hyperpage{45}
+    \subitem {flush}, \hyperpage{46}
+    \subitem {flushInput}, \hyperpage{46}
+    \subitem {flushOutput}, \hyperpage{46}
+    \subitem {isOpen}, \hyperpage{46}
+    \subitem {name}, \hyperpage{48}
+    \subitem {open}, \hyperpage{46}
+    \subitem {parity}, \hyperpage{48}
+    \subitem {port}, \hyperpage{48}
+    \subitem {read}, \hyperpage{47}
+    \subitem {readline}, \hyperpage{47}
+    \subitem {rtscts}, \hyperpage{48}
+    \subitem {stopbits}, \hyperpage{48}
+    \subitem {timeout}, \hyperpage{48}
+    \subitem {write}, \hyperpage{47}
+    \subitem {xonxoff}, \hyperpage{49}
+  \item {file\_load}
+    \subitem {gui.AutomaticPage}, \hyperpage{21}
+  \item {file\_save}
+    \subitem {gui.AutomaticPage}, \hyperpage{21}
+  \item {flip}
+    \subitem {gui.WelcomePage}, \hyperpage{64}
+  \item {flowrateentrylist}
+    \subitem {gui.ManualPage}, \hyperpage{37}
+  \item {flush}
+    \subitem {fakeSerial.Serial}, \hyperpage{46}
+  \item {flushInput}
+    \subitem {fakeSerial.Serial}, \hyperpage{46}
+  \item {flushOutput}
+    \subitem {fakeSerial.Serial}, \hyperpage{46}
+  \item {FormatVolume}
+    \subitem {Pump.ThreePump}, \hyperpage{55}
+  \item {forwardstep1}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{69}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{82}
+  \item {forwardstep2}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{69}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{82}
+  \item {frames}
+    \subitem {gui.App}, \hyperpage{17}
+
+  \indexspace
+
+  \item {get\_comport}
+    \subitem {gui.App}, \hyperpage{14}
+  \item {get\_info}
+    \subitem {Collection.Collectador}, \hyperpage{26}
+    \subitem {Mswitch.MSwitch}, \hyperpage{42}
+  \item {get\_ports}
+    \subitem {gui.App}, \hyperpage{15}
+    \subitem {Pump}, \hyperpage{12}
+  \item {getIdentifier}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{60}
+  \item {greaterlabelframe}
+    \subitem {gui.ManualPage}, \hyperpage{37}
+  \item {gui}, \hyperpage{9}
+    \subitem {app}, \hyperpage{11}
+    \subitem {check\_input}, \hyperpage{10}
+    \subitem {combine\_funcs}, \hyperpage{10}
+    \subitem {LARGE\_FONT}, \hyperpage{11}
+    \subitem {message\_prompt}, \hyperpage{10}
+  \item {gui.App}, \hyperpage{13}
+    \subitem {\_\_init\_\_}, \hyperpage{14}
+    \subitem {appHighlightFont}, \hyperpage{16}
+    \subitem {buttonFont}, \hyperpage{16}
+    \subitem {default\_diameter\_index}, \hyperpage{16}
+    \subitem {done\_and\_load}, \hyperpage{14}
+    \subitem {frames}, \hyperpage{17}
+    \subitem {get\_comport}, \hyperpage{14}
+    \subitem {get\_ports}, \hyperpage{15}
+    \subitem {hasColl}, \hyperpage{17}
+    \subitem {hasMani}, \hyperpage{17}
+    \subitem {hasPump}, \hyperpage{17}
+    \subitem {max\_flowrate\_1}, \hyperpage{17}
+    \subitem {max\_flowrate\_2}, \hyperpage{17}
+    \subitem {max\_flowrate\_3}, \hyperpage{17}
+    \subitem {max\_flowrate\_list}, \hyperpage{18}
+    \subitem {message\_window}, \hyperpage{15}
+    \subitem {my2Switch}, \hyperpage{18}
+    \subitem {myColl}, \hyperpage{18}
+    \subitem {myMani}, \hyperpage{18}
+    \subitem {myPump}, \hyperpage{18}
+    \subitem {negative\_run\_status}, \hyperpage{15}
+    \subitem {pageFont}, \hyperpage{18}
+    \subitem {port2Switch}, \hyperpage{18}
+    \subitem {portColl}, \hyperpage{18}
+    \subitem {portMani}, \hyperpage{19}
+    \subitem {portPump}, \hyperpage{19}
+    \subitem {ports}, \hyperpage{19}
+    \subitem {positive\_run\_status}, \hyperpage{15}
+    \subitem {set\_defaults}, \hyperpage{16}
+    \subitem {should\_be\_running}, \hyperpage{19}
+    \subitem {show\_frame}, \hyperpage{16}
+    \subitem {well\_working\_volume}, \hyperpage{19}
+  \item {gui.AutomaticPage}, \hyperpage{19}
+    \subitem {\_\_init\_\_}, \hyperpage{20}
+    \subitem {add\_step}, \hyperpage{20}
+    \subitem {channels}, \hyperpage{22}
+    \subitem {check\_channel}, \hyperpage{21}
+    \subitem {clear\_recipe}, \hyperpage{21}
+    \subitem {clearbutton}, \hyperpage{22}
+    \subitem {create\_step}, \hyperpage{21}
+    \subitem {delete\_step}, \hyperpage{21}
+    \subitem {deletestep}, \hyperpage{22}
+    \subitem {deletestepcombo}, \hyperpage{22}
+    \subitem {ejectbutton}, \hyperpage{22}
+    \subitem {file\_load}, \hyperpage{21}
+    \subitem {file\_save}, \hyperpage{21}
+    \subitem {headinglabel}, \hyperpage{23}
+    \subitem {loadbutton}, \hyperpage{23}
+    \subitem {mainlabel}, \hyperpage{23}
+    \subitem {manualbutton}, \hyperpage{23}
+    \subitem {newstep}, \hyperpage{23}
+    \subitem {number\_deleted}, \hyperpage{23}
+    \subitem {numberlist}, \hyperpage{23}
+    \subitem {reservoirs}, \hyperpage{23}
+    \subitem {run\_recipe}, \hyperpage{22}
+    \subitem {runbutton}, \hyperpage{24}
+    \subitem {savebutton}, \hyperpage{24}
+    \subitem {settingsbutton}, \hyperpage{24}
+    \subitem {steplist}, \hyperpage{24}
+    \subitem {stepnumbers}, \hyperpage{24}
+    \subitem {todelete}, \hyperpage{24}
+    \subitem {twoSwitchValues}, \hyperpage{24}
+  \item {gui.ManualPage}, \hyperpage{31}
+    \subitem {\_\_init\_\_}, \hyperpage{32}
+    \subitem {autocollectlabel}, \hyperpage{36}
+    \subitem {autopagebutton}, \hyperpage{36}
+    \subitem {channels}, \hyperpage{36}
+    \subitem {channeltextlist}, \hyperpage{36}
+    \subitem {check\_all\_manual}, \hyperpage{32}
+    \subitem {check\_all\_manual\_and\_sampling}, \hyperpage{32}
+    \subitem {check\_channel}, \hyperpage{32}
+    \subitem {CollectionControlLabel}, \hyperpage{36}
+    \subitem {create\_channels}, \hyperpage{33}
+    \subitem {done}, \hyperpage{33}
+    \subitem {eject}, \hyperpage{33}
+    \subitem {ejectbutton}, \hyperpage{37}
+    \subitem {flowrateentrylist}, \hyperpage{37}
+    \subitem {greaterlabelframe}, \hyperpage{37}
+    \subitem {labelframelist}, \hyperpage{37}
+    \subitem {lastwellbutton}, \hyperpage{37}
+    \subitem {mainlabel}, \hyperpage{37}
+    \subitem {moveOneDown}, \hyperpage{33}
+    \subitem {moveOneLeft}, \hyperpage{33}
+    \subitem {moveOneRight}, \hyperpage{34}
+    \subitem {moveOneUp}, \hyperpage{34}
+    \subitem {next}, \hyperpage{34}
+    \subitem {nextwellbutton}, \hyperpage{37}
+    \subitem {patternLabel}, \hyperpage{37}
+    \subitem {positionLabel}, \hyperpage{38}
+    \subitem {prev}, \hyperpage{34}
+    \subitem {reservoircombobox}, \hyperpage{38}
+    \subitem {reservoirlabel}, \hyperpage{38}
+    \subitem {reservoirs}, \hyperpage{38}
+    \subitem {reservoirvalues}, \hyperpage{38}
+    \subitem {reset}, \hyperpage{34}
+    \subitem {resetbutton}, \hyperpage{38}
+    \subitem {sampleslabel}, \hyperpage{38}
+    \subitem {samplingrate}, \hyperpage{38}
+    \subitem {samplingrateentry}, \hyperpage{39}
+    \subitem {set\_and\_start}, \hyperpage{34}
+    \subitem {set\_and\_start\_all}, \hyperpage{35}
+    \subitem {setOrigin}, \hyperpage{35}
+    \subitem {setOriginButton}, \hyperpage{39}
+    \subitem {settingsbutton}, \hyperpage{39}
+    \subitem {sites}, \hyperpage{39}
+    \subitem {sitesentry}, \hyperpage{39}
+    \subitem {start\_and\_collect}, \hyperpage{35}
+    \subitem {startallbutton}, \hyperpage{39}
+    \subitem {startandcollectbutton}, \hyperpage{39}
+    \subitem {startbuttonlist}, \hyperpage{39}
+    \subitem {stop}, \hyperpage{35}
+    \subitem {stop\_all}, \hyperpage{35}
+    \subitem {stopallbutton}, \hyperpage{40}
+    \subitem {stopbuttonlist}, \hyperpage{40}
+    \subitem {toggle}, \hyperpage{36}
+    \subitem {togglebutton}, \hyperpage{40}
+    \subitem {toplabels}, \hyperpage{40}
+    \subitem {twoSwitchComboBoxList}, \hyperpage{40}
+    \subitem {twoSwitchValues}, \hyperpage{40}
+  \item {gui.py}, \hyperpage{76}
+  \item {gui.SettingsPage}, \hyperpage{49}
+    \subitem {\_\_init\_\_}, \hyperpage{50}
+    \subitem {autopagebutton}, \hyperpage{50}
+    \subitem {calibrate}, \hyperpage{50}
+    \subitem {calibratebutton}, \hyperpage{50}
+    \subitem {calibratecombobox}, \hyperpage{51}
+    \subitem {calibrationlabel}, \hyperpage{51}
+    \subitem {channelcaliblabel}, \hyperpage{51}
+    \subitem {channels}, \hyperpage{51}
+    \subitem {channelvalues}, \hyperpage{51}
+    \subitem {diameterlabel}, \hyperpage{51}
+    \subitem {diameterlist}, \hyperpage{51}
+    \subitem {diametervalues}, \hyperpage{51}
+    \subitem {directionheading}, \hyperpage{52}
+    \subitem {directionlabellist}, \hyperpage{52}
+    \subitem {directions}, \hyperpage{52}
+    \subitem {directionslist}, \hyperpage{52}
+    \subitem {entercalibratedbutton}, \hyperpage{52}
+    \subitem {mainlabel}, \hyperpage{52}
+    \subitem {manualbutton}, \hyperpage{52}
+    \subitem {measuredVolume}, \hyperpage{52}
+    \subitem {measuredVolumeEntry}, \hyperpage{53}
+    \subitem {reservoirs}, \hyperpage{53}
+    \subitem {update}, \hyperpage{50}
+    \subitem {updatebutton}, \hyperpage{53}
+  \item {gui.WelcomePage}, \hyperpage{63}
+    \subitem {\_\_init\_\_}, \hyperpage{63}
+    \subitem {coll\_label}, \hyperpage{64}
+    \subitem {collectorframe}, \hyperpage{64}
+    \subitem {donebutton}, \hyperpage{64}
+    \subitem {flip}, \hyperpage{64}
+    \subitem {mainlabel}, \hyperpage{64}
+    \subitem {manilabel}, \hyperpage{64}
+    \subitem {perfusorframe}, \hyperpage{64}
+    \subitem {pumplabel}, \hyperpage{65}
+    \subitem {sublabelframe}, \hyperpage{65}
+
+  \indexspace
+
+  \item {hasColl}
+    \subitem {gui.App}, \hyperpage{17}
+  \item {hasMani}
+    \subitem {gui.App}, \hyperpage{17}
+  \item {hasPump}
+    \subitem {gui.App}, \hyperpage{17}
+  \item {headinglabel}
+    \subitem {gui.AutomaticPage}, \hyperpage{23}
+
+  \indexspace
+
+  \item {isOn}
+    \subitem {Pump.ThreePump}, \hyperpage{59}
+  \item {isOpen}
+    \subitem {fakeSerial.Serial}, \hyperpage{46}
+
+  \indexspace
+
+  \item {labelframelist}
+    \subitem {gui.ManualPage}, \hyperpage{37}
+  \item {LARGE\_FONT}
+    \subitem {gui}, \hyperpage{11}
+  \item {last\_site}
+    \subitem {Collection.Collectador}, \hyperpage{27}
+  \item {lastwellbutton}
+    \subitem {gui.ManualPage}, \hyperpage{37}
+  \item {limitSwitchB}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{73}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{85}
+  \item {limitSwitchT}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{73}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{85}
+  \item {loadbutton}
+    \subitem {gui.AutomaticPage}, \hyperpage{23}
+  \item {locationPopulate.cpp}, \hyperpage{77}
+    \subitem {columns}, \hyperpage{78}
+    \subitem {main}, \hyperpage{77}
+    \subitem {numLocations}, \hyperpage{78}
+    \subitem {populateLocations}, \hyperpage{77}
+    \subitem {rows}, \hyperpage{78}
+    \subitem {stepsPerWell}, \hyperpage{78}
+    \subitem {stepsToEject}, \hyperpage{78}
+  \item {locations}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{73}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{86}
+  \item {loop}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{70}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{82}
+
+  \indexspace
+
+  \item {main}
+    \subitem {locationPopulate.cpp}, \hyperpage{77}
+  \item {mainlabel}
+    \subitem {gui.AutomaticPage}, \hyperpage{23}
+    \subitem {gui.ManualPage}, \hyperpage{37}
+    \subitem {gui.SettingsPage}, \hyperpage{52}
+    \subitem {gui.WelcomePage}, \hyperpage{64}
+  \item {manilabel}
+    \subitem {gui.WelcomePage}, \hyperpage{64}
+  \item {manualbutton}
+    \subitem {gui.AutomaticPage}, \hyperpage{23}
+    \subitem {gui.SettingsPage}, \hyperpage{52}
+  \item {max\_flowrate\_1}
+    \subitem {gui.App}, \hyperpage{17}
+  \item {max\_flowrate\_2}
+    \subitem {gui.App}, \hyperpage{17}
+  \item {max\_flowrate\_3}
+    \subitem {gui.App}, \hyperpage{17}
+  \item {max\_flowrate\_list}
+    \subitem {gui.App}, \hyperpage{18}
+  \item {maximumSpeed}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{73}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{86}
+  \item {measuredVolume}
+    \subitem {gui.SettingsPage}, \hyperpage{52}
+  \item {measuredVolumeEntry}
+    \subitem {gui.SettingsPage}, \hyperpage{53}
+  \item {message\_prompt}
+    \subitem {gui}, \hyperpage{10}
+  \item {message\_window}
+    \subitem {gui.App}, \hyperpage{15}
+  \item {moveDown}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{70}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{82}
+  \item {moveGen}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{70}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{82}
+  \item {moveLast}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{70}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{83}
+  \item {moveLeft}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{71}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{83}
+  \item {moveNext}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{71}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{83}
+  \item {moveOneDown}
+    \subitem {Collection.Collectador}, \hyperpage{27}
+    \subitem {gui.ManualPage}, \hyperpage{33}
+  \item {moveOneLeft}
+    \subitem {Collection.Collectador}, \hyperpage{27}
+    \subitem {gui.ManualPage}, \hyperpage{33}
+  \item {moveOneRight}
+    \subitem {Collection.Collectador}, \hyperpage{27}
+    \subitem {gui.ManualPage}, \hyperpage{34}
+  \item {moveOneUp}
+    \subitem {Collection.Collectador}, \hyperpage{27}
+    \subitem {gui.ManualPage}, \hyperpage{34}
+  \item {moveRight}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{71}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{83}
+  \item {moveUp}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{71}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{83}
+  \item {Mswitch}, \hyperpage{11}
+  \item {Mswitch.MSwitch}, \hyperpage{41}
+    \subitem {\_\_init\_\_}, \hyperpage{41}
+    \subitem {baud}, \hyperpage{43}
+    \subitem {chop\_return}, \hyperpage{41}
+    \subitem {connected}, \hyperpage{43}
+    \subitem {get\_info}, \hyperpage{42}
+    \subitem {port}, \hyperpage{43}
+    \subitem {res}, \hyperpage{43}
+    \subitem {send}, \hyperpage{42}
+    \subitem {ser}, \hyperpage{43}
+    \subitem {serial\_connect}, \hyperpage{42}
+    \subitem {serialConnected}, \hyperpage{43}
+    \subitem {set\_reservoir}, \hyperpage{42}
+    \subitem {uniqueID}, \hyperpage{44}
+  \item {Mswitch.py}, \hyperpage{79}
+  \item {my2Switch}
+    \subitem {gui.App}, \hyperpage{18}
+  \item {myColl}
+    \subitem {gui.App}, \hyperpage{18}
+  \item {myMani}
+    \subitem {gui.App}, \hyperpage{18}
+  \item {myMotorB}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{74}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{86}
+  \item {myMotorT}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{74}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{86}
+  \item {myPosition}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{74}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{86}
+  \item {myPump}
+    \subitem {gui.App}, \hyperpage{18}
+
+  \indexspace
+
+  \item {name}
+    \subitem {fakeSerial.Serial}, \hyperpage{48}
+  \item {negative\_run\_status}
+    \subitem {gui.App}, \hyperpage{15}
+  \item {newstep}
+    \subitem {gui.AutomaticPage}, \hyperpage{23}
+  \item {next}
+    \subitem {gui.ManualPage}, \hyperpage{34}
+  \item {next\_site}
+    \subitem {Collection.Collectador}, \hyperpage{28}
+  \item {nextwellbutton}
+    \subitem {gui.ManualPage}, \hyperpage{37}
+  \item {number\_deleted}
+    \subitem {gui.AutomaticPage}, \hyperpage{23}
+  \item {numberlist}
+    \subitem {gui.AutomaticPage}, \hyperpage{23}
+  \item {numLocations}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{74}
+    \subitem {locationPopulate.cpp}, \hyperpage{78}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{86}
+
+  \indexspace
+
+  \item {open}
+    \subitem {fakeSerial.Serial}, \hyperpage{46}
+
+  \indexspace
+
+  \item {pageFont}
+    \subitem {gui.App}, \hyperpage{18}
+  \item {parity}
+    \subitem {fakeSerial.Serial}, \hyperpage{48}
+  \item {patternLabel}
+    \subitem {gui.ManualPage}, \hyperpage{37}
+  \item {perfusorframe}
+    \subitem {gui.WelcomePage}, \hyperpage{64}
+  \item {populateLocations}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{71}
+    \subitem {locationPopulate.cpp}, \hyperpage{77}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{83}
+  \item {port}
+    \subitem {Collection.Collectador}, \hyperpage{30}
+    \subitem {fakeSerial.Serial}, \hyperpage{48}
+    \subitem {Mswitch.MSwitch}, \hyperpage{43}
+    \subitem {Pump.ThreePump}, \hyperpage{59}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{62}
+  \item {port2Switch}
+    \subitem {gui.App}, \hyperpage{18}
+  \item {portColl}
+    \subitem {gui.App}, \hyperpage{18}
+  \item {portMani}
+    \subitem {gui.App}, \hyperpage{19}
+  \item {portPump}
+    \subitem {gui.App}, \hyperpage{19}
+  \item {ports}
+    \subitem {gui.App}, \hyperpage{19}
+  \item {position}
+    \subitem {Collection.Collectador}, \hyperpage{30}
+  \item {positionLabel}
+    \subitem {gui.ManualPage}, \hyperpage{38}
+  \item {positions}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{74}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{87}
+  \item {positive\_run\_status}
+    \subitem {gui.App}, \hyperpage{15}
+  \item {prev}
+    \subitem {gui.ManualPage}, \hyperpage{34}
+  \item {Pump}, \hyperpage{11}
+    \subitem {get\_ports}, \hyperpage{12}
+  \item {Pump.py}, \hyperpage{79}
+  \item {Pump.ThreePump}, \hyperpage{53}
+    \subitem {\_\_init\_\_}, \hyperpage{54}
+    \subitem {abort\_calibration}, \hyperpage{54}
+    \subitem {baud}, \hyperpage{58}
+    \subitem {calibrate}, \hyperpage{54}
+    \subitem {calibrationunit}, \hyperpage{58}
+    \subitem {calibrationvolume}, \hyperpage{58}
+    \subitem {chop\_return}, \hyperpage{55}
+    \subitem {connected}, \hyperpage{59}
+    \subitem {FormatVolume}, \hyperpage{55}
+    \subitem {isOn}, \hyperpage{59}
+    \subitem {port}, \hyperpage{59}
+    \subitem {send}, \hyperpage{55}
+    \subitem {send\_return}, \hyperpage{55}
+    \subitem {ser}, \hyperpage{59}
+    \subitem {serial\_connect}, \hyperpage{56}
+    \subitem {serialConnected}, \hyperpage{59}
+    \subitem {setDefaults}, \hyperpage{56}
+    \subitem {setDir}, \hyperpage{56}
+    \subitem {setFlow}, \hyperpage{56}
+    \subitem {setMeasuredVolume}, \hyperpage{57}
+    \subitem {setTargetCalibrationVolume}, \hyperpage{57}
+    \subitem {start}, \hyperpage{57}
+    \subitem {start\_all}, \hyperpage{57}
+    \subitem {stop}, \hyperpage{58}
+    \subitem {stop\_all}, \hyperpage{58}
+  \item {pumplabel}
+    \subitem {gui.WelcomePage}, \hyperpage{65}
+
+  \indexspace
+
+  \item {read}
+    \subitem {fakeSerial.Serial}, \hyperpage{47}
+  \item {readline}
+    \subitem {fakeSerial.Serial}, \hyperpage{47}
+  \item {res}
+    \subitem {Mswitch.MSwitch}, \hyperpage{43}
+  \item {reservoircombobox}
+    \subitem {gui.ManualPage}, \hyperpage{38}
+  \item {reservoirlabel}
+    \subitem {gui.ManualPage}, \hyperpage{38}
+  \item {reservoirs}
+    \subitem {gui.AutomaticPage}, \hyperpage{23}
+    \subitem {gui.ManualPage}, \hyperpage{38}
+    \subitem {gui.SettingsPage}, \hyperpage{53}
+  \item {reservoirvalues}
+    \subitem {gui.ManualPage}, \hyperpage{38}
+  \item {reset}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{71}
+    \subitem {Collection.Collectador}, \hyperpage{28}
+    \subitem {gui.ManualPage}, \hyperpage{34}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{84}
+  \item {resetbutton}
+    \subitem {gui.ManualPage}, \hyperpage{38}
+  \item {rows}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{74}
+    \subitem {locationPopulate.cpp}, \hyperpage{78}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{87}
+  \item {rtscts}
+    \subitem {fakeSerial.Serial}, \hyperpage{48}
+  \item {run\_recipe}
+    \subitem {gui.AutomaticPage}, \hyperpage{22}
+  \item {runbutton}
+    \subitem {gui.AutomaticPage}, \hyperpage{24}
+
+  \indexspace
+
+  \item {sampleslabel}
+    \subitem {gui.ManualPage}, \hyperpage{38}
+  \item {samplingrate}
+    \subitem {gui.ManualPage}, \hyperpage{38}
+  \item {samplingrateentry}
+    \subitem {gui.ManualPage}, \hyperpage{39}
+  \item {savebutton}
+    \subitem {gui.AutomaticPage}, \hyperpage{24}
+  \item {send}
+    \subitem {Collection.Collectador}, \hyperpage{28}
+    \subitem {Mswitch.MSwitch}, \hyperpage{42}
+    \subitem {Pump.ThreePump}, \hyperpage{55}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{61}
+  \item {send\_return}
+    \subitem {Pump.ThreePump}, \hyperpage{55}
+  \item {ser}
+    \subitem {Collection.Collectador}, \hyperpage{30}
+    \subitem {Mswitch.MSwitch}, \hyperpage{43}
+    \subitem {Pump.ThreePump}, \hyperpage{59}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{62}
+  \item {serial\_connect}
+    \subitem {Collection.Collectador}, \hyperpage{28}
+    \subitem {Mswitch.MSwitch}, \hyperpage{42}
+    \subitem {Pump.ThreePump}, \hyperpage{56}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{61}
+  \item {serialConnected}
+    \subitem {Collection.Collectador}, \hyperpage{30}
+    \subitem {Mswitch.MSwitch}, \hyperpage{43}
+    \subitem {Pump.ThreePump}, \hyperpage{59}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{62}
+  \item {set}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{72}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{84}
+  \item {set\_and\_start}
+    \subitem {gui.ManualPage}, \hyperpage{34}
+  \item {set\_and\_start\_all}
+    \subitem {gui.ManualPage}, \hyperpage{35}
+  \item {set\_defaults}
+    \subitem {gui.App}, \hyperpage{16}
+  \item {set\_reservoir}
+    \subitem {Mswitch.MSwitch}, \hyperpage{42}
+  \item {setCollect}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{61}
+  \item {setDefaults}
+    \subitem {Pump.ThreePump}, \hyperpage{56}
+  \item {setDir}
+    \subitem {Pump.ThreePump}, \hyperpage{56}
+  \item {setFlow}
+    \subitem {Pump.ThreePump}, \hyperpage{56}
+  \item {setMeasuredVolume}
+    \subitem {Pump.ThreePump}, \hyperpage{57}
+  \item {setOrigin}
+    \subitem {Collection.Collectador}, \hyperpage{29}
+    \subitem {gui.ManualPage}, \hyperpage{35}
+  \item {setOriginButton}
+    \subitem {gui.ManualPage}, \hyperpage{39}
+  \item {setRecirculate}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{61}
+  \item {setTargetCalibrationVolume}
+    \subitem {Pump.ThreePump}, \hyperpage{57}
+  \item {settingsbutton}
+    \subitem {gui.AutomaticPage}, \hyperpage{24}
+    \subitem {gui.ManualPage}, \hyperpage{39}
+  \item {setup}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{72}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{84}
+  \item {should\_be\_running}
+    \subitem {gui.App}, \hyperpage{19}
+  \item {show\_frame}
+    \subitem {gui.App}, \hyperpage{16}
+  \item {sites}
+    \subitem {gui.ManualPage}, \hyperpage{39}
+  \item {sitesentry}
+    \subitem {gui.ManualPage}, \hyperpage{39}
+  \item {start}
+    \subitem {Pump.ThreePump}, \hyperpage{57}
+  \item {start\_all}
+    \subitem {Pump.ThreePump}, \hyperpage{57}
+  \item {start\_and\_collect}
+    \subitem {gui.ManualPage}, \hyperpage{35}
+  \item {startallbutton}
+    \subitem {gui.ManualPage}, \hyperpage{39}
+  \item {startandcollectbutton}
+    \subitem {gui.ManualPage}, \hyperpage{39}
+  \item {startbuttonlist}
+    \subitem {gui.ManualPage}, \hyperpage{39}
+  \item {steplist}
+    \subitem {gui.AutomaticPage}, \hyperpage{24}
+  \item {stepnumbers}
+    \subitem {gui.AutomaticPage}, \hyperpage{24}
+  \item {stepperB}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{72}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{84}
+  \item {steppers}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{75}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{87}
+  \item {stepperT}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{72}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{84}
+  \item {stepsPerRevolution}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{75}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{87}
+  \item {stepsPerWell}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{75}
+    \subitem {locationPopulate.cpp}, \hyperpage{78}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{87}
+  \item {stepsToEject}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{75}
+    \subitem {locationPopulate.cpp}, \hyperpage{78}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{87}
+  \item {stop}
+    \subitem {gui.ManualPage}, \hyperpage{35}
+    \subitem {Pump.ThreePump}, \hyperpage{58}
+  \item {stop\_all}
+    \subitem {gui.ManualPage}, \hyperpage{35}
+    \subitem {Pump.ThreePump}, \hyperpage{58}
+  \item {stopallbutton}
+    \subitem {gui.ManualPage}, \hyperpage{40}
+  \item {stopbits}
+    \subitem {fakeSerial.Serial}, \hyperpage{48}
+  \item {stopbuttonlist}
+    \subitem {gui.ManualPage}, \hyperpage{40}
+  \item {sublabelframe}
+    \subitem {gui.WelcomePage}, \hyperpage{65}
+
+  \indexspace
+
+  \item {timeout}
+    \subitem {fakeSerial.Serial}, \hyperpage{48}
+  \item {todelete}
+    \subitem {gui.AutomaticPage}, \hyperpage{24}
+  \item {toggle}
+    \subitem {gui.ManualPage}, \hyperpage{36}
+  \item {toggle\_pattern}
+    \subitem {Collection.Collectador}, \hyperpage{29}
+  \item {togglebutton}
+    \subitem {gui.ManualPage}, \hyperpage{40}
+  \item {toplabels}
+    \subitem {gui.ManualPage}, \hyperpage{40}
+  \item {TwoSwitch}, \hyperpage{12}
+  \item {TwoSwitch.py}, \hyperpage{79}
+  \item {TwoSwitch.TwoSwitch}, \hyperpage{59}
+    \subitem {\_\_init\_\_}, \hyperpage{60}
+    \subitem {baud}, \hyperpage{62}
+    \subitem {chop\_return}, \hyperpage{60}
+    \subitem {connected}, \hyperpage{62}
+    \subitem {getIdentifier}, \hyperpage{60}
+    \subitem {port}, \hyperpage{62}
+    \subitem {send}, \hyperpage{61}
+    \subitem {ser}, \hyperpage{62}
+    \subitem {serial\_connect}, \hyperpage{61}
+    \subitem {serialConnected}, \hyperpage{62}
+    \subitem {setCollect}, \hyperpage{61}
+    \subitem {setRecirculate}, \hyperpage{61}
+    \subitem {uniqueID}, \hyperpage{62}
+    \subitem {willRecirculate}, \hyperpage{63}
+  \item {TwoSwitchA}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{75}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{88}
+  \item {TwoSwitchB}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{75}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{88}
+  \item {TwoSwitchC}
+    \subitem {ArduinoSnakePattern.cpp}, \hyperpage{76}
+    \subitem {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, 
+		\hyperpage{88}
+  \item {twoSwitchComboBoxList}
+    \subitem {gui.ManualPage}, \hyperpage{40}
+  \item {twoSwitchValues}
+    \subitem {gui.AutomaticPage}, \hyperpage{24}
+    \subitem {gui.ManualPage}, \hyperpage{40}
+
+  \indexspace
+
+  \item {uniqueID}
+    \subitem {Collection.Collectador}, \hyperpage{30}
+    \subitem {Mswitch.MSwitch}, \hyperpage{44}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{62}
+  \item {update}
+    \subitem {gui.SettingsPage}, \hyperpage{50}
+  \item {updatebutton}
+    \subitem {gui.SettingsPage}, \hyperpage{53}
+  \item {usingSnakePattern}
+    \subitem {Collection.Collectador}, \hyperpage{30}
+
+  \indexspace
+
+  \item {well\_working\_volume}
+    \subitem {gui.App}, \hyperpage{19}
+  \item {willRecirculate}
+    \subitem {TwoSwitch.TwoSwitch}, \hyperpage{63}
+  \item {write}
+    \subitem {fakeSerial.Serial}, \hyperpage{47}
+
+  \indexspace
+
+  \item {xonxoff}
+    \subitem {fakeSerial.Serial}, \hyperpage{49}
+  \item {XYStage\_LimitSwitch\_TwoSwitch\_Control.cpp}, \hyperpage{79}
+    \subitem {acceleration}, \hyperpage{84}
+    \subitem {AFMS}, \hyperpage{85}
+    \subitem {backwardstep1}, \hyperpage{81}
+    \subitem {backwardstep2}, \hyperpage{81}
+    \subitem {collectionPattern}, \hyperpage{85}
+    \subitem {columns}, \hyperpage{85}
+    \subitem {delayRPM}, \hyperpage{85}
+    \subitem {eject}, \hyperpage{81}
+    \subitem {forwardstep1}, \hyperpage{82}
+    \subitem {forwardstep2}, \hyperpage{82}
+    \subitem {limitSwitchB}, \hyperpage{85}
+    \subitem {limitSwitchT}, \hyperpage{85}
+    \subitem {locations}, \hyperpage{86}
+    \subitem {loop}, \hyperpage{82}
+    \subitem {maximumSpeed}, \hyperpage{86}
+    \subitem {moveDown}, \hyperpage{82}
+    \subitem {moveGen}, \hyperpage{82}
+    \subitem {moveLast}, \hyperpage{83}
+    \subitem {moveLeft}, \hyperpage{83}
+    \subitem {moveNext}, \hyperpage{83}
+    \subitem {moveRight}, \hyperpage{83}
+    \subitem {moveUp}, \hyperpage{83}
+    \subitem {myMotorB}, \hyperpage{86}
+    \subitem {myMotorT}, \hyperpage{86}
+    \subitem {myPosition}, \hyperpage{86}
+    \subitem {numLocations}, \hyperpage{86}
+    \subitem {populateLocations}, \hyperpage{83}
+    \subitem {positions}, \hyperpage{87}
+    \subitem {reset}, \hyperpage{84}
+    \subitem {rows}, \hyperpage{87}
+    \subitem {set}, \hyperpage{84}
+    \subitem {setup}, \hyperpage{84}
+    \subitem {stepperB}, \hyperpage{84}
+    \subitem {steppers}, \hyperpage{87}
+    \subitem {stepperT}, \hyperpage{84}
+    \subitem {stepsPerRevolution}, \hyperpage{87}
+    \subitem {stepsPerWell}, \hyperpage{87}
+    \subitem {stepsToEject}, \hyperpage{87}
+    \subitem {TwoSwitchA}, \hyperpage{88}
+    \subitem {TwoSwitchB}, \hyperpage{88}
+    \subitem {TwoSwitchC}, \hyperpage{88}
+
+\end{theindex}
