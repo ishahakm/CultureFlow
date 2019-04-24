@@ -1,0 +1,432 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}Collection Namespace Reference}{9}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{9}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}fake\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Serial Namespace Reference}{9}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{9}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}gui Namespace Reference}{9}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{10}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Function Documentation}{10}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}check\_input()}{10}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}combine\_funcs()}{10}{subsubsection.5.3.2.2}
+\contentsline {subsubsection}{\numberline {5.3.2.3}message\_prompt()}{10}{subsubsection.5.3.2.3}
+\contentsline {subsection}{\numberline {5.3.3}Variable Documentation}{11}{subsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.1}app}{11}{subsubsection.5.3.3.1}
+\contentsline {subsubsection}{\numberline {5.3.3.2}LARGE\_FONT}{11}{subsubsection.5.3.3.2}
+\contentsline {section}{\numberline {5.4}Mswitch Namespace Reference}{11}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{11}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}Pump Namespace Reference}{11}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{11}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Function Documentation}{12}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}get\_ports()}{12}{subsubsection.5.5.2.1}
+\contentsline {section}{\numberline {5.6}Two\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Switch Namespace Reference}{12}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{12}{subsection.5.6.1}
+\contentsline {chapter}{\numberline {6}Class Documentation}{13}{chapter.6}
+\contentsline {section}{\numberline {6.1}gui.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}App Class Reference}{13}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{14}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{14}{subsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.2.1}\_\_init\_\_()}{14}{subsubsection.6.1.2.1}
+\contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{14}{subsection.6.1.3}
+\contentsline {subsubsection}{\numberline {6.1.3.1}done\_and\_load()}{14}{subsubsection.6.1.3.1}
+\contentsline {subsubsection}{\numberline {6.1.3.2}get\_comport()}{15}{subsubsection.6.1.3.2}
+\contentsline {subsubsection}{\numberline {6.1.3.3}get\_ports()}{15}{subsubsection.6.1.3.3}
+\contentsline {subsubsection}{\numberline {6.1.3.4}message\_window()}{15}{subsubsection.6.1.3.4}
+\contentsline {subsubsection}{\numberline {6.1.3.5}negative\_run\_status()}{15}{subsubsection.6.1.3.5}
+\contentsline {subsubsection}{\numberline {6.1.3.6}positive\_run\_status()}{16}{subsubsection.6.1.3.6}
+\contentsline {subsubsection}{\numberline {6.1.3.7}set\_defaults()}{16}{subsubsection.6.1.3.7}
+\contentsline {subsubsection}{\numberline {6.1.3.8}show\_frame()}{16}{subsubsection.6.1.3.8}
+\contentsline {subsection}{\numberline {6.1.4}Member Data Documentation}{16}{subsection.6.1.4}
+\contentsline {subsubsection}{\numberline {6.1.4.1}appHighlightFont}{16}{subsubsection.6.1.4.1}
+\contentsline {subsubsection}{\numberline {6.1.4.2}buttonFont}{16}{subsubsection.6.1.4.2}
+\contentsline {subsubsection}{\numberline {6.1.4.3}default\_diameter\_index}{17}{subsubsection.6.1.4.3}
+\contentsline {subsubsection}{\numberline {6.1.4.4}frames}{17}{subsubsection.6.1.4.4}
+\contentsline {subsubsection}{\numberline {6.1.4.5}hasColl}{17}{subsubsection.6.1.4.5}
+\contentsline {subsubsection}{\numberline {6.1.4.6}hasMani}{17}{subsubsection.6.1.4.6}
+\contentsline {subsubsection}{\numberline {6.1.4.7}hasPump}{17}{subsubsection.6.1.4.7}
+\contentsline {subsubsection}{\numberline {6.1.4.8}max\_flowrate\_1}{17}{subsubsection.6.1.4.8}
+\contentsline {subsubsection}{\numberline {6.1.4.9}max\_flowrate\_2}{17}{subsubsection.6.1.4.9}
+\contentsline {subsubsection}{\numberline {6.1.4.10}max\_flowrate\_3}{18}{subsubsection.6.1.4.10}
+\contentsline {subsubsection}{\numberline {6.1.4.11}max\_flowrate\_list}{18}{subsubsection.6.1.4.11}
+\contentsline {subsubsection}{\numberline {6.1.4.12}my2Switch}{18}{subsubsection.6.1.4.12}
+\contentsline {subsubsection}{\numberline {6.1.4.13}myColl}{18}{subsubsection.6.1.4.13}
+\contentsline {subsubsection}{\numberline {6.1.4.14}myMani}{18}{subsubsection.6.1.4.14}
+\contentsline {subsubsection}{\numberline {6.1.4.15}myPump}{18}{subsubsection.6.1.4.15}
+\contentsline {subsubsection}{\numberline {6.1.4.16}pageFont}{18}{subsubsection.6.1.4.16}
+\contentsline {subsubsection}{\numberline {6.1.4.17}port2Switch}{18}{subsubsection.6.1.4.17}
+\contentsline {subsubsection}{\numberline {6.1.4.18}portColl}{19}{subsubsection.6.1.4.18}
+\contentsline {subsubsection}{\numberline {6.1.4.19}portMani}{19}{subsubsection.6.1.4.19}
+\contentsline {subsubsection}{\numberline {6.1.4.20}portPump}{19}{subsubsection.6.1.4.20}
+\contentsline {subsubsection}{\numberline {6.1.4.21}ports}{19}{subsubsection.6.1.4.21}
+\contentsline {subsubsection}{\numberline {6.1.4.22}should\_be\_running}{19}{subsubsection.6.1.4.22}
+\contentsline {subsubsection}{\numberline {6.1.4.23}well\_working\_volume}{19}{subsubsection.6.1.4.23}
+\contentsline {section}{\numberline {6.2}gui.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Automatic\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Page Class Reference}{19}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Constructor \& Destructor Documentation}{20}{subsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.1.1}\_\_init\_\_()}{20}{subsubsection.6.2.1.1}
+\contentsline {subsection}{\numberline {6.2.2}Member Function Documentation}{20}{subsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.2.1}add\_step()}{21}{subsubsection.6.2.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2.2}check\_channel()}{21}{subsubsection.6.2.2.2}
+\contentsline {subsubsection}{\numberline {6.2.2.3}clear\_recipe()}{21}{subsubsection.6.2.2.3}
+\contentsline {subsubsection}{\numberline {6.2.2.4}create\_step()}{21}{subsubsection.6.2.2.4}
+\contentsline {subsubsection}{\numberline {6.2.2.5}delete\_step()}{21}{subsubsection.6.2.2.5}
+\contentsline {subsubsection}{\numberline {6.2.2.6}file\_load()}{21}{subsubsection.6.2.2.6}
+\contentsline {subsubsection}{\numberline {6.2.2.7}file\_save()}{22}{subsubsection.6.2.2.7}
+\contentsline {subsubsection}{\numberline {6.2.2.8}run\_recipe()}{22}{subsubsection.6.2.2.8}
+\contentsline {subsection}{\numberline {6.2.3}Member Data Documentation}{22}{subsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.3.1}channels}{22}{subsubsection.6.2.3.1}
+\contentsline {subsubsection}{\numberline {6.2.3.2}clearbutton}{22}{subsubsection.6.2.3.2}
+\contentsline {subsubsection}{\numberline {6.2.3.3}deletestep}{22}{subsubsection.6.2.3.3}
+\contentsline {subsubsection}{\numberline {6.2.3.4}deletestepcombo}{22}{subsubsection.6.2.3.4}
+\contentsline {subsubsection}{\numberline {6.2.3.5}ejectbutton}{23}{subsubsection.6.2.3.5}
+\contentsline {subsubsection}{\numberline {6.2.3.6}headinglabel}{23}{subsubsection.6.2.3.6}
+\contentsline {subsubsection}{\numberline {6.2.3.7}loadbutton}{23}{subsubsection.6.2.3.7}
+\contentsline {subsubsection}{\numberline {6.2.3.8}mainlabel}{23}{subsubsection.6.2.3.8}
+\contentsline {subsubsection}{\numberline {6.2.3.9}manualbutton}{23}{subsubsection.6.2.3.9}
+\contentsline {subsubsection}{\numberline {6.2.3.10}newstep}{23}{subsubsection.6.2.3.10}
+\contentsline {subsubsection}{\numberline {6.2.3.11}number\_deleted}{23}{subsubsection.6.2.3.11}
+\contentsline {subsubsection}{\numberline {6.2.3.12}numberlist}{23}{subsubsection.6.2.3.12}
+\contentsline {subsubsection}{\numberline {6.2.3.13}reservoirs}{24}{subsubsection.6.2.3.13}
+\contentsline {subsubsection}{\numberline {6.2.3.14}runbutton}{24}{subsubsection.6.2.3.14}
+\contentsline {subsubsection}{\numberline {6.2.3.15}savebutton}{24}{subsubsection.6.2.3.15}
+\contentsline {subsubsection}{\numberline {6.2.3.16}settingsbutton}{24}{subsubsection.6.2.3.16}
+\contentsline {subsubsection}{\numberline {6.2.3.17}steplist}{24}{subsubsection.6.2.3.17}
+\contentsline {subsubsection}{\numberline {6.2.3.18}stepnumbers}{24}{subsubsection.6.2.3.18}
+\contentsline {subsubsection}{\numberline {6.2.3.19}todelete}{24}{subsubsection.6.2.3.19}
+\contentsline {subsubsection}{\numberline {6.2.3.20}twoSwitchValues}{25}{subsubsection.6.2.3.20}
+\contentsline {section}{\numberline {6.3}Collection.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Collectador Class Reference}{25}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{25}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{26}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2.1}\_\_init\_\_()}{26}{subsubsection.6.3.2.1}
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{26}{subsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3.1}chop\_return()}{26}{subsubsection.6.3.3.1}
+\contentsline {subsubsection}{\numberline {6.3.3.2}eject()}{26}{subsubsection.6.3.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3.3}get\_info()}{27}{subsubsection.6.3.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3.4}last\_site()}{27}{subsubsection.6.3.3.4}
+\contentsline {subsubsection}{\numberline {6.3.3.5}moveOneDown()}{27}{subsubsection.6.3.3.5}
+\contentsline {subsubsection}{\numberline {6.3.3.6}moveOneLeft()}{27}{subsubsection.6.3.3.6}
+\contentsline {subsubsection}{\numberline {6.3.3.7}moveOneRight()}{27}{subsubsection.6.3.3.7}
+\contentsline {subsubsection}{\numberline {6.3.3.8}moveOneUp()}{28}{subsubsection.6.3.3.8}
+\contentsline {subsubsection}{\numberline {6.3.3.9}next\_site()}{28}{subsubsection.6.3.3.9}
+\contentsline {subsubsection}{\numberline {6.3.3.10}reset()}{28}{subsubsection.6.3.3.10}
+\contentsline {subsubsection}{\numberline {6.3.3.11}send()}{28}{subsubsection.6.3.3.11}
+\contentsline {subsubsection}{\numberline {6.3.3.12}serial\_connect()}{29}{subsubsection.6.3.3.12}
+\contentsline {subsubsection}{\numberline {6.3.3.13}setOrigin()}{29}{subsubsection.6.3.3.13}
+\contentsline {subsubsection}{\numberline {6.3.3.14}toggle\_pattern()}{29}{subsubsection.6.3.3.14}
+\contentsline {subsection}{\numberline {6.3.4}Member Data Documentation}{29}{subsection.6.3.4}
+\contentsline {subsubsection}{\numberline {6.3.4.1}baud}{29}{subsubsection.6.3.4.1}
+\contentsline {subsubsection}{\numberline {6.3.4.2}connected}{29}{subsubsection.6.3.4.2}
+\contentsline {subsubsection}{\numberline {6.3.4.3}currentPattern}{30}{subsubsection.6.3.4.3}
+\contentsline {subsubsection}{\numberline {6.3.4.4}port}{30}{subsubsection.6.3.4.4}
+\contentsline {subsubsection}{\numberline {6.3.4.5}position}{30}{subsubsection.6.3.4.5}
+\contentsline {subsubsection}{\numberline {6.3.4.6}ser}{30}{subsubsection.6.3.4.6}
+\contentsline {subsubsection}{\numberline {6.3.4.7}serialConnected}{30}{subsubsection.6.3.4.7}
+\contentsline {subsubsection}{\numberline {6.3.4.8}uniqueID}{30}{subsubsection.6.3.4.8}
+\contentsline {subsubsection}{\numberline {6.3.4.9}usingSnakePattern}{30}{subsubsection.6.3.4.9}
+\contentsline {section}{\numberline {6.4}gui.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manual\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Page Class Reference}{31}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Constructor \& Destructor Documentation}{32}{subsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.1.1}\_\_init\_\_()}{32}{subsubsection.6.4.1.1}
+\contentsline {subsection}{\numberline {6.4.2}Member Function Documentation}{32}{subsection.6.4.2}
+\contentsline {subsubsection}{\numberline {6.4.2.1}check\_all\_manual()}{32}{subsubsection.6.4.2.1}
+\contentsline {subsubsection}{\numberline {6.4.2.2}check\_all\_manual\_and\_sampling()}{32}{subsubsection.6.4.2.2}
+\contentsline {subsubsection}{\numberline {6.4.2.3}check\_channel()}{33}{subsubsection.6.4.2.3}
+\contentsline {subsubsection}{\numberline {6.4.2.4}create\_channels()}{33}{subsubsection.6.4.2.4}
+\contentsline {subsubsection}{\numberline {6.4.2.5}done()}{33}{subsubsection.6.4.2.5}
+\contentsline {subsubsection}{\numberline {6.4.2.6}eject()}{33}{subsubsection.6.4.2.6}
+\contentsline {subsubsection}{\numberline {6.4.2.7}moveOneDown()}{33}{subsubsection.6.4.2.7}
+\contentsline {subsubsection}{\numberline {6.4.2.8}moveOneLeft()}{34}{subsubsection.6.4.2.8}
+\contentsline {subsubsection}{\numberline {6.4.2.9}moveOneRight()}{34}{subsubsection.6.4.2.9}
+\contentsline {subsubsection}{\numberline {6.4.2.10}moveOneUp()}{34}{subsubsection.6.4.2.10}
+\contentsline {subsubsection}{\numberline {6.4.2.11}next()}{34}{subsubsection.6.4.2.11}
+\contentsline {subsubsection}{\numberline {6.4.2.12}prev()}{34}{subsubsection.6.4.2.12}
+\contentsline {subsubsection}{\numberline {6.4.2.13}reset()}{34}{subsubsection.6.4.2.13}
+\contentsline {subsubsection}{\numberline {6.4.2.14}set\_and\_start()}{35}{subsubsection.6.4.2.14}
+\contentsline {subsubsection}{\numberline {6.4.2.15}set\_and\_start\_all()}{35}{subsubsection.6.4.2.15}
+\contentsline {subsubsection}{\numberline {6.4.2.16}setOrigin()}{35}{subsubsection.6.4.2.16}
+\contentsline {subsubsection}{\numberline {6.4.2.17}start\_and\_collect()}{35}{subsubsection.6.4.2.17}
+\contentsline {subsubsection}{\numberline {6.4.2.18}stop()}{35}{subsubsection.6.4.2.18}
+\contentsline {subsubsection}{\numberline {6.4.2.19}stop\_all()}{36}{subsubsection.6.4.2.19}
+\contentsline {subsubsection}{\numberline {6.4.2.20}toggle()}{36}{subsubsection.6.4.2.20}
+\contentsline {subsection}{\numberline {6.4.3}Member Data Documentation}{36}{subsection.6.4.3}
+\contentsline {subsubsection}{\numberline {6.4.3.1}autocollectlabel}{36}{subsubsection.6.4.3.1}
+\contentsline {subsubsection}{\numberline {6.4.3.2}autopagebutton}{36}{subsubsection.6.4.3.2}
+\contentsline {subsubsection}{\numberline {6.4.3.3}channels}{36}{subsubsection.6.4.3.3}
+\contentsline {subsubsection}{\numberline {6.4.3.4}channeltextlist}{36}{subsubsection.6.4.3.4}
+\contentsline {subsubsection}{\numberline {6.4.3.5}CollectionControlLabel}{37}{subsubsection.6.4.3.5}
+\contentsline {subsubsection}{\numberline {6.4.3.6}ejectbutton}{37}{subsubsection.6.4.3.6}
+\contentsline {subsubsection}{\numberline {6.4.3.7}flowrateentrylist}{37}{subsubsection.6.4.3.7}
+\contentsline {subsubsection}{\numberline {6.4.3.8}greaterlabelframe}{37}{subsubsection.6.4.3.8}
+\contentsline {subsubsection}{\numberline {6.4.3.9}labelframelist}{37}{subsubsection.6.4.3.9}
+\contentsline {subsubsection}{\numberline {6.4.3.10}lastwellbutton}{37}{subsubsection.6.4.3.10}
+\contentsline {subsubsection}{\numberline {6.4.3.11}mainlabel}{37}{subsubsection.6.4.3.11}
+\contentsline {subsubsection}{\numberline {6.4.3.12}nextwellbutton}{37}{subsubsection.6.4.3.12}
+\contentsline {subsubsection}{\numberline {6.4.3.13}patternLabel}{38}{subsubsection.6.4.3.13}
+\contentsline {subsubsection}{\numberline {6.4.3.14}positionLabel}{38}{subsubsection.6.4.3.14}
+\contentsline {subsubsection}{\numberline {6.4.3.15}reservoircombobox}{38}{subsubsection.6.4.3.15}
+\contentsline {subsubsection}{\numberline {6.4.3.16}reservoirlabel}{38}{subsubsection.6.4.3.16}
+\contentsline {subsubsection}{\numberline {6.4.3.17}reservoirs}{38}{subsubsection.6.4.3.17}
+\contentsline {subsubsection}{\numberline {6.4.3.18}reservoirvalues}{38}{subsubsection.6.4.3.18}
+\contentsline {subsubsection}{\numberline {6.4.3.19}resetbutton}{38}{subsubsection.6.4.3.19}
+\contentsline {subsubsection}{\numberline {6.4.3.20}sampleslabel}{38}{subsubsection.6.4.3.20}
+\contentsline {subsubsection}{\numberline {6.4.3.21}samplingrate}{39}{subsubsection.6.4.3.21}
+\contentsline {subsubsection}{\numberline {6.4.3.22}samplingrateentry}{39}{subsubsection.6.4.3.22}
+\contentsline {subsubsection}{\numberline {6.4.3.23}setOriginButton}{39}{subsubsection.6.4.3.23}
+\contentsline {subsubsection}{\numberline {6.4.3.24}settingsbutton}{39}{subsubsection.6.4.3.24}
+\contentsline {subsubsection}{\numberline {6.4.3.25}sites}{39}{subsubsection.6.4.3.25}
+\contentsline {subsubsection}{\numberline {6.4.3.26}sitesentry}{39}{subsubsection.6.4.3.26}
+\contentsline {subsubsection}{\numberline {6.4.3.27}startallbutton}{39}{subsubsection.6.4.3.27}
+\contentsline {subsubsection}{\numberline {6.4.3.28}startandcollectbutton}{39}{subsubsection.6.4.3.28}
+\contentsline {subsubsection}{\numberline {6.4.3.29}startbuttonlist}{40}{subsubsection.6.4.3.29}
+\contentsline {subsubsection}{\numberline {6.4.3.30}stopallbutton}{40}{subsubsection.6.4.3.30}
+\contentsline {subsubsection}{\numberline {6.4.3.31}stopbuttonlist}{40}{subsubsection.6.4.3.31}
+\contentsline {subsubsection}{\numberline {6.4.3.32}togglebutton}{40}{subsubsection.6.4.3.32}
+\contentsline {subsubsection}{\numberline {6.4.3.33}toplabels}{40}{subsubsection.6.4.3.33}
+\contentsline {subsubsection}{\numberline {6.4.3.34}twoSwitchComboBoxList}{40}{subsubsection.6.4.3.34}
+\contentsline {subsubsection}{\numberline {6.4.3.35}twoSwitchValues}{40}{subsubsection.6.4.3.35}
+\contentsline {section}{\numberline {6.5}Mswitch.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Switch Class Reference}{41}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{41}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Constructor \& Destructor Documentation}{41}{subsection.6.5.2}
+\contentsline {subsubsection}{\numberline {6.5.2.1}\_\_init\_\_()}{41}{subsubsection.6.5.2.1}
+\contentsline {subsection}{\numberline {6.5.3}Member Function Documentation}{41}{subsection.6.5.3}
+\contentsline {subsubsection}{\numberline {6.5.3.1}chop\_return()}{42}{subsubsection.6.5.3.1}
+\contentsline {subsubsection}{\numberline {6.5.3.2}get\_info()}{42}{subsubsection.6.5.3.2}
+\contentsline {subsubsection}{\numberline {6.5.3.3}send()}{42}{subsubsection.6.5.3.3}
+\contentsline {subsubsection}{\numberline {6.5.3.4}serial\_connect()}{42}{subsubsection.6.5.3.4}
+\contentsline {subsubsection}{\numberline {6.5.3.5}set\_reservoir()}{43}{subsubsection.6.5.3.5}
+\contentsline {subsection}{\numberline {6.5.4}Member Data Documentation}{43}{subsection.6.5.4}
+\contentsline {subsubsection}{\numberline {6.5.4.1}baud}{43}{subsubsection.6.5.4.1}
+\contentsline {subsubsection}{\numberline {6.5.4.2}connected}{43}{subsubsection.6.5.4.2}
+\contentsline {subsubsection}{\numberline {6.5.4.3}port}{43}{subsubsection.6.5.4.3}
+\contentsline {subsubsection}{\numberline {6.5.4.4}res}{43}{subsubsection.6.5.4.4}
+\contentsline {subsubsection}{\numberline {6.5.4.5}ser}{43}{subsubsection.6.5.4.5}
+\contentsline {subsubsection}{\numberline {6.5.4.6}serialConnected}{44}{subsubsection.6.5.4.6}
+\contentsline {subsubsection}{\numberline {6.5.4.7}uniqueID}{44}{subsubsection.6.5.4.7}
+\contentsline {section}{\numberline {6.6}fake\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Serial.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Serial Class Reference}{44}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{45}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Constructor \& Destructor Documentation}{45}{subsection.6.6.2}
+\contentsline {subsubsection}{\numberline {6.6.2.1}\_\_init\_\_()}{45}{subsubsection.6.6.2.1}
+\contentsline {subsection}{\numberline {6.6.3}Member Function Documentation}{45}{subsection.6.6.3}
+\contentsline {subsubsection}{\numberline {6.6.3.1}\_\_str\_\_()}{45}{subsubsection.6.6.3.1}
+\contentsline {subsubsection}{\numberline {6.6.3.2}close()}{46}{subsubsection.6.6.3.2}
+\contentsline {subsubsection}{\numberline {6.6.3.3}flush()}{46}{subsubsection.6.6.3.3}
+\contentsline {subsubsection}{\numberline {6.6.3.4}flushInput()}{46}{subsubsection.6.6.3.4}
+\contentsline {subsubsection}{\numberline {6.6.3.5}flushOutput()}{46}{subsubsection.6.6.3.5}
+\contentsline {subsubsection}{\numberline {6.6.3.6}isOpen()}{46}{subsubsection.6.6.3.6}
+\contentsline {subsubsection}{\numberline {6.6.3.7}open()}{47}{subsubsection.6.6.3.7}
+\contentsline {subsubsection}{\numberline {6.6.3.8}read()}{47}{subsubsection.6.6.3.8}
+\contentsline {subsubsection}{\numberline {6.6.3.9}readline()}{47}{subsubsection.6.6.3.9}
+\contentsline {subsubsection}{\numberline {6.6.3.10}write()}{47}{subsubsection.6.6.3.10}
+\contentsline {subsection}{\numberline {6.6.4}Member Data Documentation}{48}{subsection.6.6.4}
+\contentsline {subsubsection}{\numberline {6.6.4.1}baudrate}{48}{subsubsection.6.6.4.1}
+\contentsline {subsubsection}{\numberline {6.6.4.2}bytesize}{48}{subsubsection.6.6.4.2}
+\contentsline {subsubsection}{\numberline {6.6.4.3}name}{48}{subsubsection.6.6.4.3}
+\contentsline {subsubsection}{\numberline {6.6.4.4}parity}{48}{subsubsection.6.6.4.4}
+\contentsline {subsubsection}{\numberline {6.6.4.5}port}{48}{subsubsection.6.6.4.5}
+\contentsline {subsubsection}{\numberline {6.6.4.6}rtscts}{48}{subsubsection.6.6.4.6}
+\contentsline {subsubsection}{\numberline {6.6.4.7}stopbits}{48}{subsubsection.6.6.4.7}
+\contentsline {subsubsection}{\numberline {6.6.4.8}timeout}{49}{subsubsection.6.6.4.8}
+\contentsline {subsubsection}{\numberline {6.6.4.9}xonxoff}{49}{subsubsection.6.6.4.9}
+\contentsline {section}{\numberline {6.7}gui.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Settings\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Page Class Reference}{49}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{50}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Constructor \& Destructor Documentation}{50}{subsection.6.7.2}
+\contentsline {subsubsection}{\numberline {6.7.2.1}\_\_init\_\_()}{50}{subsubsection.6.7.2.1}
+\contentsline {subsection}{\numberline {6.7.3}Member Function Documentation}{50}{subsection.6.7.3}
+\contentsline {subsubsection}{\numberline {6.7.3.1}calibrate()}{50}{subsubsection.6.7.3.1}
+\contentsline {subsubsection}{\numberline {6.7.3.2}update()}{50}{subsubsection.6.7.3.2}
+\contentsline {subsection}{\numberline {6.7.4}Member Data Documentation}{50}{subsection.6.7.4}
+\contentsline {subsubsection}{\numberline {6.7.4.1}autopagebutton}{50}{subsubsection.6.7.4.1}
+\contentsline {subsubsection}{\numberline {6.7.4.2}calibratebutton}{51}{subsubsection.6.7.4.2}
+\contentsline {subsubsection}{\numberline {6.7.4.3}calibratecombobox}{51}{subsubsection.6.7.4.3}
+\contentsline {subsubsection}{\numberline {6.7.4.4}calibrationlabel}{51}{subsubsection.6.7.4.4}
+\contentsline {subsubsection}{\numberline {6.7.4.5}channelcaliblabel}{51}{subsubsection.6.7.4.5}
+\contentsline {subsubsection}{\numberline {6.7.4.6}channels}{51}{subsubsection.6.7.4.6}
+\contentsline {subsubsection}{\numberline {6.7.4.7}channelvalues}{51}{subsubsection.6.7.4.7}
+\contentsline {subsubsection}{\numberline {6.7.4.8}diameterlabel}{51}{subsubsection.6.7.4.8}
+\contentsline {subsubsection}{\numberline {6.7.4.9}diameterlist}{51}{subsubsection.6.7.4.9}
+\contentsline {subsubsection}{\numberline {6.7.4.10}diametervalues}{52}{subsubsection.6.7.4.10}
+\contentsline {subsubsection}{\numberline {6.7.4.11}directionheading}{52}{subsubsection.6.7.4.11}
+\contentsline {subsubsection}{\numberline {6.7.4.12}directionlabellist}{52}{subsubsection.6.7.4.12}
+\contentsline {subsubsection}{\numberline {6.7.4.13}directions}{52}{subsubsection.6.7.4.13}
+\contentsline {subsubsection}{\numberline {6.7.4.14}directionslist}{52}{subsubsection.6.7.4.14}
+\contentsline {subsubsection}{\numberline {6.7.4.15}entercalibratedbutton}{52}{subsubsection.6.7.4.15}
+\contentsline {subsubsection}{\numberline {6.7.4.16}mainlabel}{52}{subsubsection.6.7.4.16}
+\contentsline {subsubsection}{\numberline {6.7.4.17}manualbutton}{52}{subsubsection.6.7.4.17}
+\contentsline {subsubsection}{\numberline {6.7.4.18}measuredVolume}{53}{subsubsection.6.7.4.18}
+\contentsline {subsubsection}{\numberline {6.7.4.19}measuredVolumeEntry}{53}{subsubsection.6.7.4.19}
+\contentsline {subsubsection}{\numberline {6.7.4.20}reservoirs}{53}{subsubsection.6.7.4.20}
+\contentsline {subsubsection}{\numberline {6.7.4.21}updatebutton}{53}{subsubsection.6.7.4.21}
+\contentsline {section}{\numberline {6.8}Pump.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Three\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Pump Class Reference}{53}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{54}{subsection.6.8.1}
+\contentsline {subsection}{\numberline {6.8.2}Constructor \& Destructor Documentation}{54}{subsection.6.8.2}
+\contentsline {subsubsection}{\numberline {6.8.2.1}\_\_init\_\_()}{54}{subsubsection.6.8.2.1}
+\contentsline {subsection}{\numberline {6.8.3}Member Function Documentation}{54}{subsection.6.8.3}
+\contentsline {subsubsection}{\numberline {6.8.3.1}abort\_calibration()}{54}{subsubsection.6.8.3.1}
+\contentsline {subsubsection}{\numberline {6.8.3.2}calibrate()}{55}{subsubsection.6.8.3.2}
+\contentsline {subsubsection}{\numberline {6.8.3.3}chop\_return()}{55}{subsubsection.6.8.3.3}
+\contentsline {subsubsection}{\numberline {6.8.3.4}FormatVolume()}{55}{subsubsection.6.8.3.4}
+\contentsline {subsubsection}{\numberline {6.8.3.5}send()}{55}{subsubsection.6.8.3.5}
+\contentsline {subsubsection}{\numberline {6.8.3.6}send\_return()}{56}{subsubsection.6.8.3.6}
+\contentsline {subsubsection}{\numberline {6.8.3.7}serial\_connect()}{56}{subsubsection.6.8.3.7}
+\contentsline {subsubsection}{\numberline {6.8.3.8}setDefaults()}{56}{subsubsection.6.8.3.8}
+\contentsline {subsubsection}{\numberline {6.8.3.9}setDir()}{56}{subsubsection.6.8.3.9}
+\contentsline {subsubsection}{\numberline {6.8.3.10}setFlow()}{57}{subsubsection.6.8.3.10}
+\contentsline {subsubsection}{\numberline {6.8.3.11}setMeasuredVolume()}{57}{subsubsection.6.8.3.11}
+\contentsline {subsubsection}{\numberline {6.8.3.12}setTargetCalibrationVolume()}{57}{subsubsection.6.8.3.12}
+\contentsline {subsubsection}{\numberline {6.8.3.13}start()}{57}{subsubsection.6.8.3.13}
+\contentsline {subsubsection}{\numberline {6.8.3.14}start\_all()}{58}{subsubsection.6.8.3.14}
+\contentsline {subsubsection}{\numberline {6.8.3.15}stop()}{58}{subsubsection.6.8.3.15}
+\contentsline {subsubsection}{\numberline {6.8.3.16}stop\_all()}{58}{subsubsection.6.8.3.16}
+\contentsline {subsection}{\numberline {6.8.4}Member Data Documentation}{58}{subsection.6.8.4}
+\contentsline {subsubsection}{\numberline {6.8.4.1}baud}{58}{subsubsection.6.8.4.1}
+\contentsline {subsubsection}{\numberline {6.8.4.2}calibrationunit}{58}{subsubsection.6.8.4.2}
+\contentsline {subsubsection}{\numberline {6.8.4.3}calibrationvolume}{59}{subsubsection.6.8.4.3}
+\contentsline {subsubsection}{\numberline {6.8.4.4}connected}{59}{subsubsection.6.8.4.4}
+\contentsline {subsubsection}{\numberline {6.8.4.5}isOn}{59}{subsubsection.6.8.4.5}
+\contentsline {subsubsection}{\numberline {6.8.4.6}port}{59}{subsubsection.6.8.4.6}
+\contentsline {subsubsection}{\numberline {6.8.4.7}ser}{59}{subsubsection.6.8.4.7}
+\contentsline {subsubsection}{\numberline {6.8.4.8}serialConnected}{59}{subsubsection.6.8.4.8}
+\contentsline {section}{\numberline {6.9}Two\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Switch.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Two\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Switch Class Reference}{59}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{60}{subsection.6.9.1}
+\contentsline {subsection}{\numberline {6.9.2}Constructor \& Destructor Documentation}{60}{subsection.6.9.2}
+\contentsline {subsubsection}{\numberline {6.9.2.1}\_\_init\_\_()}{60}{subsubsection.6.9.2.1}
+\contentsline {subsection}{\numberline {6.9.3}Member Function Documentation}{60}{subsection.6.9.3}
+\contentsline {subsubsection}{\numberline {6.9.3.1}chop\_return()}{60}{subsubsection.6.9.3.1}
+\contentsline {subsubsection}{\numberline {6.9.3.2}getIdentifier()}{61}{subsubsection.6.9.3.2}
+\contentsline {subsubsection}{\numberline {6.9.3.3}send()}{61}{subsubsection.6.9.3.3}
+\contentsline {subsubsection}{\numberline {6.9.3.4}serial\_connect()}{61}{subsubsection.6.9.3.4}
+\contentsline {subsubsection}{\numberline {6.9.3.5}setCollect()}{61}{subsubsection.6.9.3.5}
+\contentsline {subsubsection}{\numberline {6.9.3.6}setRecirculate()}{62}{subsubsection.6.9.3.6}
+\contentsline {subsection}{\numberline {6.9.4}Member Data Documentation}{62}{subsection.6.9.4}
+\contentsline {subsubsection}{\numberline {6.9.4.1}baud}{62}{subsubsection.6.9.4.1}
+\contentsline {subsubsection}{\numberline {6.9.4.2}connected}{62}{subsubsection.6.9.4.2}
+\contentsline {subsubsection}{\numberline {6.9.4.3}port}{62}{subsubsection.6.9.4.3}
+\contentsline {subsubsection}{\numberline {6.9.4.4}ser}{62}{subsubsection.6.9.4.4}
+\contentsline {subsubsection}{\numberline {6.9.4.5}serialConnected}{62}{subsubsection.6.9.4.5}
+\contentsline {subsubsection}{\numberline {6.9.4.6}uniqueID}{63}{subsubsection.6.9.4.6}
+\contentsline {subsubsection}{\numberline {6.9.4.7}willRecirculate}{63}{subsubsection.6.9.4.7}
+\contentsline {section}{\numberline {6.10}gui.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Welcome\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Page Class Reference}{63}{section.6.10}
+\contentsline {subsection}{\numberline {6.10.1}Constructor \& Destructor Documentation}{63}{subsection.6.10.1}
+\contentsline {subsubsection}{\numberline {6.10.1.1}\_\_init\_\_()}{63}{subsubsection.6.10.1.1}
+\contentsline {subsection}{\numberline {6.10.2}Member Function Documentation}{64}{subsection.6.10.2}
+\contentsline {subsubsection}{\numberline {6.10.2.1}flip()}{64}{subsubsection.6.10.2.1}
+\contentsline {subsection}{\numberline {6.10.3}Member Data Documentation}{64}{subsection.6.10.3}
+\contentsline {subsubsection}{\numberline {6.10.3.1}coll\_label}{64}{subsubsection.6.10.3.1}
+\contentsline {subsubsection}{\numberline {6.10.3.2}collectorframe}{64}{subsubsection.6.10.3.2}
+\contentsline {subsubsection}{\numberline {6.10.3.3}donebutton}{64}{subsubsection.6.10.3.3}
+\contentsline {subsubsection}{\numberline {6.10.3.4}mainlabel}{64}{subsubsection.6.10.3.4}
+\contentsline {subsubsection}{\numberline {6.10.3.5}manilabel}{64}{subsubsection.6.10.3.5}
+\contentsline {subsubsection}{\numberline {6.10.3.6}perfusorframe}{65}{subsubsection.6.10.3.6}
+\contentsline {subsubsection}{\numberline {6.10.3.7}pumplabel}{65}{subsubsection.6.10.3.7}
+\contentsline {subsubsection}{\numberline {6.10.3.8}sublabelframe}{65}{subsubsection.6.10.3.8}
+\contentsline {chapter}{\numberline {7}File Documentation}{67}{chapter.7}
+\contentsline {section}{\numberline {7.1}Arduino\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Snake\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Pattern.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cpp File Reference}{67}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{69}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Function Documentation}{69}{subsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.2.1}backwardstep1()}{69}{subsubsection.7.1.2.1}
+\contentsline {subsubsection}{\numberline {7.1.2.2}backwardstep2()}{69}{subsubsection.7.1.2.2}
+\contentsline {subsubsection}{\numberline {7.1.2.3}eject()}{69}{subsubsection.7.1.2.3}
+\contentsline {subsubsection}{\numberline {7.1.2.4}forwardstep1()}{69}{subsubsection.7.1.2.4}
+\contentsline {subsubsection}{\numberline {7.1.2.5}forwardstep2()}{70}{subsubsection.7.1.2.5}
+\contentsline {subsubsection}{\numberline {7.1.2.6}loop()}{70}{subsubsection.7.1.2.6}
+\contentsline {subsubsection}{\numberline {7.1.2.7}moveDown()}{70}{subsubsection.7.1.2.7}
+\contentsline {subsubsection}{\numberline {7.1.2.8}moveGen()}{70}{subsubsection.7.1.2.8}
+\contentsline {subsubsection}{\numberline {7.1.2.9}moveLast()}{70}{subsubsection.7.1.2.9}
+\contentsline {subsubsection}{\numberline {7.1.2.10}moveLeft()}{71}{subsubsection.7.1.2.10}
+\contentsline {subsubsection}{\numberline {7.1.2.11}moveNext()}{71}{subsubsection.7.1.2.11}
+\contentsline {subsubsection}{\numberline {7.1.2.12}moveRight()}{71}{subsubsection.7.1.2.12}
+\contentsline {subsubsection}{\numberline {7.1.2.13}moveUp()}{71}{subsubsection.7.1.2.13}
+\contentsline {subsubsection}{\numberline {7.1.2.14}populateLocations()}{71}{subsubsection.7.1.2.14}
+\contentsline {subsubsection}{\numberline {7.1.2.15}reset()}{72}{subsubsection.7.1.2.15}
+\contentsline {subsubsection}{\numberline {7.1.2.16}set()}{72}{subsubsection.7.1.2.16}
+\contentsline {subsubsection}{\numberline {7.1.2.17}setup()}{72}{subsubsection.7.1.2.17}
+\contentsline {subsubsection}{\numberline {7.1.2.18}stepperB()}{72}{subsubsection.7.1.2.18}
+\contentsline {subsubsection}{\numberline {7.1.2.19}stepperT()}{72}{subsubsection.7.1.2.19}
+\contentsline {subsection}{\numberline {7.1.3}Variable Documentation}{72}{subsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.3.1}acceleration}{72}{subsubsection.7.1.3.1}
+\contentsline {subsubsection}{\numberline {7.1.3.2}AFMS}{73}{subsubsection.7.1.3.2}
+\contentsline {subsubsection}{\numberline {7.1.3.3}columns}{73}{subsubsection.7.1.3.3}
+\contentsline {subsubsection}{\numberline {7.1.3.4}delayRPM}{73}{subsubsection.7.1.3.4}
+\contentsline {subsubsection}{\numberline {7.1.3.5}limitSwitchB}{73}{subsubsection.7.1.3.5}
+\contentsline {subsubsection}{\numberline {7.1.3.6}limitSwitchT}{73}{subsubsection.7.1.3.6}
+\contentsline {subsubsection}{\numberline {7.1.3.7}locations}{73}{subsubsection.7.1.3.7}
+\contentsline {subsubsection}{\numberline {7.1.3.8}maximumSpeed}{74}{subsubsection.7.1.3.8}
+\contentsline {subsubsection}{\numberline {7.1.3.9}myMotorB}{74}{subsubsection.7.1.3.9}
+\contentsline {subsubsection}{\numberline {7.1.3.10}myMotorT}{74}{subsubsection.7.1.3.10}
+\contentsline {subsubsection}{\numberline {7.1.3.11}myPosition}{74}{subsubsection.7.1.3.11}
+\contentsline {subsubsection}{\numberline {7.1.3.12}numLocations}{74}{subsubsection.7.1.3.12}
+\contentsline {subsubsection}{\numberline {7.1.3.13}positions}{74}{subsubsection.7.1.3.13}
+\contentsline {subsubsection}{\numberline {7.1.3.14}rows}{75}{subsubsection.7.1.3.14}
+\contentsline {subsubsection}{\numberline {7.1.3.15}steppers}{75}{subsubsection.7.1.3.15}
+\contentsline {subsubsection}{\numberline {7.1.3.16}stepsPerRevolution}{75}{subsubsection.7.1.3.16}
+\contentsline {subsubsection}{\numberline {7.1.3.17}stepsPerWell}{75}{subsubsection.7.1.3.17}
+\contentsline {subsubsection}{\numberline {7.1.3.18}stepsToEject}{75}{subsubsection.7.1.3.18}
+\contentsline {subsubsection}{\numberline {7.1.3.19}TwoSwitchA}{75}{subsubsection.7.1.3.19}
+\contentsline {subsubsection}{\numberline {7.1.3.20}TwoSwitchB}{76}{subsubsection.7.1.3.20}
+\contentsline {subsubsection}{\numberline {7.1.3.21}TwoSwitchC}{76}{subsubsection.7.1.3.21}
+\contentsline {section}{\numberline {7.2}Collection.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}py File Reference}{76}{section.7.2}
+\contentsline {section}{\numberline {7.3}fake\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Serial.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}py File Reference}{76}{section.7.3}
+\contentsline {section}{\numberline {7.4}gui.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}py File Reference}{76}{section.7.4}
+\contentsline {section}{\numberline {7.5}location\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Populate.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cpp File Reference}{77}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Function Documentation}{77}{subsection.7.5.1}
+\contentsline {subsubsection}{\numberline {7.5.1.1}main()}{77}{subsubsection.7.5.1.1}
+\contentsline {subsubsection}{\numberline {7.5.1.2}populateLocations()}{78}{subsubsection.7.5.1.2}
+\contentsline {subsection}{\numberline {7.5.2}Variable Documentation}{78}{subsection.7.5.2}
+\contentsline {subsubsection}{\numberline {7.5.2.1}columns}{78}{subsubsection.7.5.2.1}
+\contentsline {subsubsection}{\numberline {7.5.2.2}numLocations}{78}{subsubsection.7.5.2.2}
+\contentsline {subsubsection}{\numberline {7.5.2.3}rows}{78}{subsubsection.7.5.2.3}
+\contentsline {subsubsection}{\numberline {7.5.2.4}stepsPerWell}{78}{subsubsection.7.5.2.4}
+\contentsline {subsubsection}{\numberline {7.5.2.5}stepsToEject}{78}{subsubsection.7.5.2.5}
+\contentsline {section}{\numberline {7.6}Mswitch.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}py File Reference}{79}{section.7.6}
+\contentsline {section}{\numberline {7.7}Pump.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}py File Reference}{79}{section.7.7}
+\contentsline {section}{\numberline {7.8}Two\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Switch.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}py File Reference}{79}{section.7.8}
+\contentsline {section}{\numberline {7.9}X\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Y\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Stage\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Limit\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Switch\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Two\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Switch\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Control.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cpp File Reference}{79}{section.7.9}
+\contentsline {subsection}{\numberline {7.9.1}Function Documentation}{81}{subsection.7.9.1}
+\contentsline {subsubsection}{\numberline {7.9.1.1}backwardstep1()}{81}{subsubsection.7.9.1.1}
+\contentsline {subsubsection}{\numberline {7.9.1.2}backwardstep2()}{81}{subsubsection.7.9.1.2}
+\contentsline {subsubsection}{\numberline {7.9.1.3}eject()}{82}{subsubsection.7.9.1.3}
+\contentsline {subsubsection}{\numberline {7.9.1.4}forwardstep1()}{82}{subsubsection.7.9.1.4}
+\contentsline {subsubsection}{\numberline {7.9.1.5}forwardstep2()}{82}{subsubsection.7.9.1.5}
+\contentsline {subsubsection}{\numberline {7.9.1.6}loop()}{82}{subsubsection.7.9.1.6}
+\contentsline {subsubsection}{\numberline {7.9.1.7}moveDown()}{82}{subsubsection.7.9.1.7}
+\contentsline {subsubsection}{\numberline {7.9.1.8}moveGen()}{82}{subsubsection.7.9.1.8}
+\contentsline {subsubsection}{\numberline {7.9.1.9}moveLast()}{83}{subsubsection.7.9.1.9}
+\contentsline {subsubsection}{\numberline {7.9.1.10}moveLeft()}{83}{subsubsection.7.9.1.10}
+\contentsline {subsubsection}{\numberline {7.9.1.11}moveNext()}{83}{subsubsection.7.9.1.11}
+\contentsline {subsubsection}{\numberline {7.9.1.12}moveRight()}{83}{subsubsection.7.9.1.12}
+\contentsline {subsubsection}{\numberline {7.9.1.13}moveUp()}{83}{subsubsection.7.9.1.13}
+\contentsline {subsubsection}{\numberline {7.9.1.14}populateLocations()}{84}{subsubsection.7.9.1.14}
+\contentsline {subsubsection}{\numberline {7.9.1.15}reset()}{84}{subsubsection.7.9.1.15}
+\contentsline {subsubsection}{\numberline {7.9.1.16}set()}{84}{subsubsection.7.9.1.16}
+\contentsline {subsubsection}{\numberline {7.9.1.17}setup()}{84}{subsubsection.7.9.1.17}
+\contentsline {subsubsection}{\numberline {7.9.1.18}stepperB()}{84}{subsubsection.7.9.1.18}
+\contentsline {subsubsection}{\numberline {7.9.1.19}stepperT()}{84}{subsubsection.7.9.1.19}
+\contentsline {subsection}{\numberline {7.9.2}Variable Documentation}{84}{subsection.7.9.2}
+\contentsline {subsubsection}{\numberline {7.9.2.1}acceleration}{85}{subsubsection.7.9.2.1}
+\contentsline {subsubsection}{\numberline {7.9.2.2}AFMS}{85}{subsubsection.7.9.2.2}
+\contentsline {subsubsection}{\numberline {7.9.2.3}collectionPattern}{85}{subsubsection.7.9.2.3}
+\contentsline {subsubsection}{\numberline {7.9.2.4}columns}{85}{subsubsection.7.9.2.4}
+\contentsline {subsubsection}{\numberline {7.9.2.5}delayRPM}{85}{subsubsection.7.9.2.5}
+\contentsline {subsubsection}{\numberline {7.9.2.6}limitSwitchB}{85}{subsubsection.7.9.2.6}
+\contentsline {subsubsection}{\numberline {7.9.2.7}limitSwitchT}{86}{subsubsection.7.9.2.7}
+\contentsline {subsubsection}{\numberline {7.9.2.8}locations}{86}{subsubsection.7.9.2.8}
+\contentsline {subsubsection}{\numberline {7.9.2.9}maximumSpeed}{86}{subsubsection.7.9.2.9}
+\contentsline {subsubsection}{\numberline {7.9.2.10}myMotorB}{86}{subsubsection.7.9.2.10}
+\contentsline {subsubsection}{\numberline {7.9.2.11}myMotorT}{86}{subsubsection.7.9.2.11}
+\contentsline {subsubsection}{\numberline {7.9.2.12}myPosition}{86}{subsubsection.7.9.2.12}
+\contentsline {subsubsection}{\numberline {7.9.2.13}numLocations}{87}{subsubsection.7.9.2.13}
+\contentsline {subsubsection}{\numberline {7.9.2.14}positions}{87}{subsubsection.7.9.2.14}
+\contentsline {subsubsection}{\numberline {7.9.2.15}rows}{87}{subsubsection.7.9.2.15}
+\contentsline {subsubsection}{\numberline {7.9.2.16}steppers}{87}{subsubsection.7.9.2.16}
+\contentsline {subsubsection}{\numberline {7.9.2.17}stepsPerRevolution}{87}{subsubsection.7.9.2.17}
+\contentsline {subsubsection}{\numberline {7.9.2.18}stepsPerWell}{87}{subsubsection.7.9.2.18}
+\contentsline {subsubsection}{\numberline {7.9.2.19}stepsToEject}{88}{subsubsection.7.9.2.19}
+\contentsline {subsubsection}{\numberline {7.9.2.20}TwoSwitchA}{88}{subsubsection.7.9.2.20}
+\contentsline {subsubsection}{\numberline {7.9.2.21}TwoSwitchB}{88}{subsubsection.7.9.2.21}
+\contentsline {subsubsection}{\numberline {7.9.2.22}TwoSwitchC}{88}{subsubsection.7.9.2.22}
+\contentsline {chapter}{Index}{89}{section*.51}
