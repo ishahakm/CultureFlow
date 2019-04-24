@@ -246,6 +246,10 @@ class App(tk.Tk):
 
         self.set_defaults()
 
+        self.my2Switch.setCollect(1)
+        self.my2Switch.setCollect(2)
+        self.my2Switch.setCollect(3)
+
         self.show_frame(ManualPage)
     def positive_run_status(self):
         """

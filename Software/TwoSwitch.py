@@ -46,10 +46,6 @@ class TwoSwitch():
 
         self.willRecirculate = False
 
-        #Start with Two Switches in Collect position.
-        self.setCollect(1)
-        self.setCollect(2)
-        self.setCollect(3)
 
     def serial_connect(self):
         """
