@@ -1181,7 +1181,7 @@ class AutomaticPage(tk.Frame):
         for steps in self.steplist:
             numsamples += int(steps.samples.get())
 
-        if (numsamples + controller.myColl.position) > 31:
+        if ((numsamples + controller.myColl.position) - 1) > 31:
             message_prompt("Can't run experiment due to overstepping amount of wells. Current position is: " + str(controller.myColl.position))
             return
         # If there are no steps ask user to create or load steps and do nothing.

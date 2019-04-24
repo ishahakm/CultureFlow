@@ -27,9 +27,9 @@ const int stepsPerWell = 225; /**< Amount of steps needed from center of well to
 const int stepsToEject = 1000; /**< Amount of steps to eject entire well plate. */
 const int limitSwitchT = 41; /**< Digital Pin Number for Top Stepper Motor Limit Switch. */
 const int limitSwitchB = 43; /**< Digital Pin Number for Bottom Stepper Motor Limit Switch. */
-const int TwoSwitchA = 31; /**< Digital Pin Number for TwoSwitchA. */
+const int TwoSwitchA = 35; /**< Digital Pin Number for TwoSwitchA. */
 const int TwoSwitchB = 33; /**< Digital Pin Number for TwoSwitchB. */
-const int TwoSwitchC = 35; /**< Digital Pin Number for TwoSwitchC. */
+const int TwoSwitchC = 31; /**< Digital Pin Number for TwoSwitchC. */
 
 //Function Decalartions.
 void forwardstep1();
@@ -68,7 +68,7 @@ MultiStepper steppers;
 int myPosition = 0; /**< Position variable to keep track of which triplet well we are on. */
 long locations[numLocations][2]; /**< Three dimensional array for schematic of positions if MultiStepper is used. */
 long positions[2]; /**< Array for movement needed for using both motors in MultiStepper. */
-int collectionPattern = 1; /**< Collection Pattern variable to choose between snake pattern XY Stage movement (default = 1) or Top down XY Stage movement (!= 1). 
+int collectionPattern = 1; /**< Collection Pattern variable to choose between snake pattern XY Stage movement (default = 1) or Top down XY Stage movement (!= 1).
 
 /**
  *  Arduino Setup. This only runs once.
@@ -139,7 +139,7 @@ void loop() {
   //I = 73 Move Right one step
   //O = 79 Move Down one step
   //P = 80 Move Up one step
-  //M = 77 Set Origin 
+  //M = 77 Set Origin
 
   //Ascii to Decimal for TwoSwitches
   //TwoSwitch A: Collection(A) = 65, Recirculation(S) = 83
@@ -334,8 +334,8 @@ void backwardstep2() {
 
 /**
  *  This function populates the location matrix with the layout
- *  for moving to any location on the well plate. Gives the user the 
- *  choice for a snake pattern Choice = 1, or top to bottom pattern Choice != 1. 
+ *  for moving to any location on the well plate. Gives the user the
+ *  choice for a snake pattern Choice = 1, or top to bottom pattern Choice != 1.
  */
 void populateLocations(long (&locations)[numLocations][2], int choice = 1){
   if (choice == 1){
