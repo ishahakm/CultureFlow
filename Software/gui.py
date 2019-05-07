@@ -43,12 +43,21 @@ def message_prompt(message):
     """Creates a pop-up message of your choice"""
     p = tk.Toplevel()
     p.grab_set()
+    p.configure(bg='#00fff2')
 
-    label = tk.Label(p,text = message)
-    exitbutton = tk.Button(p,text = "OK",font = font.Font(family='Helvetica', size=16, weight='bold'),command = combine_funcs(p.destroy,p.grab_release))
+    p.buttonFont = font.Font(family='Verdana', size=12, weight='bold')
+    p.pageFont = font.Font(family='Faktos', size=18, weight='bold')
 
-    label.pack()
-    exitbutton.pack()
+    p.exitbutton_text = tk.StringVar()
+    p.exitbutton_text = "OK"
+
+    p.label = tk.Label(p,text = message,bg = '#00fff2',justify=tk.LEFT)
+    p.exitbutton = tk.Button(p, text = p.exitbutton_text,font = p.buttonFont,command = combine_funcs(p.destroy,p.grab_release))
+
+    p.label.grid(column = 1, row = 1, columnspan = 2,rowspan = 2)
+    p.exitbutton.grid(column = 2, row = 6, columnspan = 1)
+
+    return p
 def check_input(variable, desired_datatype, lower_limit = 0, upper_limit = 0):
 
     inputGood = False
@@ -76,7 +85,7 @@ def check_input(variable, desired_datatype, lower_limit = 0, upper_limit = 0):
             #message_prompt(controller,"variable datatype does not match required datatype")
             datatypeGood = False
     else:
-        #message_prompt(controller,"invalid input, desired_datatype can be str, int, or float")
+        #message_prompt("invalid input, desired_datatype can be str, int, or float")
         datatypeGood = False
 
     if datatypeGood and limitsGood:
@@ -234,7 +243,7 @@ class App(tk.Tk):
 
         if self.hasPump.get():
             self.myPump = ThreePump(self.portPump.get())
-            self.set_pump_defaults()
+            #self.set_pump_defaults()
 
         if self.hasMani.get():
             self.myMani = MSwitch(self.portMani.get()) #= #self.portMani.get()
@@ -289,19 +298,19 @@ class WelcomePage(tk.Frame):
 
         controller.get_ports()
 
-        #print("M-Switch",controller.get_comport("R","65"))
-        controller.portMani.set(controller.get_comport("R","65"))
-        print("MSwitch has the following port: " + controller.portMani.get())
-
-        #print("Pump",controller.get_comport("0xS","IS"))
-        controller.portPump.set(controller.get_comport("0xS","IS"))
-        print("Pump has the following port: " + controller.portPump.get())
-
-        #print("XYStage/TwoSwitch",controller.get_comport("?","2xCS"))
-        controller.portColl.set(controller.get_comport("?","2xCS"))
-        controller.port2Switch.set(controller.portColl.get())
-        print(controller.portColl.get())
-        #print(controller.port2Switch.get())
+        # #print("M-Switch",controller.get_comport("R","65"))
+        # controller.portMani.set(controller.get_comport("R","65"))
+        # print("MSwitch has the following port: " + controller.portMani.get())
+        #
+        # #print("Pump",controller.get_comport("0xS","IS"))
+        # controller.portPump.set(controller.get_comport("0xS","IS"))
+        # print("Pump has the following port: " + controller.portPump.get())
+        #
+        # #print("XYStage/TwoSwitch",controller.get_comport("?","2xCS"))
+        # controller.portColl.set(controller.get_comport("?","2xCS"))
+        # controller.port2Switch.set(controller.portColl.get())
+        # print(controller.portColl.get())
+        # #print(controller.port2Switch.get())
 
         #port selection and checkbox functionality for the m-switch
         if controller.portMani.get() is not None and controller.portMani.get() is not "":
@@ -319,9 +328,9 @@ class WelcomePage(tk.Frame):
             self.coll_label['text'] = 'XYStage/TwoSwitch: Connected'
 
         #For Testing Only Comment Later
-        #controller.hasColl.set(True)
-        #controller.hasPump.set(True)
-        #controller.hasMani.set(True)
+        controller.hasColl.set(True)
+        controller.hasPump.set(True)
+        controller.hasMani.set(True)
 
 
         #port selection and checkbox functionality for the collection system
@@ -674,7 +683,6 @@ class ManualPage(tk.Frame):
     def eject(self,controller):
         controller.myColl.eject()
         self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
-
     def toggle(self,controller):
         if messagebox.askyesno("Collection Pattern Change", "You sure you want to change the collection pattern? (WARNING: Stage will reset!)"):
             controller.myColl.reset()
@@ -682,7 +690,6 @@ class ManualPage(tk.Frame):
             controller.myColl.toggle_pattern()
             self.patternLabel['text'] = "Current Pattern: " + controller.myColl.currentPattern
             self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
-
     def setOrigin(self,controller):
         window = tk.Tk()
         window.title("Set Origin/Manual Control")
@@ -704,24 +711,18 @@ class ManualPage(tk.Frame):
 
         #row 4
         doneButton.grid(row = 4, column = 2, sticky = tk.W, pady = 40)
-
     def moveOneUp(self, controller):
         controller.myColl.moveOneUp()
-
     def moveOneDown(self, controller):
         controller.myColl.moveOneDown()
-
     def moveOneRight(self, controller):
         controller.myColl.moveOneRight()
-
     def moveOneLeft(self, controller):
         controller.myColl.moveOneLeft()
-
     def done(self, controller, window):
         controller.myColl.setOrigin()
         self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
         window.destroy()
-
 
     #
     # def prime_window(self,controller):
@@ -1439,7 +1440,6 @@ class SettingsPage(tk.Frame):
 
         #present entry boxes for choosing volume and time
         window.settings = []
-
         for channel in channels:
             vol  = tk.StringVar()
             time = tk.StringVar()
@@ -1449,9 +1449,6 @@ class SettingsPage(tk.Frame):
             label = tk.Label(window, text = Ch ,bg='#00fff2',font = LARGE_FONT)
             info = [channel,label,vol_entry,time_entry]
             window.settings.append(info)
-
-            #gridding these from list just in case referencing needs to be done through window object
-
 
         #labels for the entries 2
         label_3 = tk.Label(window, text = "Channel" ,bg='#00fff2',font = LARGE_FONT)
@@ -1471,30 +1468,43 @@ class SettingsPage(tk.Frame):
             info = [channel,label,vol_meas,vol_meas_entry]
             window.measured.append(info)
 
-        all_entries = []
-
+        vol_entries = []
+        time_entries = []
+        measured_entries = []
         for i in range(len(channels)):
             window.settings[i][1].grid(column = 1, row = 3+i, columnspan = 1)
             window.settings[i][2].grid(column = 2, row = 3+i, columnspan = 1)
             window.settings[i][3].grid(column = 3, row = 3+i, columnspan = 1)
             window.measured[i][1].grid(column = 1, row = 8+i, columnspan = 1)
             window.measured[i][3].grid(column = 2, row = 8+i, columnspan = 1)
+            vol_entries.append(window.settings[i][2])
+            time_entries.append(window.settings[i][3])
+            measured_entries.append(window.measured[i][3])
 
-            all_entries.append(window.settings[i][2])
-            all_entries.append(window.settings[i][3])
-            all_entries.append(window.measured[i][3])
-
-        calibratebutton = tk.Button(window,text = "Start Calibration",bg = "#64ff64",font = controller.buttonFont,
+        window.calibratebutton = tk.Button(window,text = "Start Calibration",bg = "#64ff64",font = controller.buttonFont,
         command = lambda: combine_funcs(
-        self.flip_all(all_entries),
-        self.update_calibration_settings(controller,window.settings)))
+        self.check(controller,vol_entries,time_entries,measured_entries,window)))
+        window.calibratebutton.grid(column = 1, row = 6, columnspan = 2)
 
-        calibratebutton.grid(column = 1, row = 6, columnspan = 2)
+        window.send_button = tk.Button(window,text = "Send Measurements",bg = "#64ff64",font = controller.buttonFont,
+        command = lambda: combine_funcs(
+        self.update_measured_volumes(controller,window),
+        window.destroy(),
+        window.grab_release()))
+        window.send_button.grid(column = 1, row = 12, columnspan = 2)
 
-        # self.update_calibration_settings(controller,window.settings)
-        # self.commence_calibration_perfusion(controller,window)
-        # cancelbutton.grid(column = 2, row = 6, columnspan = 1)
-        # calibratebutton.grid(column = 3, row = 6, columnspan = 1)
+        window.send_button.config(state = tk.DISABLED)
+
+    def update_measured_volumes(self,controller,window):
+        for i in range(len(window.measured)):
+            if window.measured[i][3]['state'] == 'normal':
+                channel = window.measured[i][0]
+                volume = window.measured[i][3].get()
+                controller.myPump.set_measured_volume(channel,volume)
+
+
+
+
 
     def update_calibration_settings(self,controller,settings):
         for setting in settings:
@@ -1504,33 +1514,145 @@ class SettingsPage(tk.Frame):
             controller.myPump.set_calibration_volume(channel,volume,'uL')
             controller.myPump.set_calibration_time(channel,time)
 
-    def flip_all(self,widget_list):
+    def check(self,controller,vol_entries,time_entries,measured_entries,window):
+        """checks if the entry is a float,
+        if it is it checks if it's in range,
+        if it is it sets that channel as OK
+        it then gives option to proceed or not
         """
-        Enables or disables a widget. It is run by the checkbuttons on the WelcomPage
-        """
-        for widget in widget_list:
-            myState = str(widget['state'])
+        window.send_button.config(state = tk.NORMAL)
+        window.calibratebutton.config(state = tk.DISABLED)
+        window.update()
+        truth_table = []
+        message_list = []
+        for i in range(len(vol_entries)):
+            truth_table.append(True)
+            message_list.append("")
+        for i in range(len(vol_entries)):
+
+            message_list[i] += "Channel %s \n"%(i+1)
+
+            #empty or not check
+            if truth_table[i]:
+                if not len(vol_entries[i].get()) > 0:
+                    truth_table[i] = False
+                    message_list[i] += "volume entry is empty\n"
+                if not len(vol_entries[i].get()) > 0:
+                    truth_table[i] = False
+                    message_list[i] += "time entry is empty\n"
+
+            #float check 1
+            if truth_table[i]:
+                try:
+                    np.float(vol_entries[i].get())
+                except:
+                    truth_table[i] = False
+                    message_list[i] += "volume entry must be float\n"
+
+            #float check 2
+            if truth_table[i]:
+                try:
+                    np.float(time_entries[i].get())
+                except:
+                    truth_table[i] = False
+                    message_list[i] += "time entry must be float\n"
+
+            #range check 1
+            if truth_table[i]:
+                if np.float(time_entries[i].get()) < 0.1 or np.float(time_entries[i].get()) > 16:
+                    truth_table[i] = False
+                    message_list[i] += "time entry must be between 0.1 and 16 minutes\n"
+
+            #range check 2
+            if truth_table[i]:
+                if np.float(vol_entries[i].get()) < 0.1 or np.float(vol_entries[i].get()) > 1000:
+                    truth_table[i] = False
+                    message_list[i] += "volume entry must be between 0.1 and 1000 uL \n"
+
+            if truth_table[i]:
+                message_list[i] += "OK \n"
+        message = ""
+        for i in range(len(message_list)):
+            message += message_list[i] + "\n"
+        if any(truth_table):
+            message2 = "CALIBRATE"
+            for i in range(len(truth_table)):
+                if truth_table[i]:
+                    message2 += " %s"%(i+1)
+            message += message2 + "?"
+        prompt = message_prompt(message)
+        prompt.exitbutton["text"] = "Cancel"
+
+        new_settings = []
+        new_measured = []
+        for i in range(len(truth_table)):
+            if truth_table[i]:
+                new_settings.append(window.settings[i])
+                new_measured.append(window.measured[i])
+        for widget_set in window.settings:
+
+             myState1 = str(widget_set[2]['state'])
+             myState2 = str(widget_set[3]['state'])
+
+             if myState1 == 'normal':
+                 widget_set[2].config(state = tk.DISABLED)
+             else:
+                 widget_set[2].config(state = tk.NORMAL)
+
+             if myState2 == 'normal':
+                 widget_set[3].config(state = tk.DISABLED)
+             else:
+                 widget_set[3].config(state = tk.NORMAL)
+        for widget in new_measured:
+
+            myState = str(widget[3]['state'])
+
             if myState == 'normal':
-                widget.config(state = tk.DISABLED)
+                widget[3].config(state = tk.DISABLED)
             else:
-                widget.config(state = tk.NORMAL)
+                widget[3].config(state = tk.NORMAL)
 
-    def time_progress(self, process_name, total_time):
+        process_name = "Calibrating"
 
-        window = tk.Toplevel(controller)
-        window.grab_set()
-        window.configure(bg='#00fff2')
+        new_times = []
+        for i in range(len(new_settings)):
+            a = float(new_settings[i][3].get())
+            new_times.append(a)
+
+        total_time = np.max(new_times)
+
+        prompt.continue_button = tk.Button(prompt,text = "Continue",font = prompt.buttonFont,
+        command = lambda: combine_funcs(
+        prompt.grab_release(),
+        prompt.destroy(),
+        self.update_calibration_settings(controller,new_settings),
+        self.time_progress(controller,process_name,total_time)))
+
+        prompt.continue_button.grid(column = 1, row = 6, columnspan = 1)
+        prompt.update()
+    def time_progress(self, controller, process_name, total_time):
+
+        w = tk.Toplevel(controller)
+        w.grab_set()
+        w.configure(bg='#00fff2')
+
         initial_time = time.time()
-        window.label_1 = tk.Label(window,text = "%s Runtime = %s"%(process_name,total_time))
-        window.label_2 = tk.Label(window,text = "Time Elapsed    = %s"%(time.time() - initial_time))
+        w.label_1 = tk.Label(w,text = "%s Runtime = %s"%(process_name,total_time),bg = '#00fff2')
+        w.label_2 = tk.Label(w,text = "Time Elapsed    = %s"%(time.time() - initial_time),bg = '#00fff2')
+
+        w.cancelbutton = tk.Button(w,text = "Quit process",bg = "#ff6464",font = controller.buttonFont,width = 10, command = combine_funcs(w.destroy,w.grab_release))
+
+        w.label_1.grid(column=1,row=1,columnspan=1)
+        w.label_2.grid(column=1,row=2,columnspan=1)
+        w.cancelbutton.grid(column=1,row=3,columnspan=1)
+
         while time.time()-initial_time < total_time:
-            window.update()
+            w.label_2["text"] = "Time Elapsed    = %s"%(np.round(time.time() - initial_time,0))
+            w.update()
 
-        window.cancelbutton = tk.Button(window,text = "Cancel",bg = "#ff6464",font = controller.buttonFont,width = 10, command = combine_funcs(window.destroy,window.grab_release))
+        w.destroy()
+        w.grab_release()
 
-        window.label_1.grid(column=1,row=1,columnspan=1)
-        window.label_2.grid(column=1,row=2,columnspan=1)
-        window.cancelbutton.grid(column=1,row=3,columnspan=1)
 
     def response_calibration(self,controller,prev_window):
 

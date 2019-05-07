@@ -59,7 +59,7 @@ class ThreePump():
         self.calibrationtimeunit = "min"
 
 
-        self.setTargetCalibrationVolume()
+        #self.setTargetCalibrationVolume()
         self.setDefaults()
 
         self.isOn = None
@@ -104,7 +104,8 @@ class ThreePump():
         self.ser.write(cmd.encode('ascii') + '\r'.encode('ascii'))
         time.sleep(.1)
         print("Sent a serial command: %s %s "%("Pump",cmd))
-        response = self.ser.readline().decode()
+        #response = self.ser.readline().decode()
+        response = self.ser.readline()
         response = self.chop_return(response)
         print(response)
 
@@ -203,9 +204,8 @@ class ThreePump():
         to_send = str(channel)+"xU"+self.FormatVolume(volume,unit)
         self.send(to_send)
     def set_calibration_time(self,channel,time):
-
         #input is min
-        time = float(time*60)
+        time = float(time)*60
         if time < 0.1:
             time = 0.1
         elif time > 9999999.9:
@@ -248,10 +248,10 @@ class ThreePump():
         # self.send_return('2M')
         # self.send_return('3M')
 
-        self.send_return('0xM')
-        self.send_return('0xM')
-        self.send_return("0xU1000+0")
-        self.send_return("0xW00003000")
+        self.send('0xM')
+        self.send('0xM')
+        self.send("0xU1000+0")
+        self.send("0xW00003000")
 
         #setting to flowrate mode
         # for channel in range(3):
