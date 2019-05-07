@@ -7,11 +7,12 @@ by:
 Liev Birman
 Adiel Hernandez
 """
-import serial
+import fakeSerial as serial
 import sys
 from serial.tools.list_ports import comports
 import time
 from decimal import Decimal
+import numpy as np
 
 """
 When using this module errors can occur if:
@@ -53,7 +54,11 @@ class ThreePump():
         self.serial_connect()
 
         self.calibrationvolume = 1
-        self.calibrationunit = "mL"
+        self.calibrationvolumeunit = "uL"
+        self.calibrationtime = 1
+        self.calibrationtimeunit = "min"
+
+
         self.setTargetCalibrationVolume()
         self.setDefaults()
 
@@ -133,6 +138,7 @@ class ThreePump():
         D = str(int(float(A[:5])*1000))
         E = D+C
         return E
+
     def setFlow(self,channel,flowrate):
         """
         This method sets the flow rate of the pump.
@@ -177,14 +183,12 @@ class ThreePump():
 
         self.send(str(channel)+"I")
     def calibrate(self,channel):
-        """
-        This method sends a command to the microcontroller which is programmed to calibrate the pump only for the channel chosen.
 
-        Parameters:
-            channel (int): the channel that will be calibrated.
-        """
-
-        self.send(str(channel)+"xY")
+        if channel == "All":
+            for i in range(3):
+                self.send(str(i+1)+"xY")
+        else:
+            self.send(str(channel)+"xY")
     def abort_calibration(self,channel):
         """
         This method sends a command to the microcontroller which is programmed to abort calibration of the pump only for the channel chosen.
@@ -194,21 +198,38 @@ class ThreePump():
         """
 
         self.send(str(channel)+"xZ")
-    def setTargetCalibrationVolume(self):
-        """
-        This method sets the target calibration volume.
-        """
 
-        for i in range(3):
-            to_send = str(i+1)+"x"+self.FormatVolume(self.calibrationvolume,self.calibrationunit)
-            self.send(to_send)
-    def setMeasuredVolume(self,channel,volume):
+    def set_calibration_volume(self,channel,volume,unit):
+        to_send = str(channel)+"xU"+self.FormatVolume(volume,unit)
+        self.send(to_send)
+    def set_calibration_time(self,channel,time):
+
+        #input is min
+        time = float(time*60)
+        if time < 0.1:
+            time = 0.1
+        elif time > 9999999.9:
+            time = 99999999
+        time = np.round(time,1)
+
+        time = str(time)
+        time = time.replace(".", "")
+        time_len = len(time)
+        len_zeros = 8 - time_len
+        time_string = ""
+        for i in range(len_zeros):
+            time_string += "0"
+        time_string += time
+
+        to_send = str(channel)+"xW"+time_string
+        self.send(to_send)
+    def set_measured_volume(self,channel,volume):
         """
         This method sets the measured volume.
         """
-
-        volume = self.FormatVolume(volume,"mL")
+        volume = self.FormatVolume(volume,"uL")
         self.send_return(str(channel)+"xV"+volume)
+
     def start_all(self):
         """
         This method sends a command to the microcontroller which is programmed to start the pump for all channels.

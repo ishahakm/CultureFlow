@@ -14,7 +14,6 @@ from tkinter import ttk
 from tkinter import filedialog
 from tkinter import messagebox
 
-
 from decimal import Decimal
 import numpy as np
 import time
@@ -84,7 +83,6 @@ def check_input(variable, desired_datatype, lower_limit = 0, upper_limit = 0):
         inputGood = True
 
     return inputGood
-
 class App(tk.Tk):
     """
     The App class
@@ -210,7 +208,7 @@ class App(tk.Tk):
         for n, (port, desc, hwid) in enumerate(sorted(comports()), 1):
             ports.append(port)
         self.ports = ports
-    def set_defaults(self):
+    def set_pump_defaults(self):
         """
         Sets defaults as defined within function
         """
@@ -233,22 +231,21 @@ class App(tk.Tk):
         This function checks if we have these devices and then creates instances for each one. Open ManualPage when done.
         When we've finished specifying our devices in the WelcomePage window we run this by clicking done.
         """
+
         if self.hasPump.get():
             self.myPump = ThreePump(self.portPump.get())
+            self.set_pump_defaults()
 
         if self.hasMani.get():
-            self.myMani = MSwitch(self.portMani.get())#= #self.portMani.get()
+            self.myMani = MSwitch(self.portMani.get()) #= #self.portMani.get()
 
         if self.hasColl.get():
             self.myColl = Collectador(self.portColl.get()) #= #self.portColl.get()
             self.my2Switch = TwoSwitch(self.portColl.get())
             self.my2Switch.ser = self.myColl.ser
-
-        self.set_defaults()
-
-        self.my2Switch.setCollect(1)
-        self.my2Switch.setCollect(2)
-        self.my2Switch.setCollect(3)
+            self.my2Switch.setCollect(1)
+            self.my2Switch.setCollect(2)
+            self.my2Switch.setCollect(3)
 
         self.show_frame(ManualPage)
     def positive_run_status(self):
@@ -273,7 +270,6 @@ class App(tk.Tk):
         label = tk.Label(window,text = message, bg = '#00fff2')
         label.grid(column = 1, row = 1, columnspan = 1,sticky=tk.W)
         abortbutton.grid(column = 1, row = 2)
-
 class WelcomePage(tk.Frame):
     #Port and device selection
     #Running function instantiating devices via their respective classes
@@ -323,9 +319,9 @@ class WelcomePage(tk.Frame):
             self.coll_label['text'] = 'XYStage/TwoSwitch: Connected'
 
         #For Testing Only Comment Later
-        controller.hasColl.set(True)
-        controller.hasPump.set(True)
-        controller.hasMani.set(True)
+        #controller.hasColl.set(True)
+        #controller.hasPump.set(True)
+        #controller.hasMani.set(True)
 
 
         #port selection and checkbox functionality for the collection system
@@ -337,7 +333,6 @@ class WelcomePage(tk.Frame):
 
         #the done button takes in all of the inputs and passes them to the controller for use in the next windows
         self.donebutton = tk.Button(self, text = "Done",font = controller.buttonFont, command=controller.done_and_load)
-
 
         #geometry
         self.mainlabel.pack(fill = tk.BOTH)
@@ -981,10 +976,10 @@ class AutomaticPage(tk.Frame):
         f.write(text2save)
         f.close()
     def file_load(self):
+
         f = filedialog.askopenfilename(initialdir = "/",title = "Select file", filetypes = (("text files","*.txt"),("all files","*.*")))
         df = pd.read_csv(f)
         print(df)
-
         for i in range(len(self.steplist)):
             zeroth = tk.StringVar()
             zeroth.set("0")
@@ -1005,6 +1000,8 @@ class AutomaticPage(tk.Frame):
             sra = df["SRA"][i]
             rti = df["RTI"][i]
 
+            print("TS2",ts2)
+
 
             self.steplist[i].flowrateentrylist[0].delete(0,'end')
             self.steplist[i].flowrateentrylist[0].insert(0,fr1)
@@ -1014,11 +1011,11 @@ class AutomaticPage(tk.Frame):
             self.steplist[i].flowrateentrylist[2].insert(0,fr3)
 
             self.steplist[i].twoSwitchComboBoxList[0].delete(0,'end')
-            self.steplist[i].twoSwitchComboBoxList[0].insert(0,ts1)
+            self.steplist[i].twoSwitchComboBoxList[0].set(ts1)
             self.steplist[i].twoSwitchComboBoxList[1].delete(0,'end')
-            self.steplist[i].twoSwitchComboBoxList[1].insert(0,ts2)
+            self.steplist[i].twoSwitchComboBoxList[1].set(ts2)
             self.steplist[i].twoSwitchComboBoxList[2].delete(0,'end')
-            self.steplist[i].twoSwitchComboBoxList[2].insert(0,ts3)
+            self.steplist[i].twoSwitchComboBoxList[2].set(ts3)
 
             self.steplist[i].reservoircombobox.delete(0,'end')          # delete between two indices, 0-based
             self.steplist[i].reservoircombobox.insert(0,res)
@@ -1327,63 +1324,61 @@ class SettingsPage(tk.Frame):
     """
     def __init__(self, parent, controller):
 
-        #default channel direction
-        #
         tk.Frame.__init__(self,parent)
+        #background color
         self.configure(bg='#00fff2')
-
+        #should be automatic from single loc
         self.channels = 3
         self.reservoirs = 6
-
+        #main label
         self.mainlabel = tk.Label(self, text = "Settings",bg='#00fff2', font =controller.pageFont,width = 15)
-
+        #page navigation
         self.autopagebutton =  tk.Button(self, text = "Experiment",font = controller.buttonFont,bg = "white", command = lambda: controller.show_frame(AutomaticPage), height = 1, width = 10)
         self.manualbutton =  tk.Button(self, text = "Manual",font = controller.buttonFont,bg = "white", command = lambda: controller.show_frame(ManualPage), height = 1, width = 10)
-
+        #updating tubing diameters and direction of peristaltic pump channels
         self.updatebutton = tk.Button(self, text = "Update",font = controller.buttonFont,bg = "#64ff64", command = lambda: self.update(controller), height = 1, width = 20)
-
+        #calibration button and combobox definitions
+        #combobox
         self.calibratecombobox = tk.ttk.Combobox(self,width = 15)
         self.channelvalues = [i+1 for i in range(self.channels)]
+        self.channelvalues.append("1,2,3")
+        self.channelvalues.append("1,2")
+        self.channelvalues.append("1,3")
+        self.channelvalues.append("2,3")
+
         self.calibratecombobox['values'] = self.channelvalues
-        self.calibratecombobox.set(self.channelvalues[0])
+        self.calibratecombobox.set(self.channelvalues[3])
         self.calibratecombobox.state(['!disabled', 'readonly'])
-        self.calibratebutton = tk.Button(self, text = "Calibrate", command = lambda: self.calibrate(controller),width = 15)
-        self.measuredVolume = tk.StringVar()
-        self.measuredVolumeEntry = tk.Entry(self,textvariable = self.measuredVolume,bg = "white",width = 15)
-        self.entercalibratedbutton = tk.Button(self, text = "Enter", command = lambda: controller.myPump.setMeasuredVolume( int(self.calibratecombobox.get()) , float(self.measuredVolume.get()) ),width = 15 )
+        #calibration button
+        self.calibratebutton = tk.Button(self, text = "Calibration", command = lambda: self.request_calibration(controller),width = 15)
+        # self.measuredVolume = tk.StringVar()
+        # self.measuredVolumeEntry = tk.Entry(self,textvariable = self.measuredVolume,bg = "white",width = 15)
+        # self.entercalibratedbutton = tk.Button(self, text = "Enter", command = lambda: controller.myPump.setMeasuredVolume( int(self.calibratecombobox.get()) , float(self.measuredVolume.get()) ),width = 15 )
         self.calibrationlabel = tk.Label(self, text = "Calibration",bg='#00fff2', font =controller.pageFont,width = 15)
         self.channelcaliblabel = tk.Label(self, text = "Channel to Calibrate:",bg='#00fff2',width = 15)
-
         self.directionheading = tk.Label(self, text = "Direction",bg='#00fff2')
         self.directionslist = []
         self.directionlabellist = []
         self.directions = ["CW","CCW"]
-
         #row 1
         self.mainlabel.grid(column = 1, row = 1, columnspan = 2)
         self.autopagebutton.grid(column = 3, row = 1)
         self.manualbutton.grid(column = 4, row = 1)
-
         #row 2
         self.calibrationlabel.grid(column = 1, row = 2,columnspan = 4)
-
         #row 3
         self.channelcaliblabel.grid(column = 1, row = 3,columnspan = 1)
         self.calibratecombobox.grid(column = 2, row = 3,columnspan = 1)
         self.calibratebutton.grid(column = 3, row = 3,columnspan = 1)
-
         #row 4
         #self.entercalibratedbutton.grid(column = 4, row = 4,columnspan = 1)
-
         #row 5
         for i in range(self.channels):
             directionlabel = tk.Label(self, text = "CH%s"%(i+1),bg='#00fff2',width = 15)
             directionlabel.grid(column = i+2, row = 5, columnspan=1)
             self.directionlabellist.append([directionlabel])
-
         #row 6
         self.directionheading.grid(column = 1, row = 6, columnspan = 1)
-
         for i in range(self.channels):
             directioncombobox = tk.ttk.Combobox(self,width = 15)
             directioncombobox['values'] = self.directions
@@ -1391,7 +1386,6 @@ class SettingsPage(tk.Frame):
             directioncombobox.state(['!disabled', 'readonly'])
             directioncombobox.grid(column = i+2, row = 6, columnspan=1)
             self.directionslist.append([directioncombobox])
-
         #row 7
         self.diameterlist = []
         self.diameterlabel = tk.Label(self, text = "Tubing Diameter",bg='#00fff2',width = 15)
@@ -1402,17 +1396,11 @@ class SettingsPage(tk.Frame):
             diametercombobox.set(self.diametervalues[controller.default_diameter_index])
             diametercombobox.state(['!disabled', 'readonly'])
             self.diameterlist.append(diametercombobox)
-            diameterlabel = tk.Label(self, text = "Tubing Diameter",bg='#00fff2', font =controller.pageFont,width = 15)
+            diameterlabel = tk.Label(self, text = "Tubing Diameter",bg='#00fff2', font=controller.pageFont,width = 15)
             diametercombobox.grid(column = i+2,row = 7,columnspan=1)
 
         self.diameterlabel.grid(column = 1, row = 7,columnspan = 1)
-
-
         #row 9
-
-
-        #row 9
-
         #row 10
         self.updatebutton.grid(column = 1, row = 10,columnspan = 2,sticky=tk.W, pady=5)
     def update(self,controller):
@@ -1431,45 +1419,132 @@ class SettingsPage(tk.Frame):
         controller.myPump.ser.readline()
         controller.myPump.ser.flush()
         time.sleep(2)
-        #controller.max_flowrate_1 = float(controller.myPump.send_return('1?')[:5])
-        #controller.max_flowrate_2 = float(controller.myPump.send_return('2?')[:5])
-        #controller.max_flowrate_3 = float(controller.myPump.send_return('3?')[:5])
-    def calibrate(self,controller):
+    def request_calibration(self,controller):
 
         window = tk.Toplevel(controller)
         window.grab_set()
-
         window.configure(bg='#00fff2')
 
-        controller.myPump.calibrate(int(self.calibratecombobox.get()))
+        #get option
+        window.option = self.calibratecombobox.get()
+        channels = window.option.split(",")
 
-        #exitbutton = tk.Button(window,text = "Exit",font = controller.buttonFont,command = combine_funcs(window.destroy,window.grab_release))
-        abortbutton = tk.Button(window,text = "Abort",bg = "#ff6464",font = controller.buttonFont,width = 15, command = combine_funcs(controller.myPump.stop_all,window.destroy,window.grab_release))
+        #labels for the entries 1
+        label_1 = tk.Label(window, text = "Channel" ,bg='#00fff2',font = LARGE_FONT)
+        label_2 = tk.Label(window, text = "Volume"  ,bg='#00fff2',font = LARGE_FONT)
+        label_3 = tk.Label(window, text = "Time"    ,bg='#00fff2',font = LARGE_FONT)
+        label_1.grid(column = 1, row = 2, columnspan = 1)
+        label_2.grid(column = 2, row = 2, columnspan = 1)
+        label_3.grid(column = 3, row = 2, columnspan = 1)
 
-        measuredVolume = tk.StringVar()
-        measuredVolumeEntry = tk.Entry(window,textvariable = measuredVolume, bg = "white",width = 20)
-        entercalibratedbutton = tk.Button(window,
-        text = "Enter",
-        font = controller.buttonFont,
-        bg = "#64ff64",
+        #present entry boxes for choosing volume and time
+        window.settings = []
+
+        for channel in channels:
+            vol  = tk.StringVar()
+            time = tk.StringVar()
+            vol_entry  = tk.Entry(window, textvariable = vol, bg = "white",width = 20)
+            time_entry = tk.Entry(window, textvariable = time, bg = "white",width = 20)
+            Ch = str(channel)
+            label = tk.Label(window, text = Ch ,bg='#00fff2',font = LARGE_FONT)
+            info = [channel,label,vol_entry,time_entry]
+            window.settings.append(info)
+
+            #gridding these from list just in case referencing needs to be done through window object
+
+
+        #labels for the entries 2
+        label_3 = tk.Label(window, text = "Channel" ,bg='#00fff2',font = LARGE_FONT)
+        label_4 = tk.Label(window, text = "Measured Volume"  ,bg='#00fff2',font = LARGE_FONT)
+        label_3.grid(column = 1, row = 7, columnspan = 1)
+        label_4.grid(column = 2, row = 7, columnspan = 1)
+
+        #present entry boxes for choosing volume and time
+        window.measured = []
+
+        for channel in channels:
+            vol_meas  = tk.StringVar()
+            vol_meas_entry  = tk.Entry(window, textvariable = vol_meas, bg = "white",width = 20)
+            vol_meas_entry['state'] = tk.DISABLED
+            Ch = str(channel)
+            label = tk.Label(window, text = Ch ,bg='#00fff2',font = LARGE_FONT)
+            info = [channel,label,vol_meas,vol_meas_entry]
+            window.measured.append(info)
+
+        all_entries = []
+
+        for i in range(len(channels)):
+            window.settings[i][1].grid(column = 1, row = 3+i, columnspan = 1)
+            window.settings[i][2].grid(column = 2, row = 3+i, columnspan = 1)
+            window.settings[i][3].grid(column = 3, row = 3+i, columnspan = 1)
+            window.measured[i][1].grid(column = 1, row = 8+i, columnspan = 1)
+            window.measured[i][3].grid(column = 2, row = 8+i, columnspan = 1)
+
+            all_entries.append(window.settings[i][2])
+            all_entries.append(window.settings[i][3])
+            all_entries.append(window.measured[i][3])
+
+        calibratebutton = tk.Button(window,text = "Start Calibration",bg = "#64ff64",font = controller.buttonFont,
         command = lambda: combine_funcs(
-        window.destroy(),
-        window.grab_release(),
-        controller.myPump.setMeasuredVolume(int(self.calibratecombobox.get()),float(measuredVolume.get()))),width = 15)
+        self.flip_all(all_entries),
+        self.update_calibration_settings(controller,window.settings)))
+
+        calibratebutton.grid(column = 1, row = 6, columnspan = 2)
+
+        # self.update_calibration_settings(controller,window.settings)
+        # self.commence_calibration_perfusion(controller,window)
+        # cancelbutton.grid(column = 2, row = 6, columnspan = 1)
+        # calibratebutton.grid(column = 3, row = 6, columnspan = 1)
+
+    def update_calibration_settings(self,controller,settings):
+        for setting in settings:
+            channel = setting[0]
+            volume  = setting[2].get()
+            time    = setting[3].get()
+            controller.myPump.set_calibration_volume(channel,volume,'uL')
+            controller.myPump.set_calibration_time(channel,time)
+
+    def flip_all(self,widget_list):
+        """
+        Enables or disables a widget. It is run by the checkbuttons on the WelcomPage
+        """
+        for widget in widget_list:
+            myState = str(widget['state'])
+            if myState == 'normal':
+                widget.config(state = tk.DISABLED)
+            else:
+                widget.config(state = tk.NORMAL)
+
+    def time_progress(self, process_name, total_time):
+
+        window = tk.Toplevel(controller)
+        window.grab_set()
+        window.configure(bg='#00fff2')
+        initial_time = time.time()
+        window.label_1 = tk.Label(window,text = "%s Runtime = %s"%(process_name,total_time))
+        window.label_2 = tk.Label(window,text = "Time Elapsed    = %s"%(time.time() - initial_time))
+        while time.time()-initial_time < total_time:
+            window.update()
+
+        window.cancelbutton = tk.Button(window,text = "Cancel",bg = "#ff6464",font = controller.buttonFont,width = 10, command = combine_funcs(window.destroy,window.grab_release))
+
+        window.label_1.grid(column=1,row=1,columnspan=1)
+        window.label_2.grid(column=1,row=2,columnspan=1)
+        window.cancelbutton.grid(column=1,row=3,columnspan=1)
+
+    def response_calibration(self,controller,prev_window):
 
 
-        info = """Channel %s of your pump will now dispense %s %s of fluid.
-        Once the pump stops dispensing take your sample and measure its volume,
-        then input the measured volume in units of mL into the box below and press Enter.
-        To cancel press abort."""%(self.calibratecombobox.get(),
-        controller.myPump.calibrationvolume,
-        controller.myPump.calibrationunit)
 
-        infomessage = tk.Label(window, text = info,bg='#00fff2',font = LARGE_FONT)
+        def update_measured_volume(controller,entry_list,option):
 
-        infomessage.grid(column = 1, row = 1, columnspan = 3,sticky=tk.W)
-        measuredVolumeEntry.grid(column = 1, row = 2, columnspan = 1)
-        entercalibratedbutton.grid(column = 2, row = 2, columnspan = 1)
-        abortbutton.grid(column = 3, row = 2, columnspan = 1)
+            if option =="All":
+                for i in range(len(entry_list)):
+                    vol = entry_list[i].get()
+                    controller.myPump.set_measured_volume(self,i,vol)
+            else:
+                vol = entry_list[0].get()
+                controller.myPump.set_measured_volume(self,option,vol)
+
 app = App()
 app.mainloop()
