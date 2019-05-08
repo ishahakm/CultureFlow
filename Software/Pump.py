@@ -190,7 +190,7 @@ class ThreePump():
                 self.send(str(i+1)+"xY")
         else:
             self.send(str(channel)+"xY")
-    def abort_calibration(self,channel):
+    def abort_calibration(self):
         """
         This method sends a command to the microcontroller which is programmed to abort calibration of the pump only for the channel chosen.
 
@@ -198,8 +198,7 @@ class ThreePump():
             channel (int): the channel that will abort calibration.
         """
 
-        self.send(str(channel)+"xZ")
-
+        self.send("0xZ")
     def set_calibration_volume(self,channel,volume,unit):
         to_send = str(channel)+"xU"+self.FormatVolume(volume,unit)
         self.send(to_send)

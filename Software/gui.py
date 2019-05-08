@@ -392,7 +392,7 @@ class ManualPage(tk.Frame):
         self.resetbutton = tk.Button(self, text = "RESET STAGE",font = controller.buttonFont,bg = "white",command = lambda: self.reset(controller) , height = 1, width = 20)
         self.ejectbutton = tk.Button(self, text = "EJECT PLATE",font = controller.buttonFont,bg = "white",command = lambda: self.eject(controller) , height = 1, width = 20)
         self.togglebutton = tk.Button(self, text = "TOGGLE PATTERN",font = controller.buttonFont,bg = "white",command = lambda: self.toggle(controller) , height = 1, width = 20)
-        self.setOriginButton = tk.Button(self, text = "SET ORIGIN/MANUAL CONTROL",font = controller.buttonFont,bg = "white",command = lambda: self.setOrigin(controller) , height = 1, width = 25)
+        self.setOriginButton = tk.Button(self, text = "SET ORIGIN/MANUAL CONTROL",font = controller.buttonFont,bg = "white",command = lambda: self.setOrigin(controller) , height = 1, width = 30)
         #self.calibratebutton = tk.Button(self, text = "Calibrate", command = lambda: controller.myPump.calibrate() )
         #self.entercalibratedbutton = tk.Button(self, text = "Enter", command = lambda: controller.myPump.setMeasuredVolume() )
 
@@ -1326,58 +1326,85 @@ class SettingsPage(tk.Frame):
     def __init__(self, parent, controller):
 
         tk.Frame.__init__(self,parent)
+
         #background color
         self.configure(bg='#00fff2')
+
         #should be automatic from single loc
         self.channels = 3
         self.reservoirs = 6
+
         #main label
         self.mainlabel = tk.Label(self, text = "Settings",bg='#00fff2', font =controller.pageFont,width = 15)
+
         #page navigation
         self.autopagebutton =  tk.Button(self, text = "Experiment",font = controller.buttonFont,bg = "white", command = lambda: controller.show_frame(AutomaticPage), height = 1, width = 10)
         self.manualbutton =  tk.Button(self, text = "Manual",font = controller.buttonFont,bg = "white", command = lambda: controller.show_frame(ManualPage), height = 1, width = 10)
+
         #updating tubing diameters and direction of peristaltic pump channels
         self.updatebutton = tk.Button(self, text = "Update",font = controller.buttonFont,bg = "#64ff64", command = lambda: self.update(controller), height = 1, width = 20)
-        #calibration button and combobox definitions
-        #combobox
-        self.calibratecombobox = tk.ttk.Combobox(self,width = 15)
-        self.channelvalues = [i+1 for i in range(self.channels)]
-        self.channelvalues.append("1,2,3")
-        self.channelvalues.append("1,2")
-        self.channelvalues.append("1,3")
-        self.channelvalues.append("2,3")
 
-        self.calibratecombobox['values'] = self.channelvalues
-        self.calibratecombobox.set(self.channelvalues[3])
-        self.calibratecombobox.state(['!disabled', 'readonly'])
         #calibration button
-        self.calibratebutton = tk.Button(self, text = "Calibration", command = lambda: self.request_calibration(controller),width = 15)
+        self.calibratebutton = tk.Button(self, text = "Begin Calibration", command = lambda: self.request_calibration(controller),width = 30)
+
         # self.measuredVolume = tk.StringVar()
         # self.measuredVolumeEntry = tk.Entry(self,textvariable = self.measuredVolume,bg = "white",width = 15)
         # self.entercalibratedbutton = tk.Button(self, text = "Enter", command = lambda: controller.myPump.setMeasuredVolume( int(self.calibratecombobox.get()) , float(self.measuredVolume.get()) ),width = 15 )
         self.calibrationlabel = tk.Label(self, text = "Calibration",bg='#00fff2', font =controller.pageFont,width = 15)
-        self.channelcaliblabel = tk.Label(self, text = "Channel to Calibrate:",bg='#00fff2',width = 15)
+
         self.directionheading = tk.Label(self, text = "Direction",bg='#00fff2')
         self.directionslist = []
         self.directionlabellist = []
         self.directions = ["CW","CCW"]
+
+        self.pumpsettingslabel = tk.Label(self, text = "Pump Settings",bg='#00fff2', font =controller.pageFont, width = 15)
+
+
+        #pump comms options
+        self.input_string = tk.StringVar()
+        self.send_return_bool = tk.BooleanVar()
+        self.return_print = tk.Label(self,text = "", bg='#00fff2', width = 15)
+        self.return_print.grid(column = 3, row = 13, columnspan=1)
+
+        self.input = tk.Entry(self,text=self.input_string, width = 15)
+        self.input.grid(column = 1, row = 13, columnspan=1)
+        self.send_button = tk.Button(self,text="Send",command = lambda: self.send_to_pump(controller), width = 15)
+        self.send_button.grid(column = 4, row = 13, columnspan=1)
+        self.send_return_check = tk.Checkbutton(self,var=self.send_return_bool, width = 15,bg='#00fff2')
+        self.send_return_check.grid(column = 2, row = 13, columnspan=1)
+
+        self.input_label = tk.Label(self,text="Input",bg='#00fff2', width = 15)
+        self.input_label.grid(column = 1, row = 12, columnspan=1)
+        self.return_label = tk.Label(self,text="Response",bg='#00fff2', width = 15)
+        self.return_label.grid(column = 3, row = 12, columnspan=1)
+        self.send_return_label = tk.Label(self,text="Toggle Response",bg='#00fff2', width = 15)
+        self.send_return_label.grid(column = 2, row = 12, columnspan=1)
+
+        self.pump_com_label = tk.Label(self,text="Pump Comms: See ISMATEC pump manual for list of serial commands",bg='#00fff2', width = 60)
+        self.pump_com_label.grid(column = 1, row = 11, columnspan=4)
+
+
         #row 1
         self.mainlabel.grid(column = 1, row = 1, columnspan = 2)
         self.autopagebutton.grid(column = 3, row = 1)
         self.manualbutton.grid(column = 4, row = 1)
+
         #row 2
         self.calibrationlabel.grid(column = 1, row = 2,columnspan = 4)
+
         #row 3
-        self.channelcaliblabel.grid(column = 1, row = 3,columnspan = 1)
-        self.calibratecombobox.grid(column = 2, row = 3,columnspan = 1)
-        self.calibratebutton.grid(column = 3, row = 3,columnspan = 1)
+
+        self.calibratebutton.grid(column = 2, row = 3,columnspan = 2)
+
         #row 4
-        #self.entercalibratedbutton.grid(column = 4, row = 4,columnspan = 1)
+        self.pumpsettingslabel.grid(column = 2, row = 4,columnspan = 2)
+
         #row 5
         for i in range(self.channels):
             directionlabel = tk.Label(self, text = "CH%s"%(i+1),bg='#00fff2',width = 15)
             directionlabel.grid(column = i+2, row = 5, columnspan=1)
             self.directionlabellist.append([directionlabel])
+
         #row 6
         self.directionheading.grid(column = 1, row = 6, columnspan = 1)
         for i in range(self.channels):
@@ -1387,6 +1414,7 @@ class SettingsPage(tk.Frame):
             directioncombobox.state(['!disabled', 'readonly'])
             directioncombobox.grid(column = i+2, row = 6, columnspan=1)
             self.directionslist.append([directioncombobox])
+
         #row 7
         self.diameterlist = []
         self.diameterlabel = tk.Label(self, text = "Tubing Diameter",bg='#00fff2',width = 15)
@@ -1404,6 +1432,21 @@ class SettingsPage(tk.Frame):
         #row 9
         #row 10
         self.updatebutton.grid(column = 1, row = 10,columnspan = 2,sticky=tk.W, pady=5)
+
+    def send_to_pump(self,controller):
+
+
+
+        if self.send_return_bool.get() == 0:
+            self.return_print['text'] = "N/A"
+            command = self.input.get()
+            controller.myPump.send(command)
+
+        elif self.send_return_bool.get() == 1:
+            self.return_print['text'] = "waiting..."
+            command = self.input.get()
+            response = controller.myPump.send_return(command)
+            self.return_print["text"] = "Response: %s"%response
     def update(self,controller):
         for i in range(self.channels):
             print(i)
@@ -1427,13 +1470,13 @@ class SettingsPage(tk.Frame):
         window.configure(bg='#00fff2')
 
         #get option
-        window.option = self.calibratecombobox.get()
-        channels = window.option.split(",")
+        #window.option = self.calibratecombobox.get()
+        channels = [1,2,3]
 
         #labels for the entries 1
         label_1 = tk.Label(window, text = "Channel" ,bg='#00fff2',font = LARGE_FONT)
-        label_2 = tk.Label(window, text = "Volume"  ,bg='#00fff2',font = LARGE_FONT)
-        label_3 = tk.Label(window, text = "Time"    ,bg='#00fff2',font = LARGE_FONT)
+        label_2 = tk.Label(window, text = "Volume (uL)"  ,bg='#00fff2',font = LARGE_FONT)
+        label_3 = tk.Label(window, text = "Time (m)"    ,bg='#00fff2',font = LARGE_FONT)
         label_1.grid(column = 1, row = 2, columnspan = 1)
         label_2.grid(column = 2, row = 2, columnspan = 1)
         label_3.grid(column = 3, row = 2, columnspan = 1)
@@ -1452,7 +1495,7 @@ class SettingsPage(tk.Frame):
 
         #labels for the entries 2
         label_3 = tk.Label(window, text = "Channel" ,bg='#00fff2',font = LARGE_FONT)
-        label_4 = tk.Label(window, text = "Measured Volume"  ,bg='#00fff2',font = LARGE_FONT)
+        label_4 = tk.Label(window, text = "Measured Volume (uL)"  ,bg='#00fff2',font = LARGE_FONT)
         label_3.grid(column = 1, row = 7, columnspan = 1)
         label_4.grid(column = 2, row = 7, columnspan = 1)
 
@@ -1492,20 +1535,13 @@ class SettingsPage(tk.Frame):
         window.destroy(),
         window.grab_release()))
         window.send_button.grid(column = 1, row = 12, columnspan = 2)
-
         window.send_button.config(state = tk.DISABLED)
-
     def update_measured_volumes(self,controller,window):
         for i in range(len(window.measured)):
             if window.measured[i][3]['state'] == 'normal':
                 channel = window.measured[i][0]
                 volume = window.measured[i][3].get()
                 controller.myPump.set_measured_volume(channel,volume)
-
-
-
-
-
     def update_calibration_settings(self,controller,settings):
         for setting in settings:
             channel = setting[0]
@@ -1513,15 +1549,13 @@ class SettingsPage(tk.Frame):
             time    = setting[3].get()
             controller.myPump.set_calibration_volume(channel,volume,'uL')
             controller.myPump.set_calibration_time(channel,time)
-
     def check(self,controller,vol_entries,time_entries,measured_entries,window):
         """checks if the entry is a float,
         if it is it checks if it's in range,
         if it is it sets that channel as OK
         it then gives option to proceed or not
         """
-        window.send_button.config(state = tk.NORMAL)
-        window.calibratebutton.config(state = tk.DISABLED)
+
         window.update()
         truth_table = []
         message_list = []
@@ -1584,11 +1618,14 @@ class SettingsPage(tk.Frame):
         prompt.exitbutton["text"] = "Cancel"
 
         new_settings = []
-        new_measured = []
+        window.new_measured = []
+
         for i in range(len(truth_table)):
             if truth_table[i]:
                 new_settings.append(window.settings[i])
-                new_measured.append(window.measured[i])
+                window.new_measured.append(window.measured[i])
+
+        """
         for widget_set in window.settings:
 
              myState1 = str(widget_set[2]['state'])
@@ -1603,6 +1640,7 @@ class SettingsPage(tk.Frame):
                  widget_set[3].config(state = tk.DISABLED)
              else:
                  widget_set[3].config(state = tk.NORMAL)
+
         for widget in new_measured:
 
             myState = str(widget[3]['state'])
@@ -1611,6 +1649,8 @@ class SettingsPage(tk.Frame):
                 widget[3].config(state = tk.DISABLED)
             else:
                 widget[3].config(state = tk.NORMAL)
+        """
+
 
         process_name = "Calibrating"
 
@@ -1626,7 +1666,11 @@ class SettingsPage(tk.Frame):
         prompt.grab_release(),
         prompt.destroy(),
         self.update_calibration_settings(controller,new_settings),
-        self.time_progress(controller,process_name,total_time)))
+        self.time_progress(controller,process_name,total_time),
+        window.send_button.config(state = tk.NORMAL),
+        window.calibratebutton.config(state = tk.DISABLED),
+        self.toggle_editable(window)
+        ))
 
         prompt.continue_button.grid(column = 1, row = 6, columnspan = 1)
         prompt.update()
@@ -1640,7 +1684,8 @@ class SettingsPage(tk.Frame):
         w.label_1 = tk.Label(w,text = "%s Runtime = %s"%(process_name,total_time),bg = '#00fff2')
         w.label_2 = tk.Label(w,text = "Time Elapsed    = %s"%(time.time() - initial_time),bg = '#00fff2')
 
-        w.cancelbutton = tk.Button(w,text = "Quit process",bg = "#ff6464",font = controller.buttonFont,width = 10, command = combine_funcs(w.destroy,w.grab_release))
+        w.cancelbutton = tk.Button(w,text = "Quit process",bg = "#ff6464",font = controller.buttonFont,width = 10,
+        command = lambda : combine_funcs(w.destroy,w.grab_release,controller.myPump.abort_calibration()))
 
         w.label_1.grid(column=1,row=1,columnspan=1)
         w.label_2.grid(column=1,row=2,columnspan=1)
@@ -1652,21 +1697,40 @@ class SettingsPage(tk.Frame):
 
         w.destroy()
         w.grab_release()
+    def toggle_editable(self,window):
 
+                for widget_set in window.settings:
 
-    def response_calibration(self,controller,prev_window):
+                     myState1 = str(widget_set[2]['state'])
+                     myState2 = str(widget_set[3]['state'])
 
+                     if myState1 == 'normal':
+                         widget_set[2].config(state = tk.DISABLED)
+                     else:
+                         widget_set[2].config(state = tk.NORMAL)
 
+                     if myState2 == 'normal':
+                         widget_set[3].config(state = tk.DISABLED)
+                     else:
+                         widget_set[3].config(state = tk.NORMAL)
 
-        def update_measured_volume(controller,entry_list,option):
+                for widget in window.new_measured:
 
-            if option =="All":
-                for i in range(len(entry_list)):
-                    vol = entry_list[i].get()
-                    controller.myPump.set_measured_volume(self,i,vol)
-            else:
-                vol = entry_list[0].get()
-                controller.myPump.set_measured_volume(self,option,vol)
+                    myState = str(widget[3]['state'])
+
+                    if myState == 'normal':
+                        widget[3].config(state = tk.DISABLED)
+                    else:
+                        widget[3].config(state = tk.NORMAL)
+    def update_measured_volume(controller,entry_list,option):
+
+        if option =="All":
+            for i in range(len(entry_list)):
+                vol = entry_list[i].get()
+                controller.myPump.set_measured_volume(self,i,vol)
+        else:
+            vol = entry_list[0].get()
+            controller.myPump.set_measured_volume(self,option,vol)
 
 app = App()
 app.mainloop()
