@@ -32,6 +32,8 @@ LARGE_FONT = ("Verdana", 10)
 
 #we can inherit into our GUI application.
 #Let's try it with the pump class and see how that works.
+#if messagebox.askyesno("Collection Pattern Change", "You sure you want to change the collection pattern? (WARNING: Stage will reset!)"):
+
 def combine_funcs(*funcs):
     """Use this function for executing multiple functions simultaneously with Tkinter buttons"""
     def combined_func(*args, **kwargs):
@@ -217,6 +219,7 @@ class App(tk.Tk):
         for n, (port, desc, hwid) in enumerate(sorted(comports()), 1):
             ports.append(port)
         self.ports = ports
+
     def set_pump_defaults(self):
         """
         Sets defaults as defined within function
@@ -279,26 +282,32 @@ class App(tk.Tk):
         label = tk.Label(window,text = message, bg = '#00fff2')
         label.grid(column = 1, row = 1, columnspan = 1,sticky=tk.W)
         abortbutton.grid(column = 1, row = 2)
+
 class WelcomePage(tk.Frame):
     #Port and device selection
     #Running function instantiating devices via their respective classes
+
     def __init__(self, parent, controller):
 
         tk.Frame.__init__(self,parent)
         #Organization and label frames for the buttons and labels
+
         self.mainlabel = tk.Label(self, text = "Welcome to FLUIPLEX!", font = LARGE_FONT)
         self.sublabelframe = tk.LabelFrame(self, text = "Please identify your devices:", font = LARGE_FONT)
         self.perfusorframe = tk.LabelFrame(self.sublabelframe, text = "PERFUSATRON", font = LARGE_FONT)
         self.collectorframe = tk.LabelFrame(self.sublabelframe, text = "COLLECTADOR", font = LARGE_FONT)
         ####################Port & Device Selection############################
+
         #finding all of the ports
         self.manilabel = tk.Label(self.perfusorframe,text='M-Switch: Not Found')
         self.pumplabel= tk.Label(self.perfusorframe,text='ISMATEC Pump: Not Found')
         self.coll_label = tk.Label(self.perfusorframe,text='XYStage/TwoSwitch Not Found')
 
-        controller.get_ports()
+        ##++##++##++##++
+        ## CHECKPOINT 1
+        ##++##++##++##++
 
-        # #print("M-Switch",controller.get_comport("R","65"))
+        # print("M-Switch",controller.get_comport("R","65"))
         # controller.portMani.set(controller.get_comport("R","65"))
         # print("MSwitch has the following port: " + controller.portMani.get())
         #
@@ -310,7 +319,38 @@ class WelcomePage(tk.Frame):
         # controller.portColl.set(controller.get_comport("?","2xCS"))
         # controller.port2Switch.set(controller.portColl.get())
         # print(controller.portColl.get())
-        # #print(controller.port2Switch.get())
+
+        ##++##++##++##++
+        ## END CHECKPOINT 1
+        ##++##++##++##++
+
+        #---------------------------------------
+
+        ##**##**##**##**##**##**##**##**
+        #TESTING OPTIONS---Comment all lines of CHECKPOINT 1
+        #import fakeSerial as serial in header
+        ##**##**##**##**##**##**##**##**
+
+        controller.portMani.set("COM_MANI")
+        print("MSwitch has the following port: " + controller.portMani.get())
+
+        #print("Pump",controller.get_comport("0xS","IS"))
+        controller.portPump.set("COM_PUMP")
+        print("Pump has the following port: " + controller.portPump.get())
+
+        #print("XYStage/TwoSwitch",controller.get_comport("?","2xCS"))
+        controller.portColl.set("COM_COLL")
+        controller.port2Switch.set(controller.portColl.get())
+        print("Collection has the following port: " + controller.portColl.get())
+
+
+        controller.hasColl.set(True)
+        controller.hasPump.set(True)
+        controller.hasMani.set(True)
+
+        ##**##**##**##**##**##**##**##**
+        #END OF TESTING OPTIONS
+        ##**##**##**##**##**##**##**##**
 
         #port selection and checkbox functionality for the m-switch
         if controller.portMani.get() is not None and controller.portMani.get() is not "":
@@ -326,19 +366,6 @@ class WelcomePage(tk.Frame):
         if controller.portColl.get() is not None and controller.portColl.get() is not "":
             controller.hasColl.set(True)
             self.coll_label['text'] = 'XYStage/TwoSwitch: Connected'
-
-        #For Testing Only Comment Later
-        controller.hasColl.set(True)
-        controller.hasPump.set(True)
-        controller.hasMani.set(True)
-
-
-        #port selection and checkbox functionality for the collection system
-        # self.collportselect = tk.ttk.Combobox(self.collectorframe,textvariable=controller.portColl, state = tk.DISABLED)
-        # self.collportselect['values'] = controller.ports
-        # self.collcheck = tk.Checkbutton(self.collectorframe, text='Collection Stage',command = lambda: self.flip(self.collportselect),variable = controller.hasColl, onvalue = True, offvalue = False)
-
-        ########################################################################
 
         #the done button takes in all of the inputs and passes them to the controller for use in the next windows
         self.donebutton = tk.Button(self, text = "Done",font = controller.buttonFont, command=controller.done_and_load)
@@ -365,6 +392,9 @@ class WelcomePage(tk.Frame):
             widget.config(state = tk.DISABLED)
         else:
             widget.config(state = tk.NORMAL)
+
+
+
 class ManualPage(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -1380,7 +1410,9 @@ class SettingsPage(tk.Frame):
         self.send_return_label = tk.Label(self,text="Toggle Response",bg='#00fff2', width = 15)
         self.send_return_label.grid(column = 2, row = 12, columnspan=1)
 
-        self.pump_com_label = tk.Label(self,text="Pump Comms: See ISMATEC pump manual for list of serial commands",bg='#00fff2', width = 60)
+        self.pump_com_text = "Pump Comms: See ISMATEC pump manual for list of serial commands \n WARNING: For testing purposes only. \n No safeguards in place. Set to defaults after using."
+
+        self.pump_com_label = tk.Label(self,text=self.pump_com_text,bg='#00fff2', width = 60)
         self.pump_com_label.grid(column = 1, row = 11, columnspan=4)
 
 
