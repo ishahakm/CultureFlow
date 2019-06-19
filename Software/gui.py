@@ -94,12 +94,14 @@ def check_input(variable, desired_datatype, lower_limit = 0, upper_limit = 0):
         inputGood = True
 
     return inputGood
+
 class App(tk.Tk):
     """
     The App class
     - Does window handling
     - Holds objects and variables that need to be referenced by multiple windows
     """
+    #device handling should not be done here. Serial conections should be established outside of gui modeule.
     def __init__(self,*args,**kwargs):
         """
         - define window size and expandability
@@ -170,12 +172,14 @@ class App(tk.Tk):
             frame.grid(row=0, column=0,sticky="nsew")
 
         self.show_frame(WelcomePage)
+
     def show_frame(self, cont):
         """
         Raises frame from self.frames dictionary
         """
         frame = self.frames[cont]
         frame.tkraise()
+
     def get_comport(self,cmd,response):
         """Use this function to automatically identify
         a device. Input a command the device recognizes and a response you know
@@ -211,6 +215,7 @@ class App(tk.Tk):
 
             except:
                 print("Error accesing comports!")
+
     def get_ports(self):
         """
         fills self.ports list with comports currently connected to device
@@ -238,6 +243,7 @@ class App(tk.Tk):
         self.max_flowrate_3 = float(self.myPump.send_return('3?')[:5])
 
         self.max_flowrate_list = [self.max_flowrate_1,self.max_flowrate_2,self.max_flowrate_3]
+
     def done_and_load(self):
         """
         This function checks if we have these devices and then creates instances for each one. Open ManualPage when done.
@@ -260,16 +266,19 @@ class App(tk.Tk):
             self.my2Switch.setCollect(3)
 
         self.show_frame(ManualPage)
+
     def positive_run_status(self):
         """
         sets self.should_be_running to True.
         """
         self.should_be_running = True
+
     def negative_run_status(self):
         """
         sets self.should_be_running to Fasle.
         """
         self.should_be_running = False
+
     def message_window(self,message):
         """Creates a pop-up message of your choice formatted with
         formatting from App class"""
@@ -284,8 +293,6 @@ class App(tk.Tk):
         abortbutton.grid(column = 1, row = 2)
 
 class WelcomePage(tk.Frame):
-    #Port and device selection
-    #Running function instantiating devices via their respective classes
 
     def __init__(self, parent, controller):
 
@@ -383,6 +390,7 @@ class WelcomePage(tk.Frame):
         self.coll_label.pack(fill=tk.BOTH)
         #self.collcheck.pack(fill=tk.BOTH)
         self.donebutton.pack()
+
     def flip(self,widget):
         """
         Enables or disables a widget. It is run by the checkbuttons on the WelcomPage
@@ -392,8 +400,6 @@ class WelcomePage(tk.Frame):
             widget.config(state = tk.DISABLED)
         else:
             widget.config(state = tk.NORMAL)
-
-
 
 class ManualPage(tk.Frame):
 
@@ -753,113 +759,6 @@ class ManualPage(tk.Frame):
         controller.myColl.setOrigin()
         self.positionLabel['text'] = "Current Position: " + str(controller.myColl.position + 1)
         window.destroy()
-
-    #
-    # def prime_window(self,controller):
-    #     """
-    #     creates a window for the priming function
-    #     """
-    #     #first let's run through each of the m-switch channels
-    #     window = controller.message_window("Priming")
-    #     #start button - calls warning script
-    #     window.start_button = tk.Button(window,text = "OK",bg = "#ff6464",font = self.buttonFont,width = 5, command = self.prime_validate(window))
-    #     #entry for m-switch channels to prime
-    #     window.m_switch_channels = StringVar()
-    #     window.m_switch_channels_entry = tk.Entry(window, text = "Enter M-switch channels Ex: 1, 2, 4, 5", textvariable = window.m_switch_channels)
-    #     #entry for pump channels to prime
-    #     window.pump_channels = StringVar()
-    #     window.pump_channels_entry = tk.Entry(window, text = "Enter pump channels Ex: 1, 2, 3", textvariable = window.pump_channels)
-    #
-    #     window.m_switch_channels_entry.grid(column = 1, row = 3)
-    #     window.pump_channels_entry.grid(column = 1, row = 4)
-    #
-    # def prime_validate(self,window):
-    #
-    #     good_to_go = True
-    #     pump_channels = self.csv_list_checker(window.pump_channels.get())
-    #     m_switch_channels = self.csv_list_checker(window.m_switch_channels.get())
-    #
-    #     if not pump_channels:
-    #         error = controller.message_window("Invalid entry for pump channels. Format should be: 1, 2, 3")
-    #         good_to_go = False
-    #
-    #     if not m_switch_channels:
-    #         error = controller.message_window("Invalid entry for m-switch channels. Format should be: 1, 2, 3")
-    #         good_to_go = False
-    #
-    #     if good_to_go:
-    #
-    #         accept_priming = controller.message_window(\
-    #         "WARNING! Please make surfairue that none\n \
-    #          of the m-switch or pump channels you\n \
-    #          selected are blocked or clogged. Running\n \
-    #          anyway will cause leaks and potantial hardware problems.")
-    #
-    #         accept_priming.start_button = tk.Button(window,text = "OK, lets prime. ",bg = "#ff6464",font = self.buttonFont,width = 5, command = self.prime(pump_channels,m_switch_channels))
-    #         accept_priming.start_button.grid(column = 1, row = 3)
-    #
-    # def prime(self,pump_channels,m_switch_channels):
-    #
-    #     priming = controller.message_window("Priming!")
-    #     #running = tk.BooleanVar()
-    #     #running.set(True)
-    #
-    #     starting_volume_to_dispense = 5000 #uL
-    #     m_switch_volume_to_dispense = 1000
-    #
-    #     length_of_tubing_after_2_switch = 100
-    #     tubing_area = np.pi*(0.51/2)**2 #mm^2
-    #     two_switch_to_chip_volume = length_of_tubing_after_2_switch*tubing_area #mm^3
-    #
-    #     prime_flowrate = 200
-    #
-    #     #initial flowrate setting
-    #     controller.myPump.setFlow(0,prime_flowrate)
-    #     for channel in pump_channel:
-    #         controller.my2Switch.setRecirculate(int(channel))
-    #         controller.myPump.setFlow(channel,200)
-    #
-    #     #initial flow thru
-    #     time_0 = time.time()
-    #     controller.myPump.start_all()
-    #     controller.myMani.set_reservoir(int(m_switch_channels[0])
-    #     while time.time()-time_0 < starting_volume_to_dispense/prime_flowrate and running:
-    #         print(time.time()-time_0)
-    #
-    #     #flowing through the m-switch channels
-    #     time_0 = time.time()
-    #     for channel in m_switch_channels:
-    #         controller.myMani.set_reservoir(channel)
-    #         while time.time()-time_0 < m_switch_volume_to_dispense/prime_flowrate and running:
-    #             print(time.time()-time_0)
-    #
-    #     #flowing through the perfusion bit between the 2-switch and the chip
-    #     time_0 = time.time()
-    #     for channel in pump_channel:
-    #         controller.my2Switch.setCollect(int(channel))
-    #     while time.time()-time_0 < two_switch_to_chip_volume/prime_flowrate and running:
-    #         print(time.time()-time_0)
-    #
-    #     #stopping
-    #     controller.myPump.stop_all()
-    #
-    # def csv_list_checker(self,entry,low_limit,high_limit):
-    #
-    #     reader = csv.reader([entry], skipinitialspace=True)
-    #     entry_list = []
-    #     for number in reader:
-    #         try:
-    #             int(number)
-    #         except:
-    #             entry_list = []
-    #             return []
-    #         if int(number) < low_limit or int(number) > high_limit:
-    #             entry_list = []
-    #             return []
-    #         else:
-    #             entry_list.append(number)
-    #     return entry_list
-
     #error checking
     def check_all_manual_and_sampling(self,controller):
         """
@@ -892,32 +791,27 @@ class ManualPage(tk.Frame):
                     break
 
         return goodToGo
-    def check_all_manual(self,controller):
-        """
-        use when running all channels together
-        """
-        goodToGo = all([self.check_channel(controller,i+1) for i in range(3)])
 
+    def check_all_manual(self,controller):
+        goodToGo = all([self.check_channel(controller,i+1) for i in range(3)])
         return goodToGo
+
     def check_channel(self,controller,channel):
 
         goodToGo = True
-
         try:
             float(self.flowrateentrylist[channel-1].get())
-
         except:
             controller.message_window("Entry must be float!")
             goodToGo = False
-
-        #print("printing max flow" + str(controller.max_flowrate_list[channel-1]*1000))
         flowrateOK = (0 <= float(self.flowrateentrylist[channel-1].get()) <= controller.max_flowrate_list[channel-1]*1000)
 
         if not flowrateOK:
             goodToGo = False
             controller.message_window("Entry must be between %s and %s! uL/m"%(0,1000*controller.max_flowrate_list[channel-1]))
-
+            
         return goodToGo
+
 class AutomaticPage(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -976,6 +870,7 @@ class AutomaticPage(tk.Frame):
 
         #row 5
         self.headinglabel = tk.Label(self, text = heading_string, bg='#00fff2').grid(column = 1, row = 5, columnspan = 8)
+
     def file_save(self):
 
         f = filedialog.asksaveasfile(mode='w', defaultextension=".txt",  filetypes = (("text files","*.txt"),("all files","*.*")))
@@ -1006,6 +901,7 @@ class AutomaticPage(tk.Frame):
 
         f.write(text2save)
         f.close()
+
     def file_load(self):
 
         f = filedialog.askopenfilename(initialdir = "/",title = "Select file", filetypes = (("text files","*.txt"),("all files","*.*")))
@@ -1058,6 +954,7 @@ class AutomaticPage(tk.Frame):
             self.steplist[i].samplingrate.insert(0,sra)
 
             print(self.steplist[i].flowrateentrylist[0].get())
+
     def delete_step(self,step_number):
         """ Note that step number is not an int but a tk.StringVar
         """
@@ -1080,11 +977,13 @@ class AutomaticPage(tk.Frame):
 
         for i in range(len(self.steplist)):
             self.steplist[i].number['text'] = str(i+1)
+
     def clear_recipe(self):
         for i in range(len(self.steplist)):
             one = tk.StringVar()
             one.set("1")
             self.delete_step(one)
+
     def add_step(self):
 
         #create step
@@ -1102,6 +1001,7 @@ class AutomaticPage(tk.Frame):
 
         #add new options to deletestepcombobox
         self.deletestepcombo['values'] = self.stepnumbers
+
     def create_step(self,channels,reservoirs):
 
         greaterlabelframe = tk.LabelFrame(self, bg = "#43e7ef")
@@ -1156,6 +1056,7 @@ class AutomaticPage(tk.Frame):
         greaterlabelframe.number.grid(column = 1 ,row = 1)
 
         return greaterlabelframe
+
     def check_channel(self,controller,channel,frame_object):
 
         goodToGo = True
@@ -1196,6 +1097,7 @@ class AutomaticPage(tk.Frame):
             controller.message_window("Step %s. Sampling time for channel %s needs to be under %s s"%(frame_object.number["text"],channel,max_time))
 
         return goodToGo
+
     def run_recipe(self,controller):
         """Build in abort functionality and progress tracker
         """
@@ -1209,6 +1111,7 @@ class AutomaticPage(tk.Frame):
         for frame_object in self.steplist:
             if not all([self.check_channel(controller,channel,frame_object) for channel in np.arange(3)+1]):
                 return
+
         numsamples = 0
         for steps in self.steplist:
             numsamples += int(steps.samples.get())
@@ -1349,10 +1252,12 @@ class AutomaticPage(tk.Frame):
 
         controller.myPump.stop_all()
         ap.status.set("Done!")
+
 class SettingsPage(tk.Frame):
     """ Everything that is being sent and all experimental parameters
     should be recorded here. Start and stop events. Serial commands. Status.
     """
+
     def __init__(self, parent, controller):
 
         tk.Frame.__init__(self,parent)
@@ -1479,6 +1384,7 @@ class SettingsPage(tk.Frame):
             command = self.input.get()
             response = controller.myPump.send_return(command)
             self.return_print["text"] = "Response: %s"%response
+
     def update(self,controller):
         for i in range(self.channels):
             print(i)
@@ -1495,6 +1401,7 @@ class SettingsPage(tk.Frame):
         controller.myPump.ser.readline()
         controller.myPump.ser.flush()
         time.sleep(2)
+
     def request_calibration(self,controller):
 
         window = tk.Toplevel(controller)
@@ -1568,12 +1475,14 @@ class SettingsPage(tk.Frame):
         window.grab_release()))
         window.send_button.grid(column = 1, row = 12, columnspan = 2)
         window.send_button.config(state = tk.DISABLED)
+
     def update_measured_volumes(self,controller,window):
         for i in range(len(window.measured)):
             if window.measured[i][3]['state'] == 'normal':
                 channel = window.measured[i][0]
                 volume = window.measured[i][3].get()
                 controller.myPump.set_measured_volume(channel,volume)
+
     def update_calibration_settings(self,controller,settings):
         for setting in settings:
             channel = setting[0]
@@ -1581,6 +1490,7 @@ class SettingsPage(tk.Frame):
             time    = setting[3].get()
             controller.myPump.set_calibration_volume(channel,volume,'uL')
             controller.myPump.set_calibration_time(channel,time)
+
     def check(self,controller,vol_entries,time_entries,measured_entries,window):
         """checks if the entry is a float,
         if it is it checks if it's in range,
@@ -1706,6 +1616,7 @@ class SettingsPage(tk.Frame):
 
         prompt.continue_button.grid(column = 1, row = 6, columnspan = 1)
         prompt.update()
+
     def time_progress(self, controller, process_name, total_time):
 
         w = tk.Toplevel(controller)
@@ -1729,6 +1640,7 @@ class SettingsPage(tk.Frame):
 
         w.destroy()
         w.grab_release()
+
     def toggle_editable(self,window):
 
                 for widget_set in window.settings:
@@ -1754,6 +1666,7 @@ class SettingsPage(tk.Frame):
                         widget[3].config(state = tk.DISABLED)
                     else:
                         widget[3].config(state = tk.NORMAL)
+
     def update_measured_volume(controller,entry_list,option):
 
         if option =="All":
