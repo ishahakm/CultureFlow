@@ -1,15 +1,9 @@
-# MicrofluidicPlatform
-Automated Organ-On-Chip Microfluidic Platform
+# CultureFlow
+##What is CultureFlow?
+For starters it's a fluid handling platform that allows the user to run experiements using the organ-on-a-chip platform developed at Agarwal lab. The current components are are an ISMATEC Reglo peristaltic pump, Titan EX manifold switch, and a custom collection system also designed at Agarwal Lab. However, the state of this system is amenable to your needs! The control software was designed so that one can easily integrate any component that sends and recieves serial connections. So easy in fact, an undergrad can do it! ;) 
 
-# 5/20-5/24
-5/21 -> Islet Experiment + Any Issues there's time left for
-5/22 -> Solidworks. Work on smaller design. Finish if possible.
-5/23 -> Finish Solidworks. Assemble larger system.
-5/24 -> Assemble circuit and test. Work on software issues if necessary. 
-
-# 6/5
-Cutting out most acyrlic parts today. 
-Need to add backplate and add components to front plate.
-Need to add and cut out clamp and electronics holders also.
-Want to put all of these things together and wire as much as possible.
-Add LED ON indicator to front panel?
+Steps to add a new component. (details coming soon)
+1. Write python module for device specific function as per the new_device rubric
+2. Add the device to the model.py file
+3. You now have access to the device via system_control.py! Write whatever functions you need fo your device
+4. Run the functions from the GUI, creating buttons and entries where needed. 
