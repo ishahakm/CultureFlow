@@ -1,7 +1,10 @@
 import serial
 from serial.tools.list_ports import comports
+test_mode = True
 
 def get_ports():
+
+
     ports = []
     for n, (port, desc, hwid) in enumerate(sorted(comports()), 1):
         ports.append(port)
@@ -16,7 +19,7 @@ def locate_device_comport(ports,call,response):
           return "NC"
 
       for comport in ports:
-          
+
           try:
               ser = serial.Serial(comport, 9600, timeout=3)
               time.sleep(1)
@@ -41,3 +44,11 @@ def locate_device_comport(ports,call,response):
               print("Error accesing comports!")
 
       return "NF"
+
+def serial_connect(port,baud):
+    
+    ser = serial.Serial(port, baud, timeout=3)
+    if ser.isOpen():
+        return ser
+    else:
+        return None

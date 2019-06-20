@@ -6,14 +6,20 @@ class Pump():
 
         print("Pump object created")
 
-        #variables standard to all devices
-        self.serial_detection_call = "call"
-        self.serial_detection_response = "response"
-        self.serial_object = None
+        ###declarations standard to all devices
+
+        #call out to serial for device identification
+        self.call = "0xS"
+
+        #response from call out. must be 2 characters
+        self.response = "IS"
+        self.ser = None
+        
         self.baud = 9600
 
-        self.number_of_channels = 3
+        ###device specific
 
+        self.number_of_channels = 3
 
     def FormatVolume(self,V,unit):
         """

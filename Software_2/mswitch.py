@@ -7,9 +7,9 @@ class Mswitch():
         print("Mswitch object created")
 
         #variables standard to all devices
-        self.serial_detection_call = "call"
-        self.serial_detection_response = "response"
-        self.serial_object = None
+        self.call = "R"
+        self.response = "65"
+        self.ser = None
         self.baud = 9600
 
     def set_reservoir(self,res):

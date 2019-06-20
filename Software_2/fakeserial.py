@@ -22,7 +22,6 @@ class Serial:
                   bytesize = 8, parity = 'N', stopbits = 1, xonxoff=0,
                   rtscts = 0):
 
-
         self.name     = port
         self.port     = port
         self.timeout  = timeout
@@ -39,6 +38,8 @@ class Serial:
         print(string)
         return return_string
 
+    def comports():
+        return ""
 
     def __str__( self ):
         """

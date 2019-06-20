@@ -15,4 +15,4 @@ class CultureFlow_Model():
         self.pump = Pump()
         self.mswitch = Mswitch()
 
-        self.device_ids = {"pump":("out","in"),"mswitch":("out","in")}
+        self.devices = {"pump":self.pump,"mswitch":self.mswitch}
