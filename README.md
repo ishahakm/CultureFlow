@@ -1,8 +1,8 @@
 # CultureFlow
 
-#What is CultureFlow?
+What is CultureFlow?
 
-For starters it's a fluid handling platform that allows the user to run experiements using the organ-on-a-chip platform developed at Agarwal lab. The current components are are an ISMATEC Reglo peristaltic pump, Titan EX manifold switch, and a custom collection system also designed at Agarwal Lab. However, the state of this system is amenable to your needs! The control software was designed so that one can easily integrate any component that sends and recieves serial connections. So easy in fact, an undergrad can do it! ;) 
+For starters it's a fluid handling platform that allows the user to run experiements using the organ-on-a-chip platform developed at Agarwal lab. The current components are are an ISMATEC Reglo peristaltic pump, Titan EX manifold switch, and a custom collection system also designed at Agarwal Lab. You'll find all documentation including electronics in this However, the state of this system is amenable to your needs! The control software was designed so that one can easily integrate any component that sends and recieves serial connections. So easy in fact, an undergrad can do it! ;) 
 
 Steps to add a new component. (details coming soon)
 1. Write python module for device specific function as per the new_device rubric
