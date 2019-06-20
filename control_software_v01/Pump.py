@@ -80,6 +80,7 @@ class ThreePump():
                 self.connected = True
             else:
                 self.connected = False
+
     def send(self,cmd):
         """
         This method sends a command across the serial connection.
@@ -91,7 +92,7 @@ class ThreePump():
         self.ser.write(cmd.encode('ascii') + '\r'.encode('ascii'))
         print("Sent a serial command: %s %s "%("Pump",cmd))
 
-        
+
     def send_return(self,cmd):
         """
         This method uses the serial connection opened instance of pump and sends the text written in cmd across that connection.
