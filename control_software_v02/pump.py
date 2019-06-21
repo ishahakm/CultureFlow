@@ -14,7 +14,7 @@ class Pump():
         #response from call out. must be 2 characters
         self.response = "IS"
         self.ser = None
-        
+
         self.baud = 9600
 
         ###device specific

@@ -11,6 +11,7 @@ class Mswitch():
         self.response = "65"
         self.ser = None
         self.baud = 9600
+        self.reservoirs=6
 
     def set_reservoir(self,res):
         """

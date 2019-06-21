@@ -37,7 +37,7 @@ class CultureFlow_Control():
 
 
             for device in self.model.devices:
-                self.view_message = "sending call for %s to available comports"%device
+                self.view_message = "Sending call for %s to available comports..."%device
                 screen.update_text()
 
                 #returns device comport and unused ports if found. NC if no connections on PC. NF if not found.
@@ -45,15 +45,15 @@ class CultureFlow_Control():
 
                 #checking result from previous line and decides how to update view
                 if result == "NC":
-                    self.view_message = "No devices found"
+                    self.view_message = "No devices found..."
                     screen.update_text()
 
                 elif result == "NF":
                     device_available = False
-                    self.view_message = "%s not found"%device
+                    self.view_message = "%s not found..."%device
                     screen.update_text()
                 else:
-                    self.view_message = "%s found"%device
+                    self.view_message = "%s found..."%device
                     screen.update_text()
 
                     device_available = True
@@ -86,3 +86,33 @@ class CultureFlow_Control():
     def serial_to_model(self,device,comport):
         #connects the proper serial object the the instance of the device in model
         self.model.devices[device].ser = serial_connect(comport,self.model.devices[device].baud)
+
+    def getNumberOfPumpChannels(self):
+        return self.model.devices['pump'].number_of_channels
+
+    def getNumberOfReservoirs(self):
+        return self.model.devices['mswitch'].reservoirs
+
+    def setRecirculate(self,channel):
+        print("recirculating", channel)
+
+    def setCollect(self,channel):
+        print("collecting", channel)
+
+    def setReservoir(self,reservoir):
+        print('setting reservoirs', reservoir)
+
+    def start_pump_channel(self,channel_number,flowrate):
+        print('starting',channel_number,flowrate)
+
+    def stop_pump_channel(self,channel_number):
+        print('stopping',channel_number)
+
+    def start_all(self):
+        print('starting all')
+
+    def stop_all(self):
+        print('stopping all')
+
+    def start_collection(self,samples,time):
+        print("this many ",samples,"for this long",time)
