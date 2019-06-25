@@ -809,7 +809,7 @@ class ManualPage(tk.Frame):
         if not flowrateOK:
             goodToGo = False
             controller.message_window("Entry must be between %s and %s! uL/m"%(0,1000*controller.max_flowrate_list[channel-1]))
-            
+
         return goodToGo
 
 class AutomaticPage(tk.Frame):
